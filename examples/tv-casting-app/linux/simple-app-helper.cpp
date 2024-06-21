@@ -79,8 +79,10 @@ void DiscoveryDelegateImpl::HandleOnUpdated(matter::casting::memory::Strong<matt
 void InvokeContentLauncherLaunchURL(matter::casting::memory::Strong<matter::casting::core::Endpoint> endpoint)
 {
     // get contentLauncherCluster from the endpoint
+    // matter::casting::memory::Strong<matter::casting::clusters::content_launcher::ContentLauncherCluster> contentLauncherCluster =
+    //     endpoint->GetCluster<matter::casting::clusters::content_launcher::ContentLauncherCluster>(); // SHAO OG
     matter::casting::memory::Strong<matter::casting::clusters::content_launcher::ContentLauncherCluster> contentLauncherCluster =
-        endpoint->GetCluster<matter::casting::clusters::content_launcher::ContentLauncherCluster>();
+        static_cast<matter::casting::clusters::content_launcher::ContentLauncherCluster*>(endpoint->GetCluster());
     VerifyOrReturn(contentLauncherCluster != nullptr);
 
     // get the launchURLCommand from the contentLauncherCluster
@@ -389,7 +391,9 @@ CHIP_ERROR CommandHandler(int argc, char ** argv)
         unsigned long index = static_cast<unsigned long>(strtol(argv[1], &eptr, 10));
         std::vector<matter::casting::memory::Strong<matter::casting::core::CastingPlayer>> castingPlayers =
             matter::casting::core::CastingPlayerDiscovery::GetInstance()->GetCastingPlayers();
-        VerifyOrReturnValue(0 <= index && index < castingPlayers.size(), CHIP_ERROR_INVALID_ARGUMENT,
+        // VerifyOrReturnValue(0 <= index && index < castingPlayers.size(), CHIP_ERROR_INVALID_ARGUMENT,
+        //                     ChipLogError(AppServer, "Invalid casting player index provided: %lu", index)); // SHAO OG
+        VerifyOrReturnValue(index < castingPlayers.size(), CHIP_ERROR_INVALID_ARGUMENT,
                             ChipLogError(AppServer, "Invalid casting player index provided: %lu", index));
         targetCastingPlayer = castingPlayers.at(index);
 
