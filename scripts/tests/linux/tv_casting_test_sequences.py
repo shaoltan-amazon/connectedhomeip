@@ -214,7 +214,7 @@ test_sequences = [
             Step(app=App.TV_CASTING_APP, input_cmd=f'cast setcommissionerpasscode {int(COMMISSIONER_GENERATED_PASSCODE, 16)}\n'),
 
             # Validate the commissioner passcode that the user entered on the tv-casting-app output.
-            Step(app=App.TV_CASTING_APP, timeout_sec=30, output_msg=[
+            Step(app=App.TV_CASTING_APP, output_msg=[
                 f'CommandHandler() setcommissionerpasscode user-entered passcode: {int(COMMISSIONER_GENERATED_PASSCODE, 16)}']),
 
             # Validate that the `IdentificationDeclaration` message sent from the tv-casting-app to the tv-app will contain the following entries:
