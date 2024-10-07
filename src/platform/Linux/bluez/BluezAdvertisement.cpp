@@ -119,10 +119,24 @@ CHIP_ERROR BluezAdvertisement::Init(BluezAdapter1 * apAdapter, const char * aAdv
     GAutoPtr<char> rootPath;
     g_object_get(G_OBJECT(mEndpoint.GetGattApplicationObjectManager()), "object-path", &rootPath.GetReceiver(), nullptr);
     g_snprintf(mAdvPath, sizeof(mAdvPath), "%s/advertising", rootPath.get());
-    g_strlcpy(mAdvUUID, aAdvUUID, sizeof(mAdvUUID));
+    
+    // SHAO
+    // ChipLogProgress(DeviceLayer, "SHAO HI!");
+    //
+    // g_strlcpy(mAdvUUID, aAdvUUID, sizeof(mAdvUUID)); // SHAO OG
+    // SHAO added
+    if (aAdvUUID != nullptr)
+    {
+        // ChipLogProgress(DeviceLayer, "SHAO HOI!!");
+        g_strlcpy(mAdvUUID, aAdvUUID, sizeof(mAdvUUID));
+    }
+    //
 
     if (aAdvName != nullptr)
     {
+        // SHAO
+        // ChipLogProgress(DeviceLayer, "SHAO HELLO!");
+        //
         g_strlcpy(mAdvName, aAdvName, sizeof(mAdvName));
     }
     else
