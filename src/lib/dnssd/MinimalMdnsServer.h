@@ -65,7 +65,9 @@ public:
     {
         if (mQueryDelegate != nullptr)
         {
+            ChipLogProgress(Discovery, "SHAO before calling mQueryDelegate->OnMdnsPacketData fn");
             mQueryDelegate->OnMdnsPacketData(data, info);
+            ChipLogProgress(Discovery, "SHAO after calling mQueryDelegate->OnMdnsPacketData fn");
         }
     }
 
