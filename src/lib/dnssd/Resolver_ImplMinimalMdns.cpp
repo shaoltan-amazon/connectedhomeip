@@ -271,7 +271,17 @@ public:
     {
         GlobalMinimalMdnsServer::Instance().SetResponseDelegate(this);
     }
-    ~MinMdnsResolver() { SetDiscoveryContext(nullptr); }
+    ~MinMdnsResolver() 
+    { 
+        // SHAO added
+        // Remove this instance as the response delegate
+        if (GlobalMinimalMdnsServer::Server().IsListening()) 
+        {
+            GlobalMinimalMdnsServer::Instance().SetResponseDelegate(nullptr);
+        }
+        //
+        SetDiscoveryContext(nullptr); 
+    }
 
     //// MdnsPacketDelegate implementation
     void OnMdnsPacketData(const BytesRange & data, const chip::Inet::IPPacketInfo * info) override;
