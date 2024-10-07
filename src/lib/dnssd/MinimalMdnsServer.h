@@ -73,7 +73,9 @@ public:
     {
         if (mResponseDelegate != nullptr)
         {
+            ChipLogProgress(Discovery, "SHAO before calling mResponseDelegate->OnMdnsPacketData fn");
             mResponseDelegate->OnMdnsPacketData(data, info);
+            ChipLogProgress(Discovery, "SHAO after calling mResponseDelegate->OnMdnsPacketData fn");
         }
     }
 
