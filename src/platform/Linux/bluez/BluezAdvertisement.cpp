@@ -119,7 +119,11 @@ CHIP_ERROR BluezAdvertisement::Init(BluezAdapter1 * apAdapter, const char * aAdv
     GAutoPtr<char> rootPath;
     g_object_get(G_OBJECT(mEndpoint.GetGattApplicationObjectManager()), "object-path", &rootPath.GetReceiver(), nullptr);
     g_snprintf(mAdvPath, sizeof(mAdvPath), "%s/advertising", rootPath.get());
-    g_strlcpy(mAdvUUID, aAdvUUID, sizeof(mAdvUUID));
+
+    if (aAdvUUID != nullptr)
+    {
+        g_strlcpy(mAdvUUID, aAdvUUID, sizeof(mAdvUUID));
+    }
 
     if (aAdvName != nullptr)
     {
