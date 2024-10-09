@@ -514,6 +514,7 @@ CHIP_ERROR CommandHandler(int argc, char ** argv)
                 }
                 return err;
             }
+            return CHIP_NO_ERROR;
         }
         else
         {
