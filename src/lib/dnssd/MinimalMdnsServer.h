@@ -65,6 +65,7 @@ public:
     {
         if (mQueryDelegate != nullptr)
         {
+            ChipLogProgress(AppServer, "mQueryDelegate - Hacky fix");
             mQueryDelegate->OnMdnsPacketData(data, info);
         }
     }
@@ -73,6 +74,7 @@ public:
     {
         if (mResponseDelegate != nullptr)
         {
+            ChipLogProgress(AppServer, "mResponseDelegate - Hacky fix");
             mResponseDelegate->OnMdnsPacketData(data, info);
         }
     }
