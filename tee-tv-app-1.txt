@@ -1,0 +1,493 @@
+[1729546008.449836][8814:8814] CHIP:CTL: Setting attestation nonce to random value
+[1729546008.451231][8814:8814] CHIP:CTL: Setting CSR nonce to random value
+[1729546008.451994][8814:8814] CHIP:CTL: Setting attestation nonce to random value
+[1729546008.452408][8814:8814] CHIP:CTL: Setting CSR nonce to random value
+[1729546008.453270][8814:8814] CHIP:DL: ApplicationBasic[applicationId]: Application Name="exampleName1"
+[1729546008.457637][8814:8814] CHIP:DL: ChipLinuxStorage::Init: Using KVS config file: /tmp/chip_kvs
+[1729546008.464909][8814:8814] CHIP:DL: Wrote settings to /tmp/chip_kvs
+[1729546008.466868][8814:8814] CHIP:DL: ChipLinuxStorage::Init: Attempt to re-initialize with KVS config file: /tmp/chip_kvs
+[1729546008.467542][8814:8814] CHIP:DL: ChipLinuxStorage::Init: Using KVS config file: /tmp/chip_factory.ini
+[1729546008.475930][8814:8814] CHIP:DL: Wrote settings to /tmp/chip_factory.ini
+[1729546008.476545][8814:8814] CHIP:DL: ChipLinuxStorage::Init: Using KVS config file: /tmp/chip_config.ini
+[1729546008.486538][8814:8814] CHIP:DL: Wrote settings to /tmp/chip_config.ini
+[1729546008.487228][8814:8814] CHIP:DL: ChipLinuxStorage::Init: Using KVS config file: /tmp/chip_counters.ini
+[1729546008.497388][8814:8814] CHIP:DL: Wrote settings to /tmp/chip_counters.ini
+[1729546008.505321][8814:8814] CHIP:DL: Wrote settings to /tmp/chip_factory.ini
+[1729546008.505441][8814:8814] CHIP:DL: NVS set: chip-factory/unique-id = "26DBB96ED4106804"
+[1729546008.509407][8814:8814] CHIP:DL: Wrote settings to /tmp/chip_factory.ini
+[1729546008.509558][8814:8814] CHIP:DL: NVS set: chip-factory/vendor-id = 65521 (0xFFF1)
+[1729546008.516571][8814:8814] CHIP:DL: Wrote settings to /tmp/chip_factory.ini
+[1729546008.516737][8814:8814] CHIP:DL: NVS set: chip-factory/product-id = 32769 (0x8001)
+[1729546008.524023][8814:8814] CHIP:DL: Wrote settings to /tmp/chip_counters.ini
+[1729546008.524180][8814:8814] CHIP:DL: NVS set: chip-counters/reboot-count = 1 (0x1)
+[1729546008.531475][8814:8814] CHIP:DL: Wrote settings to /tmp/chip_counters.ini
+[1729546008.531649][8814:8814] CHIP:DL: NVS set: chip-counters/total-operational-hours = 0 (0x0)
+[1729546008.542300][8814:8814] CHIP:DL: Wrote settings to /tmp/chip_counters.ini
+[1729546008.542425][8814:8814] CHIP:DL: NVS set: chip-counters/boot-reason = 0 (0x0)
+[1729546008.549511][8814:8814] CHIP:DL: Wrote settings to /tmp/chip_config.ini
+[1729546008.549676][8814:8814] CHIP:DL: NVS set: chip-config/regulatory-location = 0 (0x0)
+[1729546008.559117][8814:8814] CHIP:DL: Wrote settings to /tmp/chip_config.ini
+[1729546008.559322][8814:8814] CHIP:DL: NVS set: chip-config/location-capability = 2 (0x2)
+[1729546008.561327][8814:8814] CHIP:DL: Got Ethernet interface: eth0
+[1729546008.562204][8814:8814] CHIP:DL: Found the primary Ethernet interface:eth0
+[1729546008.563091][8814:8814] CHIP:DL: Got WiFi interface: wlan0
+[1729546008.571424][8814:8814] CHIP:DL: Found the primary WiFi interface:wlan0
+[1729546008.571962][8814:8814] CHIP:SPT: *** WARNING: Using temporary passcode 20202021 due to no neither --passcode or --spake2p-verifier-base64 given on command line. This is temporary and will disappear. Please update your scripts to explicitly configure onboarding credentials. ***
+[1729546008.572370][8814:8814] CHIP:SPT: *** WARNING: Using temporary test discriminator 3840 due to --discriminator not given on command line. This is temporary and will disappear. Please update your scripts to explicitly configure discriminator. ***
+[1729546008.572718][8814:8814] CHIP:SPT: PASE PBKDF iterations set to 1000
+[1729546008.573093][8814:8814] CHIP:SPT: LinuxCommissionableDataProvider didn't get a PASE salt, generating one.
+[1729546008.657322][8814:8814] CHIP:DL: Device Configuration:
+[1729546008.657915][8814:8814] CHIP:DL:   Serial Number: TEST_SN
+[1729546008.658382][8814:8814] CHIP:DL:   Vendor Id: 65521 (0xFFF1)
+[1729546008.658830][8814:8814] CHIP:DL:   Product Id: 32769 (0x8001)
+[1729546008.659051][8814:8814] CHIP:DL:   Product Name: TEST_PRODUCT
+[1729546008.659195][8814:8814] CHIP:DL:   Hardware Version: 0
+[1729546008.659227][8814:8814] CHIP:DL:   Setup Pin Code (0 for UNKNOWN/ERROR): 20202021
+[1729546008.659250][8814:8814] CHIP:DL:   Setup Discriminator (0xFFFF for UNKNOWN/ERROR): 3840 (0xF00)
+[1729546008.659357][8814:8814] CHIP:DL:   Manufacturing Date: (not set)
+[1729546008.659382][8814:8814] CHIP:DL:   Device Type: 35 (0x23)
+[1729546008.659401][8814:8814] CHIP:-: ==== Onboarding payload for Standard Commissioning Flow ====
+[1729546008.659528][8814:8814] CHIP:SVR: SetupQRCode: [MT:-24J042C00KA0648G00]
+[1729546008.659587][8814:8814] CHIP:SVR: Copy/paste the below URL in a browser to see the QR Code:
+[1729546008.659607][8814:8814] CHIP:SVR: https://project-chip.github.io/connectedhomeip/qrcode.html?data=MT%3A-24J042C00KA0648G00
+[1729546008.659685][8814:8814] CHIP:SVR: Manual pairing code: [34970112332]
+[1729546008.659781][8814:8814] CHIP:DL: AppPlatform::SetupAppPlatform()
+[1729546008.659827][8814:8814] CHIP:DL: emberAfFixedEndpointCount()=4 mCurrentEndpointId=4
+[1729546008.660137][8814:8814] CHIP:SVR: Initializing subscription resumption storage...
+[1729546008.669538][8814:8814] CHIP:DL: Wrote settings to /tmp/chip_kvs
+[1729546008.670441][8814:8814] CHIP:SVR: > Server initializing...
+[1729546008.670970][8814:8814] CHIP:FP: Initializing FabricTable from persistent storage
+[1729546008.671214][8814:8814] CHIP:TS: Last Known Good Time: [unknown]
+[1729546008.671276][8814:8814] CHIP:TS: Setting Last Known Good Time to firmware build time 2023-10-14T01:16:48
+[1729546008.677040][8814:8814] CHIP:DL: Wrote settings to /tmp/chip_kvs
+[1729546008.677416][8814:8814] CHIP:DMG: AccessControl: initializing
+[1729546008.677462][8814:8814] CHIP:DMG: Examples::AccessControlDelegate::Init
+[1729546008.677995][8814:8814] CHIP:DMG: AccessControl: setting
+[1729546008.678093][8814:8814] CHIP:DMG: DefaultAclStorage: initializing
+[1729546008.678121][8814:8814] CHIP:DMG: DefaultAclStorage: 0 entries loaded
+[1729546008.678220][8814:8814] CHIP:IN: UDP::Init bind&listen port=5640
+[1729546008.678426][8814:8814] CHIP:IN: UDP::Init bound to port=5640
+[1729546008.678505][8814:8814] CHIP:IN: UDP::Init bind&listen port=5640
+[1729546008.678624][8814:8814] CHIP:IN: UDP::Init bound to port=5640
+[1729546008.678651][8814:8814] CHIP:IN: BLEBase::Init - setting/overriding transport
+[1729546008.678849][8814:8814] CHIP:IN: TransportMgr initialized
+[1729546008.689473][8814:8814] CHIP:DL: Wrote settings to /tmp/chip_kvs
+[1729546008.697447][8814:8814] CHIP:DL: Wrote settings to /tmp/chip_kvs
+[1729546008.707510][8814:8814] CHIP:DL: Wrote settings to /tmp/chip_kvs
+[1729546008.707654][8814:8814] CHIP:ZCL: Using ZAP configuration...
+[1729546008.708565][8814:8814] CHIP:DMG: Failed to read stored attribute (0, 0x0000_0028, 0x0000_0005: src/platform/Linux/KeyValueStoreManagerImpl.cpp:53: CHIP Error 0x000000A0: Value not found in the persisted storage
+[1729546008.708748][8814:8814] CHIP:DMG: Failed to read stored attribute (0, 0x0000_0028, 0x0000_0010: src/platform/Linux/KeyValueStoreManagerImpl.cpp:53: CHIP Error 0x000000A0: Value not found in the persisted storage
+[1729546008.708967][8814:8814] CHIP:DMG: Failed to read stored attribute (0, 0x0000_002B, 0x0000_0000: src/platform/Linux/KeyValueStoreManagerImpl.cpp:53: CHIP Error 0x000000A0: Value not found in the persisted storage
+[1729546008.709128][8814:8814] CHIP:DMG: Failed to read stored attribute (0, 0x0000_002C, 0x0000_0000: src/platform/Linux/KeyValueStoreManagerImpl.cpp:53: CHIP Error 0x000000A0: Value not found in the persisted storage
+[1729546008.709292][8814:8814] CHIP:DMG: Failed to read stored attribute (0, 0x0000_002C, 0x0000_0001: src/platform/Linux/KeyValueStoreManagerImpl.cpp:53: CHIP Error 0x000000A0: Value not found in the persisted storage
+[1729546008.709423][8814:8814] CHIP:DMG: Failed to read stored attribute (0, 0x0000_002D, 0x0000_0000: src/platform/Linux/KeyValueStoreManagerImpl.cpp:53: CHIP Error 0x000000A0: Value not found in the persisted storage
+[1729546008.709758][8814:8814] CHIP:DMG: Failed to read stored attribute (2, 0x0000_0008, 0x0000_0000: src/platform/Linux/KeyValueStoreManagerImpl.cpp:53: CHIP Error 0x000000A0: Value not found in the persisted storage
+[1729546008.709953][8814:8814] CHIP:DMG: Failed to read stored attribute (2, 0x0000_0008, 0x0000_4000: src/platform/Linux/KeyValueStoreManagerImpl.cpp:53: CHIP Error 0x000000A0: Value not found in the persisted storage
+[1729546008.710084][8814:8814] CHIP:DMG: AccessControlCluster: initializing
+[1729546008.710118][8814:8814] CHIP:ZCL: Initiating Admin Commissioning cluster.
+[1729546008.710398][8814:8814] CHIP:ZCL: GeneralDiagnostics: OnDeviceReboot
+[1729546008.710473][8814:8814] CHIP:DMG: Endpoint 0, Cluster 0x0000_0033 update version to 5136b080
+[1729546008.710817][8814:8814] CHIP:EVL: LogEvent event number: 0x0000000000000000 priority: 2, endpoint id:  0x0 cluster id: 0x0000_0033 event id: 0x3 Epoch timestamp: 0x00000192B0F9B886
+[1729546008.711047][8814:8814] CHIP:ZCL: TV Linux App: Messages::SetDefaultDelegate
+[1729546008.711100][8814:8814] CHIP:ZCL: TV Linux App: WakeOnLanManager::SetDefaultDelegate
+[1729546008.711123][8814:8814] CHIP:ZCL: TV Linux App: Channel::SetDefaultDelegate
+[1729546008.711145][8814:8814] CHIP:ZCL: TV Linux App: TargetNavigator::SetDefaultDelegate
+[1729546008.711165][8814:8814] CHIP:ZCL: TV Linux App: MediaPlayback::SetDefaultDelegate
+[1729546008.711187][8814:8814] CHIP:ZCL: TV Linux App: MediaInput::SetDefaultDelegate
+[1729546008.711208][8814:8814] CHIP:ZCL: TV Linux App: LowPower::SetDefaultDelegate
+[1729546008.711232][8814:8814] CHIP:ZCL: TV Linux App: KeypadInput::SetDefaultDelegate
+[1729546008.711253][8814:8814] CHIP:ZCL: TV Linux App: ContentLauncher::SetDefaultDelegate
+[1729546008.711274][8814:8814] CHIP:ZCL: TV Linux App: AudioOutput::SetDefaultDelegate
+[1729546008.711297][8814:8814] CHIP:ZCL: TV Linux App: ApplicationLauncher::SetDefaultDelegate
+[1729546008.711319][8814:8814] CHIP:ZCL: TV Linux App: ContentControlManager::SetDefaultDelegate
+[1729546008.711460][8814:8814] CHIP:DMG: Endpoint 2, Cluster 0x0000_0008 update version to 6c4ed2f0
+[1729546008.711524][8814:8814] CHIP:ZCL: TV Linux App: Channel::SetDefaultDelegate
+[1729546008.711549][8814:8814] CHIP:ZCL: TV Linux App: TargetNavigator::SetDefaultDelegate
+[1729546008.711570][8814:8814] CHIP:ZCL: TV Linux App: MediaPlayback::SetDefaultDelegate
+[1729546008.711592][8814:8814] CHIP:ZCL: TV Linux App: KeypadInput::SetDefaultDelegate
+[1729546008.711618][8814:8814] CHIP:ZCL: TV Linux App: ContentLauncher::SetDefaultDelegate
+[1729546008.711639][8814:8814] CHIP:ZCL: TV Linux App: ApplicationLauncher::SetDefaultDelegate
+[1729546008.711660][8814:8814] CHIP:ZCL: TV Linux App: ApplicationBasic::SetDefaultDelegate
+[1729546008.711682][8814:8814] CHIP:ZCL: TV Linux App: AccountLogin::SetDefaultDelegate
+[1729546008.711706][8814:8814] CHIP:ZCL: TV Linux App: ContentControlManager::SetDefaultDelegate
+[1729546008.712921][8814:8814] CHIP:IN: SecureSession[0x5120000013c0]: Allocated Type:1 LSID:11826
+[1729546008.713030][8814:8814] CHIP:SC: Assigned local session key ID 11826
+[1729546008.713086][8814:8814] CHIP:SC: Waiting for PBKDF param request
+[1729546008.721606][8814:8814] CHIP:DL: Wrote settings to /tmp/chip_counters.ini
+[1729546008.721736][8814:8814] CHIP:DL: NVS set: chip-counters/life-count = 1 (0x1)
+[1729546008.721825][8814:8814] CHIP:DIS: Updating services using commissioning mode 1
+[1729546008.726871][8814:8814] CHIP:DIS: CHIP minimal mDNS started advertising.
+[1729546008.734119][8814:8814] CHIP:DL: Using WiFi MAC for hostname
+[1729546008.734687][8814:8814] CHIP:DIS: Advertise commission parameter vendorID=65521 productID=32769 discriminator=3840/15 cm=1 cp=0
+[1729546008.734825][8814:8814] CHIP:DIS: Responding with _matterc._udp.local
+[1729546008.735052][8814:8814] CHIP:DIS: Responding with 816FD2C903CAF5AA._matterc._udp.local
+[1729546008.735132][8814:8814] CHIP:DIS: Responding with D83ADD0E2E01.local
+[1729546008.735172][8814:8814] CHIP:DIS: Responding with D83ADD0E2E01.local
+[1729546008.735235][8814:8814] CHIP:DIS: Responding with _V65521._sub._matterc._udp.local
+[1729546008.735301][8814:8814] CHIP:DIS: Responding with _T35._sub._matterc._udp.local
+[1729546008.735350][8814:8814] CHIP:DIS: Responding with _S15._sub._matterc._udp.local
+[1729546008.735399][8814:8814] CHIP:DIS: Responding with _L3840._sub._matterc._udp.local
+[1729546008.735450][8814:8814] CHIP:DIS: Responding with _CM._sub._matterc._udp.local
+[1729546008.735524][8814:8814] CHIP:DIS: Responding with 816FD2C903CAF5AA._matterc._udp.local
+[1729546008.735549][8814:8814] CHIP:DIS: CHIP minimal mDNS configured as 'Commissionable node device'; instance name: 816FD2C903CAF5AA.
+[1729546008.745603][8814:8814] CHIP:DIS: mDNS service published: _matterc._udp
+[1729546008.746368][8814:8814] CHIP:DL: Using WiFi MAC for hostname
+[1729546008.746814][8814:8814] CHIP:DIS: Advertise commission parameter vendorID=65521 productID=32769 discriminator=0000/00 cm=0 cp=1
+[1729546008.747075][8814:8814] CHIP:DIS: Responding with _matterd._udp.local
+[1729546008.747282][8814:8814] CHIP:DIS: Responding with 816FD2C903CAF5AA._matterd._udp.local
+[1729546008.747315][8814:8814] CHIP:DIS: Responding with D83ADD0E2E01.local
+[1729546008.747354][8814:8814] CHIP:DIS: Responding with D83ADD0E2E01.local
+[1729546008.747398][8814:8814] CHIP:DIS: Responding with _V65521._sub._matterd._udp.local
+[1729546008.747447][8814:8814] CHIP:DIS: Responding with _T35._sub._matterd._udp.local
+[1729546008.747504][8814:8814] CHIP:DIS: Responding with 816FD2C903CAF5AA._matterd._udp.local
+[1729546008.747528][8814:8814] CHIP:DIS: CHIP minimal mDNS configured as 'Commissioner device'; instance name: 816FD2C903CAF5AA.
+[1729546008.759695][8814:8814] CHIP:DIS: mDNS service published: _matterd._udp
+[1729546008.759801][8814:8814] CHIP:DIS: Updating services using commissioning mode 1
+[1729546008.764352][8814:8814] CHIP:DIS: CHIP minimal mDNS started advertising.
+[1729546008.788538][8814:8814] CHIP:DL: Using WiFi MAC for hostname
+[1729546008.789142][8814:8814] CHIP:DIS: Advertise commission parameter vendorID=65521 productID=32769 discriminator=3840/15 cm=1 cp=0
+[1729546008.789278][8814:8814] CHIP:DIS: Responding with _matterc._udp.local
+[1729546008.789321][8814:8814] CHIP:DIS: Responding with 816FD2C903CAF5AA._matterc._udp.local
+[1729546008.789351][8814:8814] CHIP:DIS: Responding with D83ADD0E2E01.local
+[1729546008.789395][8814:8814] CHIP:DIS: Responding with D83ADD0E2E01.local
+[1729546008.789473][8814:8814] CHIP:DIS: Responding with _V65521._sub._matterc._udp.local
+[1729546008.789512][8814:8814] CHIP:DIS: Responding with _T35._sub._matterc._udp.local
+[1729546008.789546][8814:8814] CHIP:DIS: Responding with _S15._sub._matterc._udp.local
+[1729546008.789600][8814:8814] CHIP:DIS: Responding with _L3840._sub._matterc._udp.local
+[1729546008.789638][8814:8814] CHIP:DIS: Responding with _CM._sub._matterc._udp.local
+[1729546008.789727][8814:8814] CHIP:DIS: Responding with 816FD2C903CAF5AA._matterc._udp.local
+[1729546008.789754][8814:8814] CHIP:DIS: CHIP minimal mDNS configured as 'Commissionable node device'; instance name: 816FD2C903CAF5AA.
+[1729546008.799096][8814:8814] CHIP:DIS: mDNS service published: _matterc._udp
+[1729546008.799857][8814:8814] CHIP:DL: Using WiFi MAC for hostname
+[1729546008.800312][8814:8814] CHIP:DIS: Advertise commission parameter vendorID=65521 productID=32769 discriminator=0000/00 cm=0 cp=1
+[1729546008.800447][8814:8814] CHIP:DIS: Responding with _matterd._udp.local
+[1729546008.800506][8814:8814] CHIP:DIS: Responding with 816FD2C903CAF5AA._matterd._udp.local
+[1729546008.800535][8814:8814] CHIP:DIS: Responding with D83ADD0E2E01.local
+[1729546008.800591][8814:8814] CHIP:DIS: Responding with D83ADD0E2E01.local
+[1729546008.800650][8814:8814] CHIP:DIS: Responding with _V65521._sub._matterd._udp.local
+[1729546008.800704][8814:8814] CHIP:DIS: Responding with _T35._sub._matterd._udp.local
+[1729546008.800780][8814:8814] CHIP:DIS: Responding with 816FD2C903CAF5AA._matterd._udp.local
+[1729546008.800810][8814:8814] CHIP:DIS: CHIP minimal mDNS configured as 'Commissioner device'; instance name: 816FD2C903CAF5AA.
+[1729546008.812417][8814:8814] CHIP:DIS: mDNS service published: _matterd._udp
+[1729546008.812575][8814:8814] CHIP:IN: CASE Server enabling CASE session setups
+[1729546008.813150][8814:8814] CHIP:IN: SecureSession[0x512000007e40]: Allocated Type:2 LSID:11827
+[1729546008.813328][8814:8814] CHIP:SC: Allocated SecureSession (0x512000007e40) - waiting for Sigma1 msg
+[1729546008.813383][8814:8814] CHIP:IM: WARNING ┌────────────────────────────────────────────────────
+[1729546008.813412][8814:8814] CHIP:IM: WARNING │ Interaction Model Engine running in 'Checked' mode.
+[1729546008.813432][8814:8814] CHIP:IM: WARNING │ This executes BOTH ember and data-model code paths.
+[1729546008.813450][8814:8814] CHIP:IM: WARNING │ which is inefficient and consumes more flash space.
+[1729546008.813469][8814:8814] CHIP:IM: WARNING │ This should be done for testing only.
+[1729546008.813488][8814:8814] CHIP:IM: WARNING └────────────────────────────────────────────────────
+[1729546008.813513][8814:8814] CHIP:SVR: Joining Multicast groups
+[1729546008.813579][8814:8814] CHIP:ZCL: Emitting StartUp event
+[1729546008.813949][8814:8814] CHIP:EVL: LogEvent event number: 0x0000000000000001 priority: 2, endpoint id:  0x0 cluster id: 0x0000_0028 event id: 0x0 Epoch timestamp: 0x00000192B0F9B8ED
+[1729546008.814040][8814:8814] CHIP:SVR: Server initialization complete
+[1729546008.814107][8814:8814] CHIP:SVR: Server Listening...
+[1729546008.814149][8814:8814] CHIP:DL: Device Configuration:
+[1729546008.814312][8814:8814] CHIP:DL:   Serial Number: TEST_SN
+[1729546008.814478][8814:8814] CHIP:DL:   Vendor Id: 65521 (0xFFF1)
+[1729546008.814600][8814:8814] CHIP:DL:   Product Id: 32769 (0x8001)
+[1729546008.814632][8814:8814] CHIP:DL:   Product Name: TEST_PRODUCT
+[1729546008.814712][8814:8814] CHIP:DL:   Hardware Version: 0
+[1729546008.814752][8814:8814] CHIP:DL:   Setup Pin Code (0 for UNKNOWN/ERROR): 20202021
+[1729546008.814776][8814:8814] CHIP:DL:   Setup Discriminator (0xFFFF for UNKNOWN/ERROR): 3840 (0xF00)
+[1729546008.814910][8814:8814] CHIP:DL:   Manufacturing Date: (not set)
+[1729546008.814949][8814:8814] CHIP:DL:   Device Type: 35 (0x23)
+[1729546008.815042][8814:8814] CHIP:SVR: SetupQRCode: [MT:-24J042C00KA0648G00]
+[1729546008.815087][8814:8814] CHIP:SVR: Copy/paste the below URL in a browser to see the QR Code:
+[1729546008.815106][8814:8814] CHIP:SVR: https://project-chip.github.io/connectedhomeip/qrcode.html?data=MT%3A-24J042C00KA0648G00
+[1729546008.815154][8814:8814] CHIP:SVR: Manual pairing code: [34970112332]
+[1729546008.815177][8814:8814] CHIP:SVR: Starting commissioner
+[1729546008.815410][8814:8814] CHIP:SPT:  ----- Commissioner using vendorId 0xFFF1
+[1729546008.815498][8814:8814] CHIP:SVR: Retrieving value from server storage.
+[1729546008.815646][8814:8814] CHIP:CTL: Couldn't get ExampleOpCredsCAKey from storage: src/platform/Linux/KeyValueStoreManagerImpl.cpp:53: CHIP Error 0x000000A0: Value not found in the persisted storage
+[1729546008.827656][8814:8814] CHIP:SVR: Stored value in server storage
+[1729546008.832494][8814:8814] CHIP:DL: Wrote settings to /tmp/chip_kvs
+[1729546008.832631][8814:8814] CHIP:SVR: Retrieving value from server storage.
+[1729546008.832980][8814:8814] CHIP:CTL: Couldn't get ExampleOpCredsICAKey from storage: src/platform/Linux/KeyValueStoreManagerImpl.cpp:53: CHIP Error 0x000000A0: Value not found in the persisted storage
+[1729546008.843720][8814:8814] CHIP:SVR: Stored value in server storage
+[1729546008.848371][8814:8814] CHIP:DL: Wrote settings to /tmp/chip_kvs
+[1729546008.848535][8814:8814] CHIP:SPT:  ----- UDC listening on port 5650
+[1729546008.859152][8814:8814] CHIP:SVR: Retrieving value from server storage.
+[1729546008.859477][8814:8814] CHIP:CTL: Generating RCAC
+[1729546008.880339][8814:8814] CHIP:SVR: Stored value in server storage
+[1729546008.887760][8814:8814] CHIP:DL: Wrote settings to /tmp/chip_kvs
+[1729546008.888170][8814:8814] CHIP:SVR: Retrieving value from server storage.
+[1729546008.888721][8814:8814] CHIP:CTL: Generating ICAC
+[1729546008.903346][8814:8814] CHIP:SVR: Stored value in server storage
+[1729546008.908106][8814:8814] CHIP:DL: Wrote settings to /tmp/chip_kvs
+[1729546008.908409][8814:8814] CHIP:CTL: Generating NOC
+[1729546008.923076][8814:8814] CHIP:CTL: Setting attestation nonce from parameters
+[1729546008.923179][8814:8814] CHIP:CTL: Setting CSR nonce from parameters
+[1729546008.923804][8814:8814] CHIP:IN: UDP::Init bind&listen port=5652
+[1729546008.924189][8814:8814] CHIP:IN: UDP::Init bound to port=5652
+[1729546008.924310][8814:8814] CHIP:IN: UDP::Init bind&listen port=5652
+[1729546008.924486][8814:8814] CHIP:IN: UDP::Init bound to port=5652
+[1729546008.924553][8814:8814] CHIP:IN: BLEBase::Init - not overriding transport
+[1729546008.924828][8814:8814] CHIP:IN: TransportMgr initialized
+[1729546008.926341][8814:8814] CHIP:SVR: Retrieving value from server storage.
+[1729546008.927212][8814:8814] CHIP:SVR: Retrieved value from server storage.
+[1729546008.927312][8814:8814] CHIP:SVR: Retrieving value from server storage.
+[1729546008.928068][8814:8814] CHIP:SVR: Retrieved value from server storage.
+[1729546008.928174][8814:8814] CHIP:SVR: Stored value in server storage
+[1729546008.934234][8814:8814] CHIP:DL: Wrote settings to /tmp/chip_kvs
+[1729546008.934403][8814:8814] CHIP:SVR: Stored value in server storage
+[1729546008.941876][8814:8814] CHIP:DL: Wrote settings to /tmp/chip_kvs
+[1729546008.942508][8814:8814] CHIP:ZCL: Using ZAP configuration...
+[1729546008.943395][8814:8814] CHIP:DMG: Failed to read stored attribute (0, 0x0000_0028, 0x0000_0005: src/platform/Linux/KeyValueStoreManagerImpl.cpp:53: CHIP Error 0x000000A0: Value not found in the persisted storage
+[1729546008.943742][8814:8814] CHIP:DMG: Failed to read stored attribute (0, 0x0000_0028, 0x0000_0010: src/platform/Linux/KeyValueStoreManagerImpl.cpp:53: CHIP Error 0x000000A0: Value not found in the persisted storage
+[1729546008.944126][8814:8814] CHIP:DMG: Failed to read stored attribute (0, 0x0000_002B, 0x0000_0000: src/platform/Linux/KeyValueStoreManagerImpl.cpp:53: CHIP Error 0x000000A0: Value not found in the persisted storage
+[1729546008.944433][8814:8814] CHIP:DMG: Failed to read stored attribute (0, 0x0000_002C, 0x0000_0000: src/platform/Linux/KeyValueStoreManagerImpl.cpp:53: CHIP Error 0x000000A0: Value not found in the persisted storage
+[1729546008.944680][8814:8814] CHIP:DMG: Failed to read stored attribute (0, 0x0000_002C, 0x0000_0001: src/platform/Linux/KeyValueStoreManagerImpl.cpp:53: CHIP Error 0x000000A0: Value not found in the persisted storage
+[1729546008.945349][8814:8814] CHIP:DMG: Failed to read stored attribute (0, 0x0000_002D, 0x0000_0000: src/platform/Linux/KeyValueStoreManagerImpl.cpp:53: CHIP Error 0x000000A0: Value not found in the persisted storage
+[1729546008.946041][8814:8814] CHIP:DMG: Failed to read stored attribute (2, 0x0000_0008, 0x0000_0000: src/platform/Linux/KeyValueStoreManagerImpl.cpp:53: CHIP Error 0x000000A0: Value not found in the persisted storage
+[1729546008.946326][8814:8814] CHIP:DMG: Failed to read stored attribute (2, 0x0000_0008, 0x0000_4000: src/platform/Linux/KeyValueStoreManagerImpl.cpp:53: CHIP Error 0x000000A0: Value not found in the persisted storage
+[1729546008.946449][8814:8814] CHIP:DMG: AccessControlCluster: initializing
+[1729546008.946480][8814:8814] CHIP:IM: Duplicate attribute override registration failed
+[1729546008.946502][8814:8814] CHIP:IM: Duplicate attribute override registration failed
+[1729546008.946525][8814:8814] CHIP:ZCL: Initiating Admin Commissioning cluster.
+[1729546008.946543][8814:8814] CHIP:IM: Duplicate attribute override registration failed
+[1729546008.946562][8814:8814] CHIP:IM: Duplicate attribute override registration failed
+[1729546008.946582][8814:8814] CHIP:IM: Duplicate attribute override registration failed
+[1729546008.946601][8814:8814] CHIP:IM: Duplicate attribute override registration failed
+[1729546008.946620][8814:8814] CHIP:IM: Duplicate attribute override registration failed
+[1729546008.946639][8814:8814] CHIP:IM: Duplicate attribute override registration failed
+[1729546008.946658][8814:8814] CHIP:IM: Duplicate attribute override registration failed
+[1729546008.946678][8814:8814] CHIP:IM: Duplicate attribute override registration failed
+[1729546008.946697][8814:8814] CHIP:IM: Duplicate attribute override registration failed
+[1729546008.946716][8814:8814] CHIP:IM: Duplicate attribute override registration failed
+[1729546008.946736][8814:8814] CHIP:IM: Duplicate attribute override registration failed
+[1729546008.946779][8814:8814] CHIP:IM: Duplicate attribute override registration failed
+[1729546008.946807][8814:8814] CHIP:IM: Duplicate attribute override registration failed
+[1729546008.947071][8814:8814] CHIP:ZCL: GeneralDiagnostics: OnDeviceReboot
+[1729546008.947142][8814:8814] CHIP:DMG: Endpoint 0, Cluster 0x0000_0033 update version to 292ff18d
+[1729546008.947426][8814:8814] CHIP:EVL: LogEvent event number: 0x0000000000000002 priority: 2, endpoint id:  0x0 cluster id: 0x0000_0033 event id: 0x3 Epoch timestamp: 0x00000192B0F9B973
+[1729546008.947505][8814:8814] CHIP:IM: Duplicate attribute override registration failed
+[1729546008.947528][8814:8814] CHIP:IM: Duplicate attribute override registration failed
+[1729546008.947549][8814:8814] CHIP:IM: Duplicate attribute override registration failed
+[1729546008.947568][8814:8814] CHIP:IM: Duplicate attribute override registration failed
+[1729546008.947586][8814:8814] CHIP:IM: Duplicate attribute override registration failed
+[1729546008.947605][8814:8814] CHIP:IM: Duplicate attribute override registration failed
+[1729546008.947628][8814:8814] CHIP:IM: Duplicate attribute override registration failed
+[1729546008.947657][8814:8814] CHIP:IM: Duplicate attribute override registration failed
+[1729546008.947680][8814:8814] CHIP:IM: Duplicate command handler registration failed
+[1729546008.947701][8814:8814] CHIP:IM: Duplicate attribute override registration failed
+[1729546008.947720][8814:8814] CHIP:IM: Duplicate attribute override registration failed
+[1729546008.947740][8814:8814] CHIP:IM: Duplicate attribute override registration failed
+[1729546008.947761][8814:8814] CHIP:IM: Duplicate attribute override registration failed
+[1729546008.947781][8814:8814] CHIP:IM: Duplicate attribute override registration failed
+[1729546008.947801][8814:8814] CHIP:IM: Duplicate attribute override registration failed
+[1729546008.947927][8814:8814] CHIP:ZCL: TV Linux App: Messages::SetDefaultDelegate
+[1729546008.947988][8814:8814] CHIP:ZCL: TV Linux App: WakeOnLanManager::SetDefaultDelegate
+[1729546008.948012][8814:8814] CHIP:ZCL: TV Linux App: Channel::SetDefaultDelegate
+[1729546008.948077][8814:8814] CHIP:ZCL: TV Linux App: TargetNavigator::SetDefaultDelegate
+[1729546008.948103][8814:8814] CHIP:ZCL: TV Linux App: MediaPlayback::SetDefaultDelegate
+[1729546008.948124][8814:8814] CHIP:ZCL: TV Linux App: MediaInput::SetDefaultDelegate
+[1729546008.948144][8814:8814] CHIP:ZCL: TV Linux App: LowPower::SetDefaultDelegate
+[1729546008.948166][8814:8814] CHIP:ZCL: TV Linux App: KeypadInput::SetDefaultDelegate
+[1729546008.948188][8814:8814] CHIP:ZCL: TV Linux App: ContentLauncher::SetDefaultDelegate
+[1729546008.948212][8814:8814] CHIP:ZCL: TV Linux App: AudioOutput::SetDefaultDelegate
+[1729546008.948234][8814:8814] CHIP:ZCL: TV Linux App: ApplicationLauncher::SetDefaultDelegate
+[1729546008.948257][8814:8814] CHIP:ZCL: TV Linux App: ContentControlManager::SetDefaultDelegate
+[1729546008.948364][8814:8814] CHIP:ZCL: TV Linux App: Channel::SetDefaultDelegate
+[1729546008.948412][8814:8814] CHIP:ZCL: TV Linux App: TargetNavigator::SetDefaultDelegate
+[1729546008.948434][8814:8814] CHIP:ZCL: TV Linux App: MediaPlayback::SetDefaultDelegate
+[1729546008.948455][8814:8814] CHIP:ZCL: TV Linux App: KeypadInput::SetDefaultDelegate
+[1729546008.948478][8814:8814] CHIP:ZCL: TV Linux App: ContentLauncher::SetDefaultDelegate
+[1729546008.948498][8814:8814] CHIP:ZCL: TV Linux App: ApplicationLauncher::SetDefaultDelegate
+[1729546008.948522][8814:8814] CHIP:ZCL: TV Linux App: ApplicationBasic::SetDefaultDelegate
+[1729546008.948544][8814:8814] CHIP:ZCL: TV Linux App: AccountLogin::SetDefaultDelegate
+[1729546008.948568][8814:8814] CHIP:ZCL: TV Linux App: ContentControlManager::SetDefaultDelegate
+[1729546008.948692][8814:8814] CHIP:IM: WARNING ┌────────────────────────────────────────────────────
+[1729546008.948739][8814:8814] CHIP:IM: WARNING │ Interaction Model Engine running in 'Checked' mode.
+[1729546008.948758][8814:8814] CHIP:IM: WARNING │ This executes BOTH ember and data-model code paths.
+[1729546008.948775][8814:8814] CHIP:IM: WARNING │ which is inefficient and consumes more flash space.
+[1729546008.948792][8814:8814] CHIP:IM: WARNING │ This should be done for testing only.
+[1729546008.948809][8814:8814] CHIP:IM: WARNING └────────────────────────────────────────────────────
+[1729546008.948856][8814:8814] CHIP:CTL: System State Initialized...
+[1729546008.953403][8814:8814] CHIP:FP: Validating NOC chain
+[1729546009.014195][8814:8814] CHIP:FP: NOC chain validation successful
+[1729546009.014528][8814:8814] CHIP:FP: Added new fabric at index: 0x1
+[1729546009.014590][8814:8814] CHIP:FP: Assigned compressed fabric ID: 0x19E5733C93E9E334, node ID: 0xFFFFFFEFFFFFFFFF
+[1729546009.014626][8814:8814] CHIP:TS: Last Known Good Time: 2023-10-14T01:16:48
+[1729546009.014651][8814:8814] CHIP:TS: New proposed Last Known Good Time: 2021-01-01T00:00:00
+[1729546009.014672][8814:8814] CHIP:TS: Retaining current Last Known Good Time
+[1729546009.014786][8814:8814] CHIP:SVR: Retrieving value from server storage.
+[1729546009.015128][8814:8814] CHIP:DMG: Endpoint 0, Cluster 0x0000_003E update version to c3a02c0c
+[1729546009.015195][8814:8814] CHIP:DMG: Endpoint 0, Cluster 0x0000_003E update version to c3a02c0d
+[1729546009.020376][8814:8814] CHIP:DL: Wrote settings to /tmp/chip_kvs
+[1729546009.027946][8814:8814] CHIP:DL: Wrote settings to /tmp/chip_kvs
+[1729546009.028096][8814:8814] CHIP:FP: Metadata for Fabric 0x1 persisted to storage.
+[1729546009.035597][8814:8814] CHIP:DL: Wrote settings to /tmp/chip_kvs
+[1729546009.043294][8814:8814] CHIP:DL: Wrote settings to /tmp/chip_kvs
+[1729546009.050629][8814:8814] CHIP:DL: Wrote settings to /tmp/chip_kvs
+[1729546009.050845][8814:8814] CHIP:TS: Committing Last Known Good Time to storage: 2023-10-14T01:16:48
+[1729546009.058478][8814:8814] CHIP:DL: Wrote settings to /tmp/chip_kvs
+[1729546009.066216][8814:8814] CHIP:DL: Wrote settings to /tmp/chip_kvs
+[1729546009.066377][8814:8814] CHIP:ZCL: OpCreds: Fabric index 0x1 was committed to storage. Compressed Fabric Id 0x19E5733C93E9E334, FabricId 0000000000000001, NodeId FFFFFFEFFFFFFFFF, VendorId 0xFFF1
+[1729546009.073573][8814:8814] CHIP:DL: Wrote settings to /tmp/chip_kvs
+[1729546009.073756][8814:8814] CHIP:CTL: Joined the fabric at index 1. Fabric ID is 0x0000000000000001 (Compressed Fabric ID: 19E5733C93E9E334)
+[1729546009.073806][8814:8814] CHIP:CTL: *** Missing DeviceAttestationVerifier configuration at DeviceCommissioner init: using global default, consider passing one in CommissionerInitParams.
+[1729546009.073870][8814:8814] CHIP:IN: UDP::Init bind&listen port=5650
+[1729546009.074113][8814:8814] CHIP:IN: UDP::Init bound to port=5650
+[1729546009.074173][8814:8814] CHIP:IN: UDP::Init bind&listen port=5650
+[1729546009.074276][8814:8814] CHIP:IN: UDP::Init bound to port=5650
+[1729546009.074313][8814:8814] CHIP:IN: TransportMgr initialized
+[1729546009.074442][8814:8814] CHIP:SPT: Setting up group data for Fabric Index 1 with Compressed Fabric ID:
+[1729546009.074488][8814:8814] CHIP:SPT: 0x19, 0xe5, 0x73, 0x3c, 0x93, 0xe9, 0xe3, 0x34, 
+[1729546009.074564][8814:8814] CHIP:SVR: Retrieving value from server storage.
+[1729546009.075680][8814:8814] CHIP:SVR: Stored value in server storage
+[1729546009.080949][8814:8814] CHIP:DL: Wrote settings to /tmp/chip_kvs
+[1729546009.081080][8814:8814] CHIP:SVR: Retrieving value from server storage.
+[1729546009.081588][8814:8814] CHIP:SVR: Stored value in server storage
+[1729546009.088471][8814:8814] CHIP:DL: Wrote settings to /tmp/chip_kvs
+[1729546009.088688][8814:8814] CHIP:SVR: Stored value in server storage
+[1729546009.095847][8814:8814] CHIP:DL: Wrote settings to /tmp/chip_kvs
+[1729546009.096658][8814:8814] CHIP:DL: Using WiFi MAC for hostname
+[1729546009.096740][8814:8814] CHIP:DIS: Advertise operational node 19E5733C93E9E334-FFFFFFEFFFFFFFFF
+[1729546009.096935][8814:8814] CHIP:DIS: Responding with _matter._tcp.local
+[1729546009.096989][8814:8814] CHIP:DIS: Responding with 19E5733C93E9E334-FFFFFFEFFFFFFFFF._matter._tcp.local
+[1729546009.097033][8814:8814] CHIP:DIS: Responding with 19E5733C93E9E334-FFFFFFEFFFFFFFFF._matter._tcp.local
+[1729546009.097089][8814:8814] CHIP:DIS: Responding with D83ADD0E2E01.local
+[1729546009.097118][8814:8814] CHIP:DIS: Responding with D83ADD0E2E01.local
+[1729546009.097177][8814:8814] CHIP:DIS: Responding with _I19E5733C93E9E334._sub._matter._tcp.local
+[1729546009.097216][8814:8814] CHIP:DIS: CHIP minimal mDNS configured as 'Operational device'; instance name: 19E5733C93E9E334-FFFFFFEFFFFFFFFF.
+[1729546009.109694][8814:8814] CHIP:DIS: mDNS service published: _matter._tcp
+[1729546009.109792][8814:8814] CHIP:SPT: InitCommissioner nodeId=0xFFFFFFEFFFFFFFFF fabric.fabricId=0x0000000000000000 fabricIndex=0x1
+[1729546009.109923][8814:8814] CHIP:SVR: Started commissioner
+[1729546009.109994][8814:8814] CHIP:ZCL: TV Linux App: ApplicationInit()
+[1729546009.110040][8814:8814] CHIP:DL: TV Linux App: Warning - Fixed Content App Endpoint Not Disabled
+[1729546009.110061][8814:8814] CHIP:DL: ContentAppFactoryImpl: InstallContentApp vendorId=65521 productId=32769 
+[1729546009.110226][8814:8814] CHIP:DL: ApplicationBasic[65521]: Application Name="exampleString"
+[1729546009.110951][8814:8814] CHIP:DL: Retrieving node id for key: 65521:32769
+[1729546009.111017][8814:8814] CHIP:DL: Didn't find node id
+[1729546009.111050][8814:8814] CHIP:DL: ContentAppFactoryImpl: LoadContentAppByAppId catalogVendorId=65521 applicationId=65521 
+[1729546009.111076][8814:8814] CHIP:DL:  Looking next=65521 
+[1729546009.111105][8814:8814] CHIP:DL: Adding ContentApp with appid 65521 
+[1729546009.111535][8814:8814] CHIP:ZCL: TV Linux App: ApplicationBasic::SetDefaultDelegate
+[1729546009.111585][8814:8814] CHIP:ZCL: TV Linux App: KeypadInput::SetDefaultDelegate
+[1729546009.111607][8814:8814] CHIP:ZCL: TV Linux App: ApplicationLauncher::SetDefaultDelegate
+[1729546009.111627][8814:8814] CHIP:ZCL: TV Linux App: AccountLogin::SetDefaultDelegate
+[1729546009.111649][8814:8814] CHIP:ZCL: TV Linux App: ContentLauncher::SetDefaultDelegate
+[1729546009.111669][8814:8814] CHIP:ZCL: TV Linux App: MediaPlayback::SetDefaultDelegate
+[1729546009.111690][8814:8814] CHIP:ZCL: TV Linux App: TargetNavigator::SetDefaultDelegate
+[1729546009.111711][8814:8814] CHIP:ZCL: TV Linux App: Channel::SetDefaultDelegate
+[1729546009.111750][8814:8814] CHIP:DMG: Endpoint 0, Cluster 0x0000_001D update version to ee73b136
+[1729546009.111777][8814:8814] CHIP:DL: Added ContentApp 65521 to dynamic endpoint 4 (index=0)
+[1729546009.111869][8814:8814] CHIP:DL: ContentAppFactoryImpl: InstallContentApp vendorId=1 productId=11 
+[1729546009.112105][8814:8814] CHIP:DL: ApplicationBasic[1]: Application Name="exampleid"
+[1729546009.112772][8814:8814] CHIP:DL: Retrieving node id for key: 1:11
+[1729546009.112833][8814:8814] CHIP:DL: Didn't find node id
+[1729546009.112941][8814:8814] CHIP:DL: ContentAppFactoryImpl: LoadContentAppByAppId catalogVendorId=65521 applicationId=1 
+[1729546009.112973][8814:8814] CHIP:DL:  Looking next=65521 
+[1729546009.112998][8814:8814] CHIP:DL:  Looking next=1 
+[1729546009.113023][8814:8814] CHIP:DL: Adding ContentApp with appid 1 
+[1729546009.113439][8814:8814] CHIP:ZCL: TV Linux App: ApplicationBasic::SetDefaultDelegate
+[1729546009.113477][8814:8814] CHIP:ZCL: TV Linux App: KeypadInput::SetDefaultDelegate
+[1729546009.113500][8814:8814] CHIP:ZCL: TV Linux App: ApplicationLauncher::SetDefaultDelegate
+[1729546009.113520][8814:8814] CHIP:ZCL: TV Linux App: AccountLogin::SetDefaultDelegate
+[1729546009.113540][8814:8814] CHIP:ZCL: TV Linux App: ContentLauncher::SetDefaultDelegate
+[1729546009.113561][8814:8814] CHIP:ZCL: TV Linux App: MediaPlayback::SetDefaultDelegate
+[1729546009.113582][8814:8814] CHIP:ZCL: TV Linux App: TargetNavigator::SetDefaultDelegate
+[1729546009.113602][8814:8814] CHIP:ZCL: TV Linux App: Channel::SetDefaultDelegate
+[1729546009.113638][8814:8814] CHIP:DMG: Endpoint 0, Cluster 0x0000_001D update version to ee73b137
+[1729546009.113665][8814:8814] CHIP:DL: Added ContentApp 1 to dynamic endpoint 5 (index=1)
+[1729546009.113744][8814:8814] CHIP:DL: ContentAppFactoryImpl: InstallContentApp vendorId=9050 productId=22 
+[1729546009.113964][8814:8814] CHIP:DL: ApplicationBasic[9050]: Application Name="App3"
+[1729546009.114558][8814:8814] CHIP:DL: Retrieving node id for key: 9050:22
+[1729546009.114623][8814:8814] CHIP:DL: Didn't find node id
+[1729546009.114711][8814:8814] CHIP:DL: ContentAppFactoryImpl: LoadContentAppByAppId catalogVendorId=65521 applicationId=9050 
+[1729546009.114746][8814:8814] CHIP:DL:  Looking next=65521 
+[1729546009.114771][8814:8814] CHIP:DL:  Looking next=1 
+[1729546009.114791][8814:8814] CHIP:DL:  Looking next=9050 
+[1729546009.114817][8814:8814] CHIP:DL: Adding ContentApp with appid 9050 
+[1729546009.115514][8814:8814] CHIP:ZCL: TV Linux App: ApplicationBasic::SetDefaultDelegate
+[1729546009.115563][8814:8814] CHIP:ZCL: TV Linux App: KeypadInput::SetDefaultDelegate
+[1729546009.115620][8814:8814] CHIP:ZCL: TV Linux App: ApplicationLauncher::SetDefaultDelegate
+[1729546009.115640][8814:8814] CHIP:ZCL: TV Linux App: AccountLogin::SetDefaultDelegate
+[1729546009.115660][8814:8814] CHIP:ZCL: TV Linux App: ContentLauncher::SetDefaultDelegate
+[1729546009.115681][8814:8814] CHIP:ZCL: TV Linux App: MediaPlayback::SetDefaultDelegate
+[1729546009.115701][8814:8814] CHIP:ZCL: TV Linux App: TargetNavigator::SetDefaultDelegate
+[1729546009.115720][8814:8814] CHIP:ZCL: TV Linux App: Channel::SetDefaultDelegate
+[1729546009.115756][8814:8814] CHIP:DMG: Endpoint 0, Cluster 0x0000_001D update version to ee73b138
+[1729546009.115782][8814:8814] CHIP:DL: Added ContentApp 9050 to dynamic endpoint 6 (index=2)
+[1729546009.115867][8814:8814] CHIP:DL: ContentAppFactoryImpl: InstallContentApp vendorId=1111 productId=22 
+[1729546009.116040][8814:8814] CHIP:DL: ApplicationBasic[1111]: Application Name="applicationId"
+[1729546009.116663][8814:8814] CHIP:DL: Retrieving node id for key: 1111:22
+[1729546009.116709][8814:8814] CHIP:DL: Didn't find node id
+[1729546009.116799][8814:8814] CHIP:DL: ContentAppFactoryImpl: LoadContentAppByAppId catalogVendorId=65521 applicationId=1111 
+[1729546009.116827][8814:8814] CHIP:DL:  Looking next=65521 
+[1729546009.116850][8814:8814] CHIP:DL:  Looking next=1 
+[1729546009.116870][8814:8814] CHIP:DL:  Looking next=9050 
+[1729546009.116937][8814:8814] CHIP:DL:  Looking next=1111 
+[1729546009.116962][8814:8814] CHIP:DL: Adding ContentApp with appid 1111 
+[1729546009.117391][8814:8814] CHIP:ZCL: TV Linux App: ApplicationBasic::SetDefaultDelegate
+[1729546009.117460][8814:8814] CHIP:ZCL: TV Linux App: KeypadInput::SetDefaultDelegate
+[1729546009.117482][8814:8814] CHIP:ZCL: TV Linux App: ApplicationLauncher::SetDefaultDelegate
+[1729546009.117504][8814:8814] CHIP:ZCL: TV Linux App: AccountLogin::SetDefaultDelegate
+[1729546009.117524][8814:8814] CHIP:ZCL: TV Linux App: ContentLauncher::SetDefaultDelegate
+[1729546009.117544][8814:8814] CHIP:ZCL: TV Linux App: MediaPlayback::SetDefaultDelegate
+[1729546009.117564][8814:8814] CHIP:ZCL: TV Linux App: TargetNavigator::SetDefaultDelegate
+[1729546009.117585][8814:8814] CHIP:ZCL: TV Linux App: Channel::SetDefaultDelegate
+[1729546009.117622][8814:8814] CHIP:DMG: Endpoint 0, Cluster 0x0000_001D update version to ee73b139
+[1729546009.117650][8814:8814] CHIP:DL: Added ContentApp 1111 to dynamic endpoint 7 (index=3)
+[1729546009.164317][8814:8816] CHIP:DL: CREATE service object at /chipoble/226e/service
+[1729546009.166361][8814:8816] CHIP:DL: Create characteristic object at /chipoble/226e/service/c1
+[1729546009.167964][8814:8816] CHIP:DL: Create characteristic object at /chipoble/226e/service/c2
+[1729546009.169351][8814:8816] CHIP:DL: CHIP BTP C1 /chipoble/226e/service
+[1729546009.169597][8814:8816] CHIP:DL: CHIP BTP C2 /chipoble/226e/service
+[1729546009.169636][8814:8816] CHIP:DL: CHIP_ENABLE_ADDITIONAL_DATA_ADVERTISING is TRUE
+[1729546009.169684][8814:8816] CHIP:DL: Create characteristic object at /chipoble/226e/service/c3
+[1729546009.171209][8814:8816] CHIP:DL: CHIP BTP C3 /chipoble/226e/service
+[1729546009.172780][8814:8814] CHIP:DL: HandlePlatformSpecificBLEEvent 32786
+[1729546009.173383][8814:8814] CHIP:DIS: Updating services using commissioning mode 1
+[1729546009.179522][8814:8814] CHIP:DIS: CHIP minimal mDNS started advertising.
+[1729546009.212263][8814:8816] CHIP:DL: GATT application registered successfully
+[1729546009.217138][8814:8814] CHIP:DL: Using WiFi MAC for hostname
+[1729546009.217249][8814:8814] CHIP:DIS: Advertise operational node 19E5733C93E9E334-FFFFFFEFFFFFFFFF
+[1729546009.217403][8814:8814] CHIP:DIS: Responding with _matter._tcp.local
+[1729546009.217476][8814:8814] CHIP:DIS: Responding with 19E5733C93E9E334-FFFFFFEFFFFFFFFF._matter._tcp.local
+[1729546009.217522][8814:8814] CHIP:DIS: Responding with 19E5733C93E9E334-FFFFFFEFFFFFFFFF._matter._tcp.local
+[1729546009.217549][8814:8814] CHIP:DIS: Responding with D83ADD0E2E01.local
+[1729546009.217576][8814:8814] CHIP:DIS: Responding with D83ADD0E2E01.local
+[1729546009.217622][8814:8814] CHIP:DIS: Responding with _I19E5733C93E9E334._sub._matter._tcp.local
+[1729546009.217645][8814:8814] CHIP:DIS: CHIP minimal mDNS configured as 'Operational device'; instance name: 19E5733C93E9E334-FFFFFFEFFFFFFFFF.
+[1729546009.225851][8814:8814] CHIP:DIS: mDNS service published: _matter._tcp
+[1729546009.226784][8814:8814] CHIP:DL: Using WiFi MAC for hostname
+[1729546009.227227][8814:8814] CHIP:DIS: Advertise commission parameter vendorID=65521 productID=32769 discriminator=3840/15 cm=1 cp=0
+[1729546009.227341][8814:8814] CHIP:DIS: Responding with _matterc._udp.local
+[1729546009.227382][8814:8814] CHIP:DIS: Responding with 816FD2C903CAF5AA._matterc._udp.local
+[1729546009.227411][8814:8814] CHIP:DIS: Responding with D83ADD0E2E01.local
+[1729546009.227437][8814:8814] CHIP:DIS: Responding with D83ADD0E2E01.local
+[1729546009.227476][8814:8814] CHIP:DIS: Responding with _V65521._sub._matterc._udp.local
+[1729546009.227514][8814:8814] CHIP:DIS: Responding with _T35._sub._matterc._udp.local
+[1729546009.227549][8814:8814] CHIP:DIS: Responding with _S15._sub._matterc._udp.local
+[1729546009.227611][8814:8814] CHIP:DIS: Responding with _L3840._sub._matterc._udp.local
+[1729546009.227659][8814:8814] CHIP:DIS: Responding with _CM._sub._matterc._udp.local
+[1729546009.227723][8814:8814] CHIP:DIS: Responding with 816FD2C903CAF5AA._matterc._udp.local
+[1729546009.227746][8814:8814] CHIP:DIS: CHIP minimal mDNS configured as 'Commissionable node device'; instance name: 816FD2C903CAF5AA.
+[1729546009.237220][8814:8814] CHIP:DIS: mDNS service published: _matterc._udp
+[1729546009.237789][8814:8814] CHIP:DL: Using WiFi MAC for hostname
+[1729546009.238171][8814:8814] CHIP:DIS: Advertise commission parameter vendorID=65521 productID=32769 discriminator=0000/00 cm=0 cp=1
+[1729546009.238294][8814:8814] CHIP:DIS: Responding with _matterd._udp.local
+[1729546009.238335][8814:8814] CHIP:DIS: Responding with 816FD2C903CAF5AA._matterd._udp.local
+[1729546009.238374][8814:8814] CHIP:DIS: Responding with D83ADD0E2E01.local
+[1729546009.238402][8814:8814] CHIP:DIS: Responding with D83ADD0E2E01.local
+[1729546009.238460][8814:8814] CHIP:DIS: Responding with _V65521._sub._matterd._udp.local
+[1729546009.238514][8814:8814] CHIP:DIS: Responding with _T35._sub._matterd._udp.local
+[1729546009.238570][8814:8814] CHIP:DIS: Responding with 816FD2C903CAF5AA._matterd._udp.local
+[1729546009.238593][8814:8814] CHIP:DIS: CHIP minimal mDNS configured as 'Commissioner device'; instance name: 816FD2C903CAF5AA.
+[1729546009.249699][8814:8814] CHIP:DIS: mDNS service published: _matterd._udp
+[1729546009.249825][8814:8814] CHIP:DL: HandlePlatformSpecificBLEEvent 32790
+[1729546009.249873][8814:8814] CHIP:DL: HandlePlatformSpecificBLEEvent 16394
+[1729546009.250237][8814:8816] CHIP:DL: Create BLE adv object at /chipoble/226e/advertising
+[1729546009.253534][8814:8814] CHIP:DL: SET service data to {'0xFFF6': <[byte 0x00, 0x00, 0x0f, 0xf1, 0xff, 0x01, 0x80, 0x01]>}
+[1729546009.257390][8814:8814] CHIP:DIS: SRV record already actively processed.
+[1729546009.267529][8814:8814] CHIP:DIS: SRV record already actively processed.
+[1729546009.272930][8814:8816] CHIP:DL: BLE advertisement started successfully
+[1729546009.276920][8814:8814] CHIP:DL: HandlePlatformSpecificBLEEvent 16395
+[1729546009.283652][8814:8814] CHIP:DIS: SRV record already actively processed.
+[1729546016.969073][8814:8816] CHIP:DL: New BLE connection: conn=0x5080000102a0 device=50:D4:5C:82:B2:C8 path=/org/bluez/hci0/dev_50_D4_5C_82_B2_C8
+[1729546018.108629][8814:8816] CHIP:DL: Received BluezCharacteristicReadValue
+[1729546019.341115][8814:8816] CHIP:DL: BLE connection closed: conn=0x5080000102a0
+[1729546019.342040][8814:8814] CHIP:BLE: No endpoint for connection error

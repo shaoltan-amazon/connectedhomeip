@@ -23,6 +23,7 @@ import tempfile
 import time
 from dataclasses import dataclass
 from typing import List, Optional
+import pdb # SHAO remove when done
 
 import click
 from linux.log_line_processing import ProcessOutputCapture
@@ -130,22 +131,55 @@ def parse_output_msg_in_subprocess(
         else processes.tv_app
     )
 
+    # SHAO added
+    other_app_subprocess = (
+        processes.tv_app
+        if test_sequence_step.app == App.TV_CASTING_APP
+        else processes.tv_casting)
+    #
+
+    # app_subprocess.done = False # SHAO mod
+    
+
     start_wait_time = time.time()
     msg_block = []
 
+    # with app_subprocess.lock: # SHAO added
     current_index = 0
     while current_index < len(test_sequence_step.output_msg):
+        logging.info(f"SHAO current_index: {current_index}, len(test_sequence_step.output_msg): {len(test_sequence_step.output_msg)}")
+        logging.info(f"SHAO output_lines Queue size: {app_subprocess.output_lines.qsize()}")
         # Check if we exceeded the maximum wait time to parse for the output string(s).
         max_wait_time = start_wait_time + test_sequence_step.timeout_sec - time.time()
+        logging.info(f"SHAO max_wait_time: {max_wait_time}") # SHAO added
+
+        # SHAO debug
+        if processes.tv_casting and processes.tv_app:
+            # SHAO check the queue size of tv-casting-app and tv-app
+            logging.info(f"SHAO tv-casting-app queue size: {processes.tv_casting.output_lines.qsize()}")
+            logging.info(f"SHAO tv-app queue size: {processes.tv_app.output_lines.qsize()}")
+            #
+
         if max_wait_time < 0:
+            # logging.info("SHAO TIMEOUT!!!!!!")
+            # pdb.set_trace()
             raise TestStepException(
                 f"{test_sequence_name} - Did not find the expected output string(s) in the {test_sequence_step.app.value} subprocess within the timeout: {test_sequence_step.output_msg}",
                 test_sequence_name,
                 test_sequence_step,
             )
+
+
+        
+
+        logging.info(f"SHAO before next_output_line max_wait_time: {max_wait_time} - app: {test_sequence_step.app}") # SHAO added
+        pdb.set_trace()
         output_line = app_subprocess.next_output_line(max_wait_time)
+        pdb.set_trace()
+        logging.info(f"SHAO after next_output_line max_wait_time: {max_wait_time} - app: {test_sequence_step.app}") # SHAO added
 
         if output_line:
+            logging.info(f"SHAO there's output_line: {output_line}")
             if test_sequence_step.output_msg[current_index] in output_line:
                 msg_block.append(output_line.rstrip("\n"))
                 current_index += 1
@@ -170,8 +204,17 @@ def parse_output_msg_in_subprocess(
                 for line in msg_block:
                     logging.info(f"{test_sequence_name} - {line}")
 
+                # app_subprocess.should_continue = False # SHAO added
+                # app_subprocess.done = True # SHAO mod
                 # successful completion
                 return
+
+        # else:
+        #     if other_app_subprocess and not other_app_subprocess.output_lines.empty():
+        #         output_line = app_subprocess.next_output_line(max_wait_time)
+
+
+    # app_subprocess.done = True # SHAO added
 
     raise TestStepException("Unexpected exit", test_sequence_name, test_sequence_step)
 
@@ -195,6 +238,9 @@ def send_input_cmd_to_subprocess(
         if test_sequence_step.app == App.TV_CASTING_APP
         else processes.tv_app
     )
+    # app_subprocess.should_continue = True # SHAO added
+    # app_subprocess.done = False # SHAO mod
+
     app_name = test_sequence_step.app.value
 
     input_cmd = test_sequence_step.input_cmd
@@ -204,6 +250,8 @@ def send_input_cmd_to_subprocess(
     logging.info(
         f"{test_sequence_name} - Sent `{input_cmd}` to the {app_name} subprocess."
     )
+    # app_subprocess.should_continue = False # SHAO added
+    # app_subprocess.done = True # SHAO mod
 
 
 def handle_input_cmd(
@@ -225,7 +273,7 @@ def handle_input_cmd(
 
     send_input_cmd_to_subprocess(processes, test_sequence_name, test_sequence_step)
 
-
+# SHAO OG
 def run_test_sequence_steps(
     current_index: int,
     test_sequence_name: str,
@@ -257,7 +305,7 @@ def run_test_sequence_steps(
 
         current_index += 1
 
-
+# # SHAO OG
 def cmd_execute_list(app_path):
     """Returns the list suitable to pass to a ProcessOutputCapture/subprocess.run for execution."""
     cmd = []
@@ -274,6 +322,46 @@ def cmd_execute_list(app_path):
     cmd.append("json:log")
 
     return cmd
+####
+
+# def cmd_execute_list(app_path):
+#     """Returns the list suitable to pass to a ProcessOutputCapture/subprocess.run for execution."""
+#     cmd = []
+
+#     # On Unix-like systems, use stdbuf to disable stdout buffering.
+#     # Configure command options to disable stdout buffering during tests.
+#     if sys.platform == "darwin" or sys.platform == "linux":
+#         # cmd = ["stdbuf", "-oL", "-eL"] # SHAO initial
+#         # cmd = ["stdbuf", "-o0", "i0", "-e0"] # SHAO flush frequently
+#         cmd = ["stdbuf", "-o0", "e0"] # SHAO flush frequently
+
+#     cmd.append(app_path)
+
+#     # Our applications support better debugging logs. Enable them
+#     cmd.append("--trace-to")
+#     cmd.append("json:log")
+
+#     return cmd
+
+# def cmd_execute_list(app_path, tee_path=None):
+#     """Returns the list suitable to pass to a ProcessOutputCapture/subprocess.run for execution."""
+#     cmd = []
+
+#     # On Unix-like systems, use stdbuf to disable stdout buffering.
+#     # Configure command options to disable stdout buffering during tests.
+#     if sys.platform == "darwin" or sys.platform == "linux":
+#         cmd = ["stdbuf", "-o0", "-i0"]
+
+#     cmd.append(app_path)
+
+#     # Our applications support better debugging logs. Enable them
+#     cmd.append("--trace-to")
+#     cmd.append("json:log")
+
+#     if tee_path:
+#         cmd = ["sh", "-c", f"{' '.join(cmd)} | tee {tee_path}"]
+
+#     return cmd
 
 
 @click.command()
@@ -326,6 +414,16 @@ def test_casting_fn(
 
     # Store the log files to a temporary directory.
     with tempfile.TemporaryDirectory() as temp_dir:
+
+
+        ### 
+        # SHAO remove when done
+        ###
+        print(f"Temp directory: {temp_dir}")
+        ###
+
+
+
         if log_directory:
             linux_tv_app_log_path = os.path.join(log_directory, LINUX_TV_APP_LOGS)
             linux_tv_casting_app_log_path = os.path.join(
@@ -372,7 +470,8 @@ def test_casting_fn(
         tv_app_abs_path = os.path.abspath(tv_app_rel_path)
         # Run the Linux tv-app subprocess.
         with ProcessOutputCapture(
-            cmd_execute_list(tv_app_abs_path), linux_tv_app_log_path
+            cmd_execute_list(tv_app_abs_path), linux_tv_app_log_path # SHAO OG
+            # cmd_execute_list(tv_app_abs_path, "tee-tv-app-1.txt"), linux_tv_app_log_path # SHAO added
         ) as tv_app_process:
             # Verify that the tv-app is up and running.
             parse_output_msg_in_subprocess(
@@ -395,7 +494,8 @@ def test_casting_fn(
             tv_casting_app_abs_path = os.path.abspath(tv_casting_app_rel_path)
             # Run the Linux tv-casting-app subprocess.
             with ProcessOutputCapture(
-                cmd_execute_list(tv_casting_app_abs_path), linux_tv_casting_app_log_path
+                cmd_execute_list(tv_casting_app_abs_path), linux_tv_casting_app_log_path # SHAO OG
+                # cmd_execute_list(tv_casting_app_abs_path, "tee-tv-casting-app-1.txt"), linux_tv_casting_app_log_path # SHAO added
             ) as tv_casting_app_process:
                 processes = RunningProcesses(
                     tv_casting=tv_casting_app_process, tv_app=tv_app_process

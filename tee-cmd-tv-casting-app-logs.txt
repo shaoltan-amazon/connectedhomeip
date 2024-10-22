@@ -1,0 +1,238 @@
+[1729120761.909055][6639:6639] CHIP:SVR: chip_casting_simplified = 1
+[1729120761.986429][6639:6639] CHIP:DIS: InitCommissionableDataProvider()
+[1729120761.987661][6639:6639] CHIP:SPT: InitCommissionableDataProvider() *** WARNING: Using temporary passcode 20202021 due to no neither --passcode or --spake2p-verifier-base64 given on command line. This is temporary and will be deprecated. Please update your scripts to explicitly configure onboarding credentials. ***
+[1729120761.987864][6639:6639] CHIP:SPT: InitCommissionableDataProvider() *** WARNING: PASE PBKDF iterations set to the minimum allowable: 1000. Increase for production use to enhance security. ***
+[1729120761.987990][6639:6639] CHIP:SPT: LinuxCommissionableDataProvider didn't get a PASE salt, generating one.
+[1729120762.094519][6639:6639] CHIP:DIS: CastingApp::Initialize() called
+[1729120762.098391][6639:6639] CHIP:DL: ChipLinuxStorage::Init: Using KVS config file: /tmp/chip_casting_kvs
+[1729120762.104040][6639:6639] CHIP:DL: Wrote settings to /tmp/chip_casting_kvs
+[1729120762.106701][6639:6639] CHIP:DL: ChipLinuxStorage::Init: Using KVS config file: /tmp/chip_factory.ini
+[1729120762.110066][6639:6639] CHIP:DL: ChipLinuxStorage::Init: Using KVS config file: /tmp/chip_config.ini
+[1729120762.117647][6639:6639] CHIP:DL: ChipLinuxStorage::Init: Using KVS config file: /tmp/chip_counters.ini
+[1729120762.129212][6639:6639] CHIP:DL: Wrote settings to /tmp/chip_counters.ini
+[1729120762.133346][6639:6639] CHIP:DL: NVS set: chip-counters/reboot-count = 2 (0x2)
+[1729120762.138504][6639:6639] CHIP:DL: Got Ethernet interface: eth0
+[1729120762.139796][6639:6639] CHIP:DL: Found the primary Ethernet interface:eth0
+[1729120762.141043][6639:6639] CHIP:DL: Got WiFi interface: wlan0
+[1729120762.153807][6639:6639] CHIP:DL: Found the primary WiFi interface:wlan0
+[1729120762.156256][6639:6639] CHIP:DL: ChipLinuxStorage::Init: Attempt to re-initialize with KVS config file: /tmp/chip_casting_kvs
+[1729120762.156328][6639:6639] CHIP:DIS: CastingApp::Start()
+[1729120762.156399][6639:6639] CHIP:SVR: Initializing subscription resumption storage...
+[1729120762.168390][6639:6639] CHIP:DL: Wrote settings to /tmp/chip_casting_kvs
+[1729120762.168596][6639:6639] CHIP:SVR: Server initializing...
+[1729120762.168762][6639:6639] CHIP:FP: Initializing FabricTable from persistent storage
+[1729120762.169116][6639:6639] CHIP:TS: Last Known Good Time: [unknown]
+[1729120762.169184][6639:6639] CHIP:TS: Setting Last Known Good Time to firmware build time 2023-10-14T01:16:48
+[1729120762.183161][6639:6639] CHIP:DL: Wrote settings to /tmp/chip_casting_kvs
+[1729120762.183627][6639:6639] CHIP:DMG: AccessControl: initializing
+[1729120762.183674][6639:6639] CHIP:DMG: Examples::AccessControlDelegate::Init
+[1729120762.184268][6639:6639] CHIP:DMG: AccessControl: setting
+[1729120762.184330][6639:6639] CHIP:DMG: DefaultAclStorage: initializing
+[1729120762.184350][6639:6639] CHIP:DMG: DefaultAclStorage: 0 entries loaded
+[1729120762.184407][6639:6639] CHIP:SVR: WARNING: mTestEventTriggerDelegate is null
+[1729120762.184498][6639:6639] CHIP:IN: UDP::Init bind&listen port=5540
+[1729120762.184688][6639:6639] CHIP:IN: UDP::Init bound to port=5540
+[1729120762.184756][6639:6639] CHIP:IN: UDP::Init bind&listen port=5540
+[1729120762.184865][6639:6639] CHIP:IN: UDP::Init bound to port=5540
+[1729120762.185000][6639:6639] CHIP:IN: BLEBase::Init - setting/overriding transport
+[1729120762.185225][6639:6639] CHIP:IN: TransportMgr initialized
+[1729120762.210127][6639:6639] CHIP:DL: Wrote settings to /tmp/chip_casting_kvs
+[1729120762.220153][6639:6639] CHIP:DL: Wrote settings to /tmp/chip_casting_kvs
+[1729120762.247269][6639:6639] CHIP:DL: Wrote settings to /tmp/chip_casting_kvs
+[1729120762.251498][6639:6639] CHIP:ZCL: Using ZAP configuration...
+[1729120762.253395][6639:6639] CHIP:DMG: Failed to read stored attribute (0, 0x0000_0028, 0x0000_0005: src/platform/Linux/KeyValueStoreManagerImpl.cpp:53: CHIP Error 0x000000A0: Value not found in the persisted storage
+[1729120762.254022][6639:6639] CHIP:DMG: Failed to read stored attribute (0, 0x0000_0028, 0x0000_0010: src/platform/Linux/KeyValueStoreManagerImpl.cpp:53: CHIP Error 0x000000A0: Value not found in the persisted storage
+[1729120762.254190][6639:6639] CHIP:DMG: Failed to read stored attribute (0, 0x0000_002B, 0x0000_0000: src/platform/Linux/KeyValueStoreManagerImpl.cpp:53: CHIP Error 0x000000A0: Value not found in the persisted storage
+[1729120762.254301][6639:6639] CHIP:DMG: Failed to read stored attribute (0, 0x0000_002C, 0x0000_0000: src/platform/Linux/KeyValueStoreManagerImpl.cpp:53: CHIP Error 0x000000A0: Value not found in the persisted storage
+[1729120762.254406][6639:6639] CHIP:DMG: Failed to read stored attribute (0, 0x0000_002C, 0x0000_0001: src/platform/Linux/KeyValueStoreManagerImpl.cpp:53: CHIP Error 0x000000A0: Value not found in the persisted storage
+[1729120762.254523][6639:6639] CHIP:DMG: Failed to read stored attribute (0, 0x0000_002D, 0x0000_0000: src/platform/Linux/KeyValueStoreManagerImpl.cpp:53: CHIP Error 0x000000A0: Value not found in the persisted storage
+[1729120762.254622][6639:6639] CHIP:DMG: AccessControlCluster: initializing
+[1729120762.254654][6639:6639] CHIP:ZCL: Initiating Admin Commissioning cluster.
+[1729120762.254996][6639:6639] CHIP:ZCL: GeneralDiagnostics: OnDeviceReboot
+[1729120762.255047][6639:6639] CHIP:DMG: Endpoint 0, Cluster 0x0000_0033 update version to b88e0191
+[1729120762.255856][6639:6639] CHIP:EVL: LogEvent event number: 0x0000000000000000 priority: 2, endpoint id:  0x0 cluster id: 0x0000_0033 event id: 0x3 Epoch timestamp: 0x0000019297A0F98F
+[1729120762.256071][6639:6639] CHIP:ZCL: DeviceInfoProvider is not registered
+[1729120762.256163][6639:6639] CHIP:DMG: Endpoint 1, Cluster 0x0000_0004 update version to 616e8e39
+[1729120762.256200][6639:6639] CHIP:ZCL: AttributeChangeCallback cluster: 0x0000_0004 attribute:0x0000_0000
+[1729120762.256244][6639:6639] CHIP:DMG: Endpoint 1, Cluster 0x0000_0004 update version to 616e8e3a
+[1729120762.256268][6639:6639] CHIP:ZCL: AttributeChangeCallback cluster: 0x0000_0004 attribute:0x0000_FFFC
+[1729120762.256292][6639:6639] CHIP:ZCL: TV Casting Linux App: ContentAppObserverManager::SetDefaultDelegate
+[1729120762.256363][6639:6639] CHIP:DIS: Updating services using commissioning mode 0
+[1729120762.261803][6639:6639] CHIP:DIS: CHIP minimal mDNS started advertising.
+[1729120762.273134][6639:6639] CHIP:IN: CASE Server enabling CASE session setups
+[1729120762.274611][6639:6639] CHIP:IN: SecureSession[0x5120000025c0]: Allocated Type:2 LSID:55897
+[1729120762.275264][6639:6639] CHIP:SC: Allocated SecureSession (0x5120000025c0) - waiting for Sigma1 msg
+[1729120762.275568][6639:6639] CHIP:IM: WARNING ┌────────────────────────────────────────────────────
+[1729120762.275629][6639:6639] CHIP:IM: WARNING │ Interaction Model Engine running in 'Checked' mode.
+[1729120762.275649][6639:6639] CHIP:IM: WARNING │ This executes BOTH ember and data-model code paths.
+[1729120762.275667][6639:6639] CHIP:IM: WARNING │ which is inefficient and consumes more flash space.
+[1729120762.275685][6639:6639] CHIP:IM: WARNING │ This should be done for testing only.
+[1729120762.275704][6639:6639] CHIP:IM: WARNING └────────────────────────────────────────────────────
+[1729120762.275811][6639:6639] CHIP:SVR: Joining Multicast groups
+[1729120762.275946][6639:6639] CHIP:IN: UDP::Init bind&listen port=5560
+[1729120762.276246][6639:6639] CHIP:IN: UDP::Init bound to port=5560
+[1729120762.276348][6639:6639] CHIP:IN: UDP::Init bind&listen port=5560
+[1729120762.276490][6639:6639] CHIP:IN: UDP::Init bound to port=5560
+[1729120762.276526][6639:6639] CHIP:IN: TransportMgr initialized
+[1729120762.276592][6639:6639] CHIP:ZCL: Emitting StartUp event
+[1729120762.277596][6639:6639] CHIP:EVL: LogEvent event number: 0x0000000000000001 priority: 2, endpoint id:  0x0 cluster id: 0x0000_0028 event id: 0x0 Epoch timestamp: 0x0000019297A0F9A4
+[1729120762.278079][6639:6639] CHIP:SVR: Server initialization complete
+[1729120762.278828][6639:6639] CHIP:SVR: Server Listening...
+[1729120762.279288][6639:6639] CHIP:DIS: CastingApp::PostStartRegistrations()
+[1729120762.280091][6639:6639] CHIP:SVR: Cannot load binding table: src/platform/Linux/KeyValueStoreManagerImpl.cpp:53: CHIP Error 0x000000A0: Value not found in the persisted storage
+[1729120762.280532][6639:6639] CHIP:DIS: CastingApp::PostStartRegistrations() calling GetUserDirectedCommissioningClient()->SetCommissionerDeclarationHandler()
+[1729120762.280598][6639:6639] CHIP:SVR: UserDirectedCommissioningClient::SetCommissionerDeclarationHandler()
+[1729120762.280638][6639:6639] CHIP:SVR: CastingPlayer::GetTargetCastingPlayer() The shared pointer observed by mTargetCastingPlayer has expired (become nullptr)
+[1729120762.282493][6639:6639] CHIP:DIS: CastingPlayerDiscovery::SetDelegate() called
+[1729120762.282649][6639:6639] CHIP:DIS: CastingPlayerDiscovery::StartDiscovery() called
+> [1729120762.286770][6639:6639] CHIP:DL: HandlePlatformSpecificBLEEvent 32786
+[1729120762.287469][6639:6639] CHIP:SVR: ChipDeviceEventHandler::Handle() called
+[1729120762.287753][6639:6639] CHIP:DIS: Updating services using commissioning mode 0
+[1729120762.294631][6639:6639] CHIP:DIS: CHIP minimal mDNS started advertising.
+[1729120762.303371][6639:6639] CHIP:DL: HandlePlatformSpecificBLEEvent 32790
+[1729120762.303750][6639:6639] CHIP:SVR: ChipDeviceEventHandler::Handle() called
+[1729120762.312691][6639:6639] CHIP:IM: No subscriptions to resume
+[1729120763.295759][6639:6639] CHIP:DIS: DeviceDiscoveryDelegateImpl::OnDiscoveredDevice() called
+[1729120763.298620][6639:6639] CHIP:SVR: DiscoveryDelegateImpl::HandleOnAdded()
+[1729120763.298710][6639:6639] CHIP:SVR: ---- Awaiting user input ----
+[1729120763.298734][6639:6639] CHIP:SVR: Select a discovered Casting Player (start index = 0) to request commissioning.
+[1729120763.298760][6639:6639] CHIP:SVR: Include the commissioner-generated-passcode flag to attempt the Commissioner-Generated passcode commissioning flow.
+[1729120763.298784][6639:6639] CHIP:SVR: Example 1 Commissionee Passcode:     cast request 0
+[1729120763.298831][6639:6639] CHIP:SVR: Example 2 Commissioner Passcode:     cast request 0 commissioner-generated-passcode
+[1729120763.298858][6639:6639] CHIP:SVR: ---- Awaiting user input ----
+[1729120763.298881][6639:6639] CHIP:SVR: Discovered CastingPlayer #0
+[1729120763.298947][6639:6639] CHIP:SVR: CastingPlayer::LogDetail()
+[1729120763.298975][6639:6639] CHIP:SVR: 	ID: D83ADD0E2E015650
+[1729120763.299020][6639:6639] CHIP:SVR: 	Device Name: Test TV
+[1729120763.299053][6639:6639] CHIP:SVR: 	Host Name: D83ADD0E2E01
+[1729120763.299076][6639:6639] CHIP:SVR: 	Instance Name: DD871E162B1EA2AE
+[1729120763.299099][6639:6639] CHIP:SVR: 	Number of IPs: 4
+[1729120763.299147][6639:6639] CHIP:SVR: 	IP Address #1: fe80::7b72:3e0e:7a9c:858d
+[1729120763.299175][6639:6639] CHIP:SVR: 	IP Address #2: fda3:d689:bbe4:1:bfd0:d053:6743:3360
+[1729120763.299202][6639:6639] CHIP:SVR: 	IP Address #3: fda3:d689:bbe4:1:4d08:f47b:1144:2057
+[1729120763.299234][6639:6639] CHIP:SVR: 	IP Address #4: 192.168.5.40
+[1729120763.299260][6639:6639] CHIP:SVR: 	Port: 5650
+[1729120763.299285][6639:6639] CHIP:SVR: 	Product ID: 32769
+[1729120763.299310][6639:6639] CHIP:SVR: 	Vendor ID: 65521
+[1729120763.299333][6639:6639] CHIP:SVR: 	Device Type: 35
+[1729120763.299357][6639:6639] CHIP:SVR: 	Supports Commissioner Generated Passcode: true
+[1729120765.294163][6639:6639] CHIP:DIS: DeviceDiscoveryDelegateImpl::OnDiscoveredDevice() called
+[1729120765.295408][6639:6639] CHIP:SVR: Updated Casting Player
+[1729120765.295540][6639:6639] CHIP:SVR: DiscoveryDelegateImpl::HandleOnUpdated() Updated CastingPlayer with ID: D83ADD0E2E015650
+cast request 0 commissioner-generated-passcode
+[1729120765.299155][6639:6639] CHIP:SVR: CommandHandler() request
+[1729120765.299432][6639:6639] CHIP:SVR: CommandHandler() request 0 commissioner-generated-passcode. Attempting the Commissioner-Generated Passcode commissioning flow
+[1729120765.299464][6639:6639] CHIP:SVR: IdentificationDeclarationOptions::addTargetAppInfo()
+[1729120765.299583][6639:6639] CHIP:SVR: CastingPlayer::VerifyOrEstablishConnection() called
+[1729120765.299741][6639:6639] CHIP:SVR: CastingStore::ReadAll() called
+[1729120765.300224][6639:6639] CHIP:SVR: CastingStore::ReadAll() KeyValueStoreMgr.Get failed src/platform/Linux/KeyValueStoreManagerImpl.cpp:53: CHIP Error 0x000000A0: Value not found in the persisted storage
+[1729120765.300441][6639:6639] CHIP:DIS: CastingPlayerDiscovery::ClearDisconnectedCastingPlayersInternal() mCastingPlayersInternal: 0
+[1729120765.300477][6639:6639] CHIP:SVR: CastingPlayer::VerifyOrEstablishConnection() Setting CommissionerDeclarationCallback in CommissionerDeclarationHandler
+[1729120765.300498][6639:6639] CHIP:SVR: CommissionerDeclarationHandler::SetCommissionerDeclarationCallback()
+[1729120765.300522][6639:6639] CHIP:SVR: CastingPlayer::VerifyOrEstablishConnection() verifying User Directed Commissioning (UDC) state
+[1729120765.300541][6639:6639] CHIP:SVR: IdentificationDeclarationOptions::LogDetail() - cpp
+[1729120765.300559][6639:6639] CHIP:SVR: IdentificationDeclarationOptions::mNoPasscode:                false
+[1729120765.300577][6639:6639] CHIP:SVR: IdentificationDeclarationOptions::mCdUponPasscodeDialog:      false
+[1729120765.300596][6639:6639] CHIP:SVR: IdentificationDeclarationOptions::mCommissionerPasscode:      true
+[1729120765.300615][6639:6639] CHIP:SVR: IdentificationDeclarationOptions::mCommissionerPasscodeReady: false
+[1729120765.300633][6639:6639] CHIP:SVR: IdentificationDeclarationOptions::mCancelPasscode:            false
+[1729120765.300651][6639:6639] CHIP:SVR: IdentificationDeclarationOptions::mCommissioneeInstanceName:  
+[1729120765.300669][6639:6639] CHIP:SVR: IdentificationDeclarationOptions::TargetAppInfos list:
+[1729120765.300688][6639:6639] CHIP:SVR: 		TargetAppInfo 1, Vendor ID: 1111, Product ID: 0
+[1729120765.300710][6639:6639] CHIP:SVR: CastingPlayer::VerifyOrEstablishConnection() calling OpenBasicCommissioningWindow()
+[1729120765.301849][6639:6639] CHIP:IN: SecureSession[0x512000004e40]: Allocated Type:1 LSID:55898
+[1729120765.302254][6639:6639] CHIP:SC: Assigned local session key ID 55898
+[1729120765.302311][6639:6639] CHIP:SC: Waiting for PBKDF param request
+[1729120765.308610][6639:6639] CHIP:DL: Wrote settings to /tmp/chip_counters.ini
+[1729120765.309659][6639:6639] CHIP:DL: NVS set: chip-counters/life-count = 2 (0x2)
+[1729120765.310255][6639:6639] CHIP:DIS: Updating services using commissioning mode 1
+[1729120765.322185][6639:6639] CHIP:DIS: CHIP minimal mDNS started advertising.
+[1729120765.332650][6639:6639] CHIP:DL: Using WiFi MAC for hostname
+[1729120765.333297][6639:6639] CHIP:DIS: Advertise commission parameter vendorID=65521 productID=32769 discriminator=0000/00 cm=1 cp=0
+[1729120765.333521][6639:6639] CHIP:DIS: Responding with _matterc._udp.local
+[1729120765.333567][6639:6639] CHIP:DIS: Responding with 0A0B0151D8773FC3._matterc._udp.local
+[1729120765.333628][6639:6639] CHIP:DIS: Responding with D83ADD0E2E010000.local
+[1729120765.333660][6639:6639] CHIP:DIS: Responding with D83ADD0E2E010000.local
+[1729120765.333722][6639:6639] CHIP:DIS: Responding with _V65521._sub._matterc._udp.local
+[1729120765.333780][6639:6639] CHIP:DIS: Responding with _T41._sub._matterc._udp.local
+[1729120765.333850][6639:6639] CHIP:DIS: Responding with _S0._sub._matterc._udp.local
+[1729120765.333886][6639:6639] CHIP:DIS: Responding with _L0._sub._matterc._udp.local
+[1729120765.333961][6639:6639] CHIP:DIS: Responding with _CM._sub._matterc._udp.local
+[1729120765.334036][6639:6639] CHIP:DIS: Responding with 0A0B0151D8773FC3._matterc._udp.local
+[1729120765.334065][6639:6639] CHIP:DIS: CHIP minimal mDNS configured as 'Commissionable node device'; instance name: 0A0B0151D8773FC3.
+[1729120765.355675][6639:6639] CHIP:DIS: mDNS service published: _matterc._udp
+[1729120765.355806][6639:6639] CHIP:SVR: CastingPlayer::VerifyOrEstablishConnection() calling SendUserDirectedCommissioningRequest()
+[1729120765.355835][6639:6639] CHIP:SVR: CastingPlayer::SendUserDirectedCommissioningRequest()
+[1729120765.355860][6639:6639] CHIP:SVR: Found IPv4 address at index: 3 - prioritizing use of IPv4
+[1729120765.355879][6639:6639] CHIP:SVR: IdentificationDeclarationOptions::buildIdentificationDeclarationMessage()
+[1729120765.356073][6639:6639] CHIP:SVR: IdentificationDeclarationOptions::buildIdentificationDeclarationMessage() generating InstanceName
+[1729120765.356121][6639:6639] CHIP:SVR: IdentificationDeclarationOptions::buildIdentificationDeclarationMessage() InstanceName set to: 0A0B0151D8773FC3
+[1729120765.356141][6639:6639] CHIP:SVR: IdentificationDeclarationOptions::LogDetail() - cpp
+[1729120765.356162][6639:6639] CHIP:SVR: IdentificationDeclarationOptions::mNoPasscode:                false
+[1729120765.356180][6639:6639] CHIP:SVR: IdentificationDeclarationOptions::mCdUponPasscodeDialog:      false
+[1729120765.356199][6639:6639] CHIP:SVR: IdentificationDeclarationOptions::mCommissionerPasscode:      true
+[1729120765.356218][6639:6639] CHIP:SVR: IdentificationDeclarationOptions::mCommissionerPasscodeReady: false
+[1729120765.356237][6639:6639] CHIP:SVR: IdentificationDeclarationOptions::mCancelPasscode:            false
+[1729120765.356255][6639:6639] CHIP:SVR: IdentificationDeclarationOptions::mCommissioneeInstanceName:  0A0B0151D8773FC3
+[1729120765.356273][6639:6639] CHIP:SVR: IdentificationDeclarationOptions::TargetAppInfos list:
+[1729120765.356292][6639:6639] CHIP:SVR: 		TargetAppInfo 1, Vendor ID: 1111, Product ID: 0
+[1729120765.356330][6639:6639] CHIP:SVR: ChipDeviceEventHandler::SetUdcStatus() called with udcInProgress: 1
+[1729120765.356383][6639:6639] CHIP:SVR: Server::SendUserDirectedCommissioningRequest()
+[1729120765.357710][6639:6639] CHIP:SVR: ---- Identification Declaration Start ----
+[1729120765.358177][6639:6639] CHIP:SVR: 	instance: 0A0B0151D8773FC3
+[1729120765.358384][6639:6639] CHIP:SVR: 	device Name: Test TV casting app
+[1729120765.358582][6639:6639] CHIP:SVR: 	vendor id: 65521
+[1729120765.358767][6639:6639] CHIP:SVR: 	product id: 32769
+[1729120765.359023][6639:6639] CHIP:SVR: 	cd port: 5560
+[1729120765.359065][6639:6639] CHIP:SVR: 	rotating id: 0200C70A2B28209C4F681DDAA6AA7A96F756
+[1729120765.359122][6639:6639] CHIP:SVR: 	app vendor id / product id [0]: 1111/0
+[1729120765.359143][6639:6639] CHIP:SVR: 	commissioner passcode: true
+[1729120765.359162][6639:6639] CHIP:SVR: ---- Identification Declaration End ----
+[1729120765.359180][6639:6639] CHIP:IN: Sending UDC msg
+[1729120765.862377][6639:6639] CHIP:IN: UDC msg sent
+[1729120765.862604][6639:6639] CHIP:SVR: Server::SendUserDirectedCommissioningRequest() Send UDC request success
+[1729120765.862638][6639:6639] CHIP:SVR: CastingPlayer::SendUserDirectedCommissioningRequest() complete
+[1729120765.862690][6639:6639] CHIP:SVR: CommandHandler() request, VerifyOrEstablishConnection() called, calling StopDiscovery()
+[1729120765.862716][6639:6639] CHIP:DIS: CastingPlayerDiscovery::StopDiscovery() mCastingPlayers: 1, mCastingPlayersInternal: 0
+Done
+> [1729120765.862963][6639:6639] CHIP:DL: Long dispatch time: 563 ms, for event type 2
+[1729120765.942352][6639:6643] CHIP:DL: CREATE service object at /chipoble/19ef/service
+[1729120765.945218][6639:6643] CHIP:DL: Create characteristic object at /chipoble/19ef/service/c1
+[1729120765.947001][6639:6643] CHIP:DL: Create characteristic object at /chipoble/19ef/service/c2
+[1729120765.953270][6639:6643] CHIP:DL: CHIP BTP C1 /chipoble/19ef/service
+[1729120765.955252][6639:6643] CHIP:DL: CHIP BTP C2 /chipoble/19ef/service
+[1729120765.956668][6639:6643] CHIP:DL: CHIP_ENABLE_ADDITIONAL_DATA_ADVERTISING is TRUE
+[1729120765.957064][6639:6643] CHIP:DL: Create characteristic object at /chipoble/19ef/service/c3
+[1729120765.960115][6639:6643] CHIP:DL: CHIP BTP C3 /chipoble/19ef/service
+[1729120765.965189][6639:6639] CHIP:DL: Long dispatch time: 102 ms, for event type 3
+[1729120766.022086][6639:6643] CHIP:DL: GATT application registered successfully
+[1729120766.023632][6639:6639] CHIP:DL: HandlePlatformSpecificBLEEvent 16394
+[1729120766.026522][6639:6643] CHIP:DL: Create BLE adv object at /chipoble/19ef/advertising
+[1729120766.030720][6639:6639] CHIP:DL: SET service data to {'': <[byte 0x00, 0x00, 0x00, 0xf1, 0xff, 0x01, 0x80, 0x01]>}
+[1729120766.064206][6639:6643] CHIP:DL: FAIL: RegisterAdvertisement: GDBus.Error:org.bluez.Error.Failed: Failed to parse advertisement.
+[1729120766.065325][6639:6639] CHIP:DL: HandlePlatformSpecificBLEEvent 16395
+[1729120766.065412][6639:6639] CHIP:DL: Disabling CHIPoBLE service due to error: src/platform/Linux/bluez/BluezObjectManager.cpp:312: CHIP Error 0x000000AC: Internal error
+[1729120766.088940][6639:6639] CHIP:SVR: UserDirectedCommissioningClient::OnMessageReceived() from UDP:192.168.5.40%wlan0:5650
+[1729120766.089053][6639:6639] CHIP:SVR: UserDirectedCommissioningClient::OnMessageReceived() CommissionerDeclaration DataLength() = 17
+[1729120766.089213][6639:6639] CHIP:SVR: UDC TLV parse complete
+[1729120766.089240][6639:6639] CHIP:SVR: ---- Commissioner Declaration Start ----
+[1729120766.089260][6639:6639] CHIP:SVR: 	commissioner passcode: true
+[1729120766.089279][6639:6639] CHIP:SVR: 	QR code displayed: true
+[1729120766.089298][6639:6639] CHIP:SVR: ---- Commissioner Declaration End ----
+[1729120766.089319][6639:6639] CHIP:SVR: CommissionerDeclarationHandler::OnCommissionerDeclarationMessage()
+[1729120766.089339][6639:6639] CHIP:SVR: CommissionerDeclarationHandler::OnCommissionerDeclarationMessage(), calling CloseCommissioningWindow()
+[1729120766.089361][6639:6639] CHIP:SVR: Closing pairing window
+[1729120766.092032][6639:6639] CHIP:IN: SecureSession[0x512000004e40]: Released - Type:1 LSID:55898
+[1729120766.092141][6639:6639] CHIP:DIS: Updating services using commissioning mode 0
+[1729120766.107042][6639:6639] CHIP:DIS: CHIP minimal mDNS started advertising.
+[1729120766.144280][6639:6639] CHIP:SVR: ChipDeviceEventHandler::SetUdcStatus() called with udcInProgress: 0
+[1729120766.144443][6639:6639] CHIP:SVR: simple-app-helper.cpp::CommissionerDeclarationCallback() called with CommissionerDeclaration message:
+[1729120766.144467][6639:6639] CHIP:SVR: ---- Commissioner Declaration Start ----
+[1729120766.144487][6639:6639] CHIP:SVR: 	commissioner passcode: true
+[1729120766.144506][6639:6639] CHIP:SVR: 	QR code displayed: true
+[1729120766.144528][6639:6639] CHIP:SVR: ---- Commissioner Declaration End ----
+[1729120766.144547][6639:6639] CHIP:SVR: ---- Awaiting user input ----
+[1729120766.144566][6639:6639] CHIP:SVR: Input the Commissioner-Generated passcode displayed on the CastingPlayer UX.
+[1729120766.144586][6639:6639] CHIP:SVR: Input 12345678 to use the default passcode.
+[1729120766.144604][6639:6639] CHIP:SVR: Example:     cast setcommissionerpasscode 12345678
+[1729120766.144622][6639:6639] CHIP:SVR: ---- Awaiting user input ----
