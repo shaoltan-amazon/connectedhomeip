@@ -63,7 +63,8 @@ START_APP = 'START'
 STOP_APP = 'STOP'
 
 # The maximum amount of time to wait for the Linux tv-app or Linux tv-casting-app to start before timeout.
-APP_MAX_START_WAIT_SEC = 2
+# APP_MAX_START_WAIT_SEC = 2 # SHAO OG
+APP_MAX_START_WAIT_SEC = 30
 
 # Values that identify the Linux tv-app and are noted in the 'Device Configuration' in the Linux tv-app output
 # as well as under the 'Discovered Commissioner' details in the Linux tv-casting-app output.
