@@ -549,17 +549,23 @@ public class ChipClusters {
 {%- set encodable = attribute.definition | asEncodable(typeLookup) -%}
 {%- set encodable2 = attribute.definition | asEncodable(typeLookup) -%}
 {%- set encodable3 = attribute.definition | asEncodable(typeLookup) -%}
+{%- set encodable_value_type = encode_value_without_optional_nullable(cluster, encodable2, 0) -%}
+
 {%- if not attribute.requires_timed_write %}
-    public void write{{attribute.definition.name | upfirst}}Attribute(DefaultClusterCallback callback, {{encode_value_without_optional_nullable(cluster, encodable, 0)}} value) {
+    public void write{{attribute.definition.name | upfirst}}Attribute(DefaultClusterCallback callback, {{encodable_value_type}} value) {
       write{{attribute.definition.name | upfirst}}Attribute(callback, value, 0);
     }
 {% endif %}
-    public void write{{attribute.definition.name | upfirst}}Attribute(DefaultClusterCallback callback, {{encode_value_without_optional_nullable(cluster, encodable2, 0)}} value, int timedWriteTimeoutMs) {
+    public static BaseTLVType create{{attribute.definition.name | upfirst}}AttributeValue({{encodable_value_type}} value) {
       {%- if encodable3.is_optional %}
-      BaseTLVType tlvValue = {{encode_tlv(cluster, encodable3.without_optional(), "value", 0)}};
+      return {{encode_tlv(cluster, encodable3.without_optional(), "value", 0)}};
       {%- else %}
-      BaseTLVType tlvValue = {{encode_tlv(cluster, encodable3, "value", 0)}};
+      return {{encode_tlv(cluster, encodable3, "value", 0)}};
       {%- endif %}
+    }
+
+    public void write{{attribute.definition.name | upfirst}}Attribute(DefaultClusterCallback callback, {{encodable_value_type}} value, int timedWriteTimeoutMs) {
+      BaseTLVType tlvValue = create{{attribute.definition.name | upfirst}}AttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), {{attribute.definition.name | constcase}}_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 {% endif %}

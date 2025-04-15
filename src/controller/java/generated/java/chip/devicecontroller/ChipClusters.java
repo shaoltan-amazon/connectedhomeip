@@ -403,8 +403,12 @@ public class ChipClusters {
       writeIdentifyTimeAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createIdentifyTimeAttributeValue(Integer value) {
+      return new UIntType(value);
+    }
+
     public void writeIdentifyTimeAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new UIntType(value);
+      BaseTLVType tlvValue = createIdentifyTimeAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), IDENTIFY_TIME_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -1329,8 +1333,12 @@ public class ChipClusters {
       writeOnTimeAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createOnTimeAttributeValue(Integer value) {
+      return new UIntType(value);
+    }
+
     public void writeOnTimeAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new UIntType(value);
+      BaseTLVType tlvValue = createOnTimeAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), ON_TIME_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -1364,8 +1372,12 @@ public class ChipClusters {
       writeOffWaitTimeAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createOffWaitTimeAttributeValue(Integer value) {
+      return new UIntType(value);
+    }
+
     public void writeOffWaitTimeAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new UIntType(value);
+      BaseTLVType tlvValue = createOffWaitTimeAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), OFF_WAIT_TIME_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -1399,8 +1411,12 @@ public class ChipClusters {
       writeStartUpOnOffAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createStartUpOnOffAttributeValue(Integer value) {
+      return value != null ? new UIntType(value) : new NullType();
+    }
+
     public void writeStartUpOnOffAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = value != null ? new UIntType(value) : new NullType();
+      BaseTLVType tlvValue = createStartUpOnOffAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), START_UP_ON_OFF_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -2160,8 +2176,12 @@ public class ChipClusters {
       writeOptionsAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createOptionsAttributeValue(Integer value) {
+      return new UIntType(value);
+    }
+
     public void writeOptionsAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new UIntType(value);
+      BaseTLVType tlvValue = createOptionsAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), OPTIONS_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -2195,8 +2215,12 @@ public class ChipClusters {
       writeOnOffTransitionTimeAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createOnOffTransitionTimeAttributeValue(Integer value) {
+      return new UIntType(value);
+    }
+
     public void writeOnOffTransitionTimeAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new UIntType(value);
+      BaseTLVType tlvValue = createOnOffTransitionTimeAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), ON_OFF_TRANSITION_TIME_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -2230,8 +2254,12 @@ public class ChipClusters {
       writeOnLevelAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createOnLevelAttributeValue(Integer value) {
+      return value != null ? new UIntType(value) : new NullType();
+    }
+
     public void writeOnLevelAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = value != null ? new UIntType(value) : new NullType();
+      BaseTLVType tlvValue = createOnLevelAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), ON_LEVEL_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -2265,8 +2293,12 @@ public class ChipClusters {
       writeOnTransitionTimeAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createOnTransitionTimeAttributeValue(Integer value) {
+      return value != null ? new UIntType(value) : new NullType();
+    }
+
     public void writeOnTransitionTimeAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = value != null ? new UIntType(value) : new NullType();
+      BaseTLVType tlvValue = createOnTransitionTimeAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), ON_TRANSITION_TIME_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -2300,8 +2332,12 @@ public class ChipClusters {
       writeOffTransitionTimeAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createOffTransitionTimeAttributeValue(Integer value) {
+      return value != null ? new UIntType(value) : new NullType();
+    }
+
     public void writeOffTransitionTimeAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = value != null ? new UIntType(value) : new NullType();
+      BaseTLVType tlvValue = createOffTransitionTimeAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), OFF_TRANSITION_TIME_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -2335,8 +2371,12 @@ public class ChipClusters {
       writeDefaultMoveRateAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createDefaultMoveRateAttributeValue(Integer value) {
+      return value != null ? new UIntType(value) : new NullType();
+    }
+
     public void writeDefaultMoveRateAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = value != null ? new UIntType(value) : new NullType();
+      BaseTLVType tlvValue = createDefaultMoveRateAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), DEFAULT_MOVE_RATE_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -2370,8 +2410,12 @@ public class ChipClusters {
       writeStartUpCurrentLevelAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createStartUpCurrentLevelAttributeValue(Integer value) {
+      return value != null ? new UIntType(value) : new NullType();
+    }
+
     public void writeStartUpCurrentLevelAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = value != null ? new UIntType(value) : new NullType();
+      BaseTLVType tlvValue = createStartUpCurrentLevelAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), START_UP_CURRENT_LEVEL_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -3149,8 +3193,12 @@ public class ChipClusters {
       writeBindingAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createBindingAttributeValue(ArrayList<ChipStructs.BindingClusterTargetStruct> value) {
+      return ArrayType.generateArrayType(value, (elementvalue) -> elementvalue.encodeTlv());
+    }
+
     public void writeBindingAttribute(DefaultClusterCallback callback, ArrayList<ChipStructs.BindingClusterTargetStruct> value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = ArrayType.generateArrayType(value, (elementvalue) -> elementvalue.encodeTlv());
+      BaseTLVType tlvValue = createBindingAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), BINDING_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -3444,8 +3492,12 @@ public class ChipClusters {
       writeAclAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createAclAttributeValue(ArrayList<ChipStructs.AccessControlClusterAccessControlEntryStruct> value) {
+      return ArrayType.generateArrayType(value, (elementvalue) -> elementvalue.encodeTlv());
+    }
+
     public void writeAclAttribute(DefaultClusterCallback callback, ArrayList<ChipStructs.AccessControlClusterAccessControlEntryStruct> value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = ArrayType.generateArrayType(value, (elementvalue) -> elementvalue.encodeTlv());
+      BaseTLVType tlvValue = createAclAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), ACL_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -3484,8 +3536,12 @@ public class ChipClusters {
       writeExtensionAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createExtensionAttributeValue(ArrayList<ChipStructs.AccessControlClusterAccessControlExtensionStruct> value) {
+      return ArrayType.generateArrayType(value, (elementvalue) -> elementvalue.encodeTlv());
+    }
+
     public void writeExtensionAttribute(DefaultClusterCallback callback, ArrayList<ChipStructs.AccessControlClusterAccessControlExtensionStruct> value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = ArrayType.generateArrayType(value, (elementvalue) -> elementvalue.encodeTlv());
+      BaseTLVType tlvValue = createExtensionAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), EXTENSION_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -4679,8 +4735,12 @@ public class ChipClusters {
       writeNodeLabelAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createNodeLabelAttributeValue(String value) {
+      return new StringType(value);
+    }
+
     public void writeNodeLabelAttribute(DefaultClusterCallback callback, String value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new StringType(value);
+      BaseTLVType tlvValue = createNodeLabelAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), NODE_LABEL_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -4714,8 +4774,12 @@ public class ChipClusters {
       writeLocationAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createLocationAttributeValue(String value) {
+      return new StringType(value);
+    }
+
     public void writeLocationAttribute(DefaultClusterCallback callback, String value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new StringType(value);
+      BaseTLVType tlvValue = createLocationAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), LOCATION_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -4983,8 +5047,12 @@ public class ChipClusters {
       writeLocalConfigDisabledAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createLocalConfigDisabledAttributeValue(Boolean value) {
+      return new BooleanType(value);
+    }
+
     public void writeLocalConfigDisabledAttribute(DefaultClusterCallback callback, Boolean value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new BooleanType(value);
+      BaseTLVType tlvValue = createLocalConfigDisabledAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), LOCAL_CONFIG_DISABLED_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -5813,8 +5881,12 @@ public class ChipClusters {
       writeDefaultOTAProvidersAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createDefaultOTAProvidersAttributeValue(ArrayList<ChipStructs.OtaSoftwareUpdateRequestorClusterProviderLocation> value) {
+      return ArrayType.generateArrayType(value, (elementvalue) -> elementvalue.encodeTlv());
+    }
+
     public void writeDefaultOTAProvidersAttribute(DefaultClusterCallback callback, ArrayList<ChipStructs.OtaSoftwareUpdateRequestorClusterProviderLocation> value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = ArrayType.generateArrayType(value, (elementvalue) -> elementvalue.encodeTlv());
+      BaseTLVType tlvValue = createDefaultOTAProvidersAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), DEFAULT_OTA_PROVIDERS_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -6125,8 +6197,12 @@ public class ChipClusters {
       writeActiveLocaleAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createActiveLocaleAttributeValue(String value) {
+      return new StringType(value);
+    }
+
     public void writeActiveLocaleAttribute(DefaultClusterCallback callback, String value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new StringType(value);
+      BaseTLVType tlvValue = createActiveLocaleAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), ACTIVE_LOCALE_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -6386,8 +6462,12 @@ public class ChipClusters {
       writeHourFormatAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createHourFormatAttributeValue(Integer value) {
+      return new UIntType(value);
+    }
+
     public void writeHourFormatAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new UIntType(value);
+      BaseTLVType tlvValue = createHourFormatAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), HOUR_FORMAT_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -6421,8 +6501,12 @@ public class ChipClusters {
       writeActiveCalendarTypeAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createActiveCalendarTypeAttributeValue(Integer value) {
+      return new UIntType(value);
+    }
+
     public void writeActiveCalendarTypeAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new UIntType(value);
+      BaseTLVType tlvValue = createActiveCalendarTypeAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), ACTIVE_CALENDAR_TYPE_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -6676,8 +6760,12 @@ public class ChipClusters {
       writeTemperatureUnitAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createTemperatureUnitAttributeValue(Integer value) {
+      return new UIntType(value);
+    }
+
     public void writeTemperatureUnitAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new UIntType(value);
+      BaseTLVType tlvValue = createTemperatureUnitAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), TEMPERATURE_UNIT_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -8440,8 +8528,12 @@ public class ChipClusters {
       writeBreadcrumbAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createBreadcrumbAttributeValue(Long value) {
+      return new UIntType(value);
+    }
+
     public void writeBreadcrumbAttribute(DefaultClusterCallback callback, Long value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new UIntType(value);
+      BaseTLVType tlvValue = createBreadcrumbAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), BREADCRUMB_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -9500,8 +9592,12 @@ public class ChipClusters {
       writeInterfaceEnabledAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createInterfaceEnabledAttributeValue(Boolean value) {
+      return new BooleanType(value);
+    }
+
     public void writeInterfaceEnabledAttribute(DefaultClusterCallback callback, Boolean value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new BooleanType(value);
+      BaseTLVType tlvValue = createInterfaceEnabledAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), INTERFACE_ENABLED_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -14991,8 +15087,12 @@ public class ChipClusters {
       writeNodeLabelAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createNodeLabelAttributeValue(String value) {
+      return new StringType(value);
+    }
+
     public void writeNodeLabelAttribute(DefaultClusterCallback callback, String value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new StringType(value);
+      BaseTLVType tlvValue = createNodeLabelAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), NODE_LABEL_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -17063,8 +17163,12 @@ public class ChipClusters {
       writeGroupKeyMapAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createGroupKeyMapAttributeValue(ArrayList<ChipStructs.GroupKeyManagementClusterGroupKeyMapStruct> value) {
+      return ArrayType.generateArrayType(value, (elementvalue) -> elementvalue.encodeTlv());
+    }
+
     public void writeGroupKeyMapAttribute(DefaultClusterCallback callback, ArrayList<ChipStructs.GroupKeyManagementClusterGroupKeyMapStruct> value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = ArrayType.generateArrayType(value, (elementvalue) -> elementvalue.encodeTlv());
+      BaseTLVType tlvValue = createGroupKeyMapAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), GROUP_KEY_MAP_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -17603,8 +17707,12 @@ public class ChipClusters {
       writeLabelListAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createLabelListAttributeValue(ArrayList<ChipStructs.UserLabelClusterLabelStruct> value) {
+      return ArrayType.generateArrayType(value, (elementvalue) -> elementvalue.encodeTlv());
+    }
+
     public void writeLabelListAttribute(DefaultClusterCallback callback, ArrayList<ChipStructs.UserLabelClusterLabelStruct> value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = ArrayType.generateArrayType(value, (elementvalue) -> elementvalue.encodeTlv());
+      BaseTLVType tlvValue = createLabelListAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), LABEL_LIST_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -20212,8 +20320,12 @@ public class ChipClusters {
       writeStartUpModeAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createStartUpModeAttributeValue(Integer value) {
+      return value != null ? new UIntType(value) : new NullType();
+    }
+
     public void writeStartUpModeAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = value != null ? new UIntType(value) : new NullType();
+      BaseTLVType tlvValue = createStartUpModeAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), START_UP_MODE_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -20247,8 +20359,12 @@ public class ChipClusters {
       writeOnModeAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createOnModeAttributeValue(Integer value) {
+      return value != null ? new UIntType(value) : new NullType();
+    }
+
     public void writeOnModeAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = value != null ? new UIntType(value) : new NullType();
+      BaseTLVType tlvValue = createOnModeAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), ON_MODE_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -20511,8 +20627,12 @@ public class ChipClusters {
       writeSelectedDrynessLevelAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createSelectedDrynessLevelAttributeValue(Integer value) {
+      return value != null ? new UIntType(value) : new NullType();
+    }
+
     public void writeSelectedDrynessLevelAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = value != null ? new UIntType(value) : new NullType();
+      BaseTLVType tlvValue = createSelectedDrynessLevelAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), SELECTED_DRYNESS_LEVEL_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -20890,8 +21010,12 @@ public class ChipClusters {
       writeStartUpModeAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createStartUpModeAttributeValue(Integer value) {
+      return value != null ? new UIntType(value) : new NullType();
+    }
+
     public void writeStartUpModeAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = value != null ? new UIntType(value) : new NullType();
+      BaseTLVType tlvValue = createStartUpModeAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), START_UP_MODE_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -20925,8 +21049,12 @@ public class ChipClusters {
       writeOnModeAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createOnModeAttributeValue(Integer value) {
+      return value != null ? new UIntType(value) : new NullType();
+    }
+
     public void writeOnModeAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = value != null ? new UIntType(value) : new NullType();
+      BaseTLVType tlvValue = createOnModeAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), ON_MODE_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -21267,8 +21395,12 @@ public class ChipClusters {
       writeStartUpModeAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createStartUpModeAttributeValue(Integer value) {
+      return value != null ? new UIntType(value) : new NullType();
+    }
+
     public void writeStartUpModeAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = value != null ? new UIntType(value) : new NullType();
+      BaseTLVType tlvValue = createStartUpModeAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), START_UP_MODE_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -21302,8 +21434,12 @@ public class ChipClusters {
       writeOnModeAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createOnModeAttributeValue(Integer value) {
+      return value != null ? new UIntType(value) : new NullType();
+    }
+
     public void writeOnModeAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = value != null ? new UIntType(value) : new NullType();
+      BaseTLVType tlvValue = createOnModeAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), ON_MODE_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -21644,8 +21780,12 @@ public class ChipClusters {
       writeStartUpModeAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createStartUpModeAttributeValue(Integer value) {
+      return value != null ? new UIntType(value) : new NullType();
+    }
+
     public void writeStartUpModeAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = value != null ? new UIntType(value) : new NullType();
+      BaseTLVType tlvValue = createStartUpModeAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), START_UP_MODE_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -21679,8 +21819,12 @@ public class ChipClusters {
       writeOnModeAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createOnModeAttributeValue(Integer value) {
+      return value != null ? new UIntType(value) : new NullType();
+    }
+
     public void writeOnModeAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = value != null ? new UIntType(value) : new NullType();
+      BaseTLVType tlvValue = createOnModeAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), ON_MODE_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -21949,8 +22093,12 @@ public class ChipClusters {
       writeSpinSpeedCurrentAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createSpinSpeedCurrentAttributeValue(Integer value) {
+      return value != null ? new UIntType(value) : new NullType();
+    }
+
     public void writeSpinSpeedCurrentAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = value != null ? new UIntType(value) : new NullType();
+      BaseTLVType tlvValue = createSpinSpeedCurrentAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), SPIN_SPEED_CURRENT_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -21984,8 +22132,12 @@ public class ChipClusters {
       writeNumberOfRinsesAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createNumberOfRinsesAttributeValue(Integer value) {
+      return new UIntType(value);
+    }
+
     public void writeNumberOfRinsesAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new UIntType(value);
+      BaseTLVType tlvValue = createNumberOfRinsesAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), NUMBER_OF_RINSES_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -23608,8 +23760,12 @@ public class ChipClusters {
       writeStartUpModeAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createStartUpModeAttributeValue(Integer value) {
+      return value != null ? new UIntType(value) : new NullType();
+    }
+
     public void writeStartUpModeAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = value != null ? new UIntType(value) : new NullType();
+      BaseTLVType tlvValue = createStartUpModeAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), START_UP_MODE_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -23643,8 +23799,12 @@ public class ChipClusters {
       writeOnModeAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createOnModeAttributeValue(Integer value) {
+      return value != null ? new UIntType(value) : new NullType();
+    }
+
     public void writeOnModeAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = value != null ? new UIntType(value) : new NullType();
+      BaseTLVType tlvValue = createOnModeAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), ON_MODE_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -24411,8 +24571,12 @@ public class ChipClusters {
       writeSmokeSensitivityLevelAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createSmokeSensitivityLevelAttributeValue(Integer value) {
+      return new UIntType(value);
+    }
+
     public void writeSmokeSensitivityLevelAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new UIntType(value);
+      BaseTLVType tlvValue = createSmokeSensitivityLevelAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), SMOKE_SENSITIVITY_LEVEL_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -27643,8 +27807,12 @@ public class ChipClusters {
       writeLastChangedTimeAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createLastChangedTimeAttributeValue(Long value) {
+      return value != null ? new UIntType(value) : new NullType();
+    }
+
     public void writeLastChangedTimeAttribute(DefaultClusterCallback callback, Long value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = value != null ? new UIntType(value) : new NullType();
+      BaseTLVType tlvValue = createLastChangedTimeAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), LAST_CHANGED_TIME_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -28036,8 +28204,12 @@ public class ChipClusters {
       writeLastChangedTimeAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createLastChangedTimeAttributeValue(Long value) {
+      return value != null ? new UIntType(value) : new NullType();
+    }
+
     public void writeLastChangedTimeAttribute(DefaultClusterCallback callback, Long value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = value != null ? new UIntType(value) : new NullType();
+      BaseTLVType tlvValue = createLastChangedTimeAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), LAST_CHANGED_TIME_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -28348,8 +28520,12 @@ public class ChipClusters {
       writeCurrentSensitivityLevelAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createCurrentSensitivityLevelAttributeValue(Integer value) {
+      return new UIntType(value);
+    }
+
     public void writeCurrentSensitivityLevelAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new UIntType(value);
+      BaseTLVType tlvValue = createCurrentSensitivityLevelAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), CURRENT_SENSITIVITY_LEVEL_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -28877,8 +29053,12 @@ public class ChipClusters {
       writeDefaultOpenDurationAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createDefaultOpenDurationAttributeValue(Long value) {
+      return value != null ? new UIntType(value) : new NullType();
+    }
+
     public void writeDefaultOpenDurationAttribute(DefaultClusterCallback callback, Long value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = value != null ? new UIntType(value) : new NullType();
+      BaseTLVType tlvValue = createDefaultOpenDurationAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), DEFAULT_OPEN_DURATION_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -29068,8 +29248,12 @@ public class ChipClusters {
       writeDefaultOpenLevelAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createDefaultOpenLevelAttributeValue(Integer value) {
+      return new UIntType(value);
+    }
+
     public void writeDefaultOpenLevelAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new UIntType(value);
+      BaseTLVType tlvValue = createDefaultOpenLevelAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), DEFAULT_OPEN_LEVEL_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -31203,8 +31387,12 @@ public class ChipClusters {
       writeDefaultRandomStartAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createDefaultRandomStartAttributeValue(Integer value) {
+      return new UIntType(value);
+    }
+
     public void writeDefaultRandomStartAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new UIntType(value);
+      BaseTLVType tlvValue = createDefaultRandomStartAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), DEFAULT_RANDOM_START_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -31238,8 +31426,12 @@ public class ChipClusters {
       writeDefaultRandomDurationAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createDefaultRandomDurationAttributeValue(Integer value) {
+      return new UIntType(value);
+    }
+
     public void writeDefaultRandomDurationAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new UIntType(value);
+      BaseTLVType tlvValue = createDefaultRandomDurationAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), DEFAULT_RANDOM_DURATION_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -32909,8 +33101,12 @@ public class ChipClusters {
       writeUserMaximumChargeCurrentAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createUserMaximumChargeCurrentAttributeValue(Long value) {
+      return new IntType(value);
+    }
+
     public void writeUserMaximumChargeCurrentAttribute(DefaultClusterCallback callback, Long value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new IntType(value);
+      BaseTLVType tlvValue = createUserMaximumChargeCurrentAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), USER_MAXIMUM_CHARGE_CURRENT_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -32944,8 +33140,12 @@ public class ChipClusters {
       writeRandomizationDelayWindowAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createRandomizationDelayWindowAttributeValue(Long value) {
+      return new UIntType(value);
+    }
+
     public void writeRandomizationDelayWindowAttribute(DefaultClusterCallback callback, Long value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new UIntType(value);
+      BaseTLVType tlvValue = createRandomizationDelayWindowAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), RANDOMIZATION_DELAY_WINDOW_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -33083,8 +33283,12 @@ public class ChipClusters {
       writeApproximateEVEfficiencyAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createApproximateEVEfficiencyAttributeValue(Integer value) {
+      return value != null ? new UIntType(value) : new NullType();
+    }
+
     public void writeApproximateEVEfficiencyAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = value != null ? new UIntType(value) : new NullType();
+      BaseTLVType tlvValue = createApproximateEVEfficiencyAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), APPROXIMATE_EV_EFFICIENCY_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -33536,8 +33740,12 @@ public class ChipClusters {
       writeCurrentEnergyBalanceAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createCurrentEnergyBalanceAttributeValue(Integer value) {
+      return new UIntType(value);
+    }
+
     public void writeCurrentEnergyBalanceAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new UIntType(value);
+      BaseTLVType tlvValue = createCurrentEnergyBalanceAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), CURRENT_ENERGY_BALANCE_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -33623,8 +33831,12 @@ public class ChipClusters {
       writeCurrentLowPowerModeSensitivityAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createCurrentLowPowerModeSensitivityAttributeValue(Integer value) {
+      return new UIntType(value);
+    }
+
     public void writeCurrentLowPowerModeSensitivityAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new UIntType(value);
+      BaseTLVType tlvValue = createCurrentLowPowerModeSensitivityAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), CURRENT_LOW_POWER_MODE_SENSITIVITY_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -36090,8 +36302,12 @@ public class ChipClusters {
       writeDoorOpenEventsAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createDoorOpenEventsAttributeValue(Long value) {
+      return new UIntType(value);
+    }
+
     public void writeDoorOpenEventsAttribute(DefaultClusterCallback callback, Long value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new UIntType(value);
+      BaseTLVType tlvValue = createDoorOpenEventsAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), DOOR_OPEN_EVENTS_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -36125,8 +36341,12 @@ public class ChipClusters {
       writeDoorClosedEventsAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createDoorClosedEventsAttributeValue(Long value) {
+      return new UIntType(value);
+    }
+
     public void writeDoorClosedEventsAttribute(DefaultClusterCallback callback, Long value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new UIntType(value);
+      BaseTLVType tlvValue = createDoorClosedEventsAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), DOOR_CLOSED_EVENTS_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -36160,8 +36380,12 @@ public class ChipClusters {
       writeOpenPeriodAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createOpenPeriodAttributeValue(Integer value) {
+      return new UIntType(value);
+    }
+
     public void writeOpenPeriodAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new UIntType(value);
+      BaseTLVType tlvValue = createOpenPeriodAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), OPEN_PERIOD_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -36507,8 +36731,12 @@ public class ChipClusters {
       writeLanguageAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createLanguageAttributeValue(String value) {
+      return new StringType(value);
+    }
+
     public void writeLanguageAttribute(DefaultClusterCallback callback, String value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new StringType(value);
+      BaseTLVType tlvValue = createLanguageAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), LANGUAGE_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -36542,8 +36770,12 @@ public class ChipClusters {
       writeLEDSettingsAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createLEDSettingsAttributeValue(Integer value) {
+      return new UIntType(value);
+    }
+
     public void writeLEDSettingsAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new UIntType(value);
+      BaseTLVType tlvValue = createLEDSettingsAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), LED_SETTINGS_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -36577,8 +36809,12 @@ public class ChipClusters {
       writeAutoRelockTimeAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createAutoRelockTimeAttributeValue(Long value) {
+      return new UIntType(value);
+    }
+
     public void writeAutoRelockTimeAttribute(DefaultClusterCallback callback, Long value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new UIntType(value);
+      BaseTLVType tlvValue = createAutoRelockTimeAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), AUTO_RELOCK_TIME_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -36612,8 +36848,12 @@ public class ChipClusters {
       writeSoundVolumeAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createSoundVolumeAttributeValue(Integer value) {
+      return new UIntType(value);
+    }
+
     public void writeSoundVolumeAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new UIntType(value);
+      BaseTLVType tlvValue = createSoundVolumeAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), SOUND_VOLUME_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -36647,8 +36887,12 @@ public class ChipClusters {
       writeOperatingModeAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createOperatingModeAttributeValue(Integer value) {
+      return new UIntType(value);
+    }
+
     public void writeOperatingModeAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new UIntType(value);
+      BaseTLVType tlvValue = createOperatingModeAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), OPERATING_MODE_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -36734,8 +36978,12 @@ public class ChipClusters {
       writeEnableLocalProgrammingAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createEnableLocalProgrammingAttributeValue(Boolean value) {
+      return new BooleanType(value);
+    }
+
     public void writeEnableLocalProgrammingAttribute(DefaultClusterCallback callback, Boolean value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new BooleanType(value);
+      BaseTLVType tlvValue = createEnableLocalProgrammingAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), ENABLE_LOCAL_PROGRAMMING_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -36769,8 +37017,12 @@ public class ChipClusters {
       writeEnableOneTouchLockingAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createEnableOneTouchLockingAttributeValue(Boolean value) {
+      return new BooleanType(value);
+    }
+
     public void writeEnableOneTouchLockingAttribute(DefaultClusterCallback callback, Boolean value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new BooleanType(value);
+      BaseTLVType tlvValue = createEnableOneTouchLockingAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), ENABLE_ONE_TOUCH_LOCKING_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -36804,8 +37056,12 @@ public class ChipClusters {
       writeEnableInsideStatusLEDAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createEnableInsideStatusLEDAttributeValue(Boolean value) {
+      return new BooleanType(value);
+    }
+
     public void writeEnableInsideStatusLEDAttribute(DefaultClusterCallback callback, Boolean value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new BooleanType(value);
+      BaseTLVType tlvValue = createEnableInsideStatusLEDAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), ENABLE_INSIDE_STATUS_LED_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -36839,8 +37095,12 @@ public class ChipClusters {
       writeEnablePrivacyModeButtonAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createEnablePrivacyModeButtonAttributeValue(Boolean value) {
+      return new BooleanType(value);
+    }
+
     public void writeEnablePrivacyModeButtonAttribute(DefaultClusterCallback callback, Boolean value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new BooleanType(value);
+      BaseTLVType tlvValue = createEnablePrivacyModeButtonAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), ENABLE_PRIVACY_MODE_BUTTON_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -36874,8 +37134,12 @@ public class ChipClusters {
       writeLocalProgrammingFeaturesAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createLocalProgrammingFeaturesAttributeValue(Integer value) {
+      return new UIntType(value);
+    }
+
     public void writeLocalProgrammingFeaturesAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new UIntType(value);
+      BaseTLVType tlvValue = createLocalProgrammingFeaturesAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), LOCAL_PROGRAMMING_FEATURES_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -36909,8 +37173,12 @@ public class ChipClusters {
       writeWrongCodeEntryLimitAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createWrongCodeEntryLimitAttributeValue(Integer value) {
+      return new UIntType(value);
+    }
+
     public void writeWrongCodeEntryLimitAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new UIntType(value);
+      BaseTLVType tlvValue = createWrongCodeEntryLimitAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), WRONG_CODE_ENTRY_LIMIT_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -36944,8 +37212,12 @@ public class ChipClusters {
       writeUserCodeTemporaryDisableTimeAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createUserCodeTemporaryDisableTimeAttributeValue(Integer value) {
+      return new UIntType(value);
+    }
+
     public void writeUserCodeTemporaryDisableTimeAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new UIntType(value);
+      BaseTLVType tlvValue = createUserCodeTemporaryDisableTimeAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), USER_CODE_TEMPORARY_DISABLE_TIME_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -36979,8 +37251,12 @@ public class ChipClusters {
       writeSendPINOverTheAirAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createSendPINOverTheAirAttributeValue(Boolean value) {
+      return new BooleanType(value);
+    }
+
     public void writeSendPINOverTheAirAttribute(DefaultClusterCallback callback, Boolean value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new BooleanType(value);
+      BaseTLVType tlvValue = createSendPINOverTheAirAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), SEND_PIN_OVER_THE_AIR_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -37014,8 +37290,12 @@ public class ChipClusters {
       writeRequirePINforRemoteOperationAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createRequirePINforRemoteOperationAttributeValue(Boolean value) {
+      return new BooleanType(value);
+    }
+
     public void writeRequirePINforRemoteOperationAttribute(DefaultClusterCallback callback, Boolean value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new BooleanType(value);
+      BaseTLVType tlvValue = createRequirePINforRemoteOperationAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), REQUIRE_PI_NFOR_REMOTE_OPERATION_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -37049,8 +37329,12 @@ public class ChipClusters {
       writeExpiringUserTimeoutAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createExpiringUserTimeoutAttributeValue(Integer value) {
+      return new UIntType(value);
+    }
+
     public void writeExpiringUserTimeoutAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new UIntType(value);
+      BaseTLVType tlvValue = createExpiringUserTimeoutAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), EXPIRING_USER_TIMEOUT_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -38248,8 +38532,12 @@ public class ChipClusters {
       writeModeAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createModeAttributeValue(Integer value) {
+      return new UIntType(value);
+    }
+
     public void writeModeAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new UIntType(value);
+      BaseTLVType tlvValue = createModeAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), MODE_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -40148,8 +40436,12 @@ public class ChipClusters {
       writeLifetimeRunningHoursAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createLifetimeRunningHoursAttributeValue(Long value) {
+      return value != null ? new UIntType(value) : new NullType();
+    }
+
     public void writeLifetimeRunningHoursAttribute(DefaultClusterCallback callback, Long value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = value != null ? new UIntType(value) : new NullType();
+      BaseTLVType tlvValue = createLifetimeRunningHoursAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), LIFETIME_RUNNING_HOURS_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -40209,8 +40501,12 @@ public class ChipClusters {
       writeLifetimeEnergyConsumedAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createLifetimeEnergyConsumedAttributeValue(Long value) {
+      return value != null ? new UIntType(value) : new NullType();
+    }
+
     public void writeLifetimeEnergyConsumedAttribute(DefaultClusterCallback callback, Long value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = value != null ? new UIntType(value) : new NullType();
+      BaseTLVType tlvValue = createLifetimeEnergyConsumedAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), LIFETIME_ENERGY_CONSUMED_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -40244,8 +40540,12 @@ public class ChipClusters {
       writeOperationModeAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createOperationModeAttributeValue(Integer value) {
+      return new UIntType(value);
+    }
+
     public void writeOperationModeAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new UIntType(value);
+      BaseTLVType tlvValue = createOperationModeAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), OPERATION_MODE_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -40279,8 +40579,12 @@ public class ChipClusters {
       writeControlModeAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createControlModeAttributeValue(Integer value) {
+      return new UIntType(value);
+    }
+
     public void writeControlModeAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new UIntType(value);
+      BaseTLVType tlvValue = createControlModeAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), CONTROL_MODE_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -41139,8 +41443,12 @@ public class ChipClusters {
       writeHVACSystemTypeConfigurationAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createHVACSystemTypeConfigurationAttributeValue(Integer value) {
+      return new UIntType(value);
+    }
+
     public void writeHVACSystemTypeConfigurationAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new UIntType(value);
+      BaseTLVType tlvValue = createHVACSystemTypeConfigurationAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), HVAC_SYSTEM_TYPE_CONFIGURATION_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -41174,8 +41482,12 @@ public class ChipClusters {
       writeLocalTemperatureCalibrationAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createLocalTemperatureCalibrationAttributeValue(Integer value) {
+      return new IntType(value);
+    }
+
     public void writeLocalTemperatureCalibrationAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new IntType(value);
+      BaseTLVType tlvValue = createLocalTemperatureCalibrationAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), LOCAL_TEMPERATURE_CALIBRATION_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -41209,8 +41521,12 @@ public class ChipClusters {
       writeOccupiedCoolingSetpointAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createOccupiedCoolingSetpointAttributeValue(Integer value) {
+      return new IntType(value);
+    }
+
     public void writeOccupiedCoolingSetpointAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new IntType(value);
+      BaseTLVType tlvValue = createOccupiedCoolingSetpointAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), OCCUPIED_COOLING_SETPOINT_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -41244,8 +41560,12 @@ public class ChipClusters {
       writeOccupiedHeatingSetpointAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createOccupiedHeatingSetpointAttributeValue(Integer value) {
+      return new IntType(value);
+    }
+
     public void writeOccupiedHeatingSetpointAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new IntType(value);
+      BaseTLVType tlvValue = createOccupiedHeatingSetpointAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), OCCUPIED_HEATING_SETPOINT_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -41279,8 +41599,12 @@ public class ChipClusters {
       writeUnoccupiedCoolingSetpointAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createUnoccupiedCoolingSetpointAttributeValue(Integer value) {
+      return new IntType(value);
+    }
+
     public void writeUnoccupiedCoolingSetpointAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new IntType(value);
+      BaseTLVType tlvValue = createUnoccupiedCoolingSetpointAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), UNOCCUPIED_COOLING_SETPOINT_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -41314,8 +41638,12 @@ public class ChipClusters {
       writeUnoccupiedHeatingSetpointAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createUnoccupiedHeatingSetpointAttributeValue(Integer value) {
+      return new IntType(value);
+    }
+
     public void writeUnoccupiedHeatingSetpointAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new IntType(value);
+      BaseTLVType tlvValue = createUnoccupiedHeatingSetpointAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), UNOCCUPIED_HEATING_SETPOINT_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -41349,8 +41677,12 @@ public class ChipClusters {
       writeMinHeatSetpointLimitAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createMinHeatSetpointLimitAttributeValue(Integer value) {
+      return new IntType(value);
+    }
+
     public void writeMinHeatSetpointLimitAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new IntType(value);
+      BaseTLVType tlvValue = createMinHeatSetpointLimitAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), MIN_HEAT_SETPOINT_LIMIT_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -41384,8 +41716,12 @@ public class ChipClusters {
       writeMaxHeatSetpointLimitAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createMaxHeatSetpointLimitAttributeValue(Integer value) {
+      return new IntType(value);
+    }
+
     public void writeMaxHeatSetpointLimitAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new IntType(value);
+      BaseTLVType tlvValue = createMaxHeatSetpointLimitAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), MAX_HEAT_SETPOINT_LIMIT_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -41419,8 +41755,12 @@ public class ChipClusters {
       writeMinCoolSetpointLimitAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createMinCoolSetpointLimitAttributeValue(Integer value) {
+      return new IntType(value);
+    }
+
     public void writeMinCoolSetpointLimitAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new IntType(value);
+      BaseTLVType tlvValue = createMinCoolSetpointLimitAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), MIN_COOL_SETPOINT_LIMIT_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -41454,8 +41794,12 @@ public class ChipClusters {
       writeMaxCoolSetpointLimitAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createMaxCoolSetpointLimitAttributeValue(Integer value) {
+      return new IntType(value);
+    }
+
     public void writeMaxCoolSetpointLimitAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new IntType(value);
+      BaseTLVType tlvValue = createMaxCoolSetpointLimitAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), MAX_COOL_SETPOINT_LIMIT_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -41489,8 +41833,12 @@ public class ChipClusters {
       writeMinSetpointDeadBandAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createMinSetpointDeadBandAttributeValue(Integer value) {
+      return new IntType(value);
+    }
+
     public void writeMinSetpointDeadBandAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new IntType(value);
+      BaseTLVType tlvValue = createMinSetpointDeadBandAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), MIN_SETPOINT_DEAD_BAND_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -41524,8 +41872,12 @@ public class ChipClusters {
       writeRemoteSensingAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createRemoteSensingAttributeValue(Integer value) {
+      return new UIntType(value);
+    }
+
     public void writeRemoteSensingAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new UIntType(value);
+      BaseTLVType tlvValue = createRemoteSensingAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), REMOTE_SENSING_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -41559,8 +41911,12 @@ public class ChipClusters {
       writeControlSequenceOfOperationAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createControlSequenceOfOperationAttributeValue(Integer value) {
+      return new UIntType(value);
+    }
+
     public void writeControlSequenceOfOperationAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new UIntType(value);
+      BaseTLVType tlvValue = createControlSequenceOfOperationAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), CONTROL_SEQUENCE_OF_OPERATION_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -41594,8 +41950,12 @@ public class ChipClusters {
       writeSystemModeAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createSystemModeAttributeValue(Integer value) {
+      return new UIntType(value);
+    }
+
     public void writeSystemModeAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new UIntType(value);
+      BaseTLVType tlvValue = createSystemModeAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), SYSTEM_MODE_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -41733,8 +42093,12 @@ public class ChipClusters {
       writeTemperatureSetpointHoldAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createTemperatureSetpointHoldAttributeValue(Integer value) {
+      return new UIntType(value);
+    }
+
     public void writeTemperatureSetpointHoldAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new UIntType(value);
+      BaseTLVType tlvValue = createTemperatureSetpointHoldAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), TEMPERATURE_SETPOINT_HOLD_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -41768,8 +42132,12 @@ public class ChipClusters {
       writeTemperatureSetpointHoldDurationAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createTemperatureSetpointHoldDurationAttributeValue(Integer value) {
+      return value != null ? new UIntType(value) : new NullType();
+    }
+
     public void writeTemperatureSetpointHoldDurationAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = value != null ? new UIntType(value) : new NullType();
+      BaseTLVType tlvValue = createTemperatureSetpointHoldDurationAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), TEMPERATURE_SETPOINT_HOLD_DURATION_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -41803,8 +42171,12 @@ public class ChipClusters {
       writeThermostatProgrammingOperationModeAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createThermostatProgrammingOperationModeAttributeValue(Integer value) {
+      return new UIntType(value);
+    }
+
     public void writeThermostatProgrammingOperationModeAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new UIntType(value);
+      BaseTLVType tlvValue = createThermostatProgrammingOperationModeAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), THERMOSTAT_PROGRAMMING_OPERATION_MODE_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -41942,8 +42314,12 @@ public class ChipClusters {
       writeOccupiedSetbackAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createOccupiedSetbackAttributeValue(Integer value) {
+      return value != null ? new UIntType(value) : new NullType();
+    }
+
     public void writeOccupiedSetbackAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = value != null ? new UIntType(value) : new NullType();
+      BaseTLVType tlvValue = createOccupiedSetbackAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), OCCUPIED_SETBACK_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -42029,8 +42405,12 @@ public class ChipClusters {
       writeUnoccupiedSetbackAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createUnoccupiedSetbackAttributeValue(Integer value) {
+      return value != null ? new UIntType(value) : new NullType();
+    }
+
     public void writeUnoccupiedSetbackAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = value != null ? new UIntType(value) : new NullType();
+      BaseTLVType tlvValue = createUnoccupiedSetbackAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), UNOCCUPIED_SETBACK_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -42116,8 +42496,12 @@ public class ChipClusters {
       writeEmergencyHeatDeltaAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createEmergencyHeatDeltaAttributeValue(Integer value) {
+      return new UIntType(value);
+    }
+
     public void writeEmergencyHeatDeltaAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new UIntType(value);
+      BaseTLVType tlvValue = createEmergencyHeatDeltaAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), EMERGENCY_HEAT_DELTA_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -42151,8 +42535,12 @@ public class ChipClusters {
       writeACTypeAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createACTypeAttributeValue(Integer value) {
+      return new UIntType(value);
+    }
+
     public void writeACTypeAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new UIntType(value);
+      BaseTLVType tlvValue = createACTypeAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), AC_TYPE_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -42186,8 +42574,12 @@ public class ChipClusters {
       writeACCapacityAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createACCapacityAttributeValue(Integer value) {
+      return new UIntType(value);
+    }
+
     public void writeACCapacityAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new UIntType(value);
+      BaseTLVType tlvValue = createACCapacityAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), AC_CAPACITY_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -42221,8 +42613,12 @@ public class ChipClusters {
       writeACRefrigerantTypeAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createACRefrigerantTypeAttributeValue(Integer value) {
+      return new UIntType(value);
+    }
+
     public void writeACRefrigerantTypeAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new UIntType(value);
+      BaseTLVType tlvValue = createACRefrigerantTypeAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), AC_REFRIGERANT_TYPE_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -42256,8 +42652,12 @@ public class ChipClusters {
       writeACCompressorTypeAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createACCompressorTypeAttributeValue(Integer value) {
+      return new UIntType(value);
+    }
+
     public void writeACCompressorTypeAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new UIntType(value);
+      BaseTLVType tlvValue = createACCompressorTypeAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), AC_COMPRESSOR_TYPE_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -42291,8 +42691,12 @@ public class ChipClusters {
       writeACErrorCodeAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createACErrorCodeAttributeValue(Long value) {
+      return new UIntType(value);
+    }
+
     public void writeACErrorCodeAttribute(DefaultClusterCallback callback, Long value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new UIntType(value);
+      BaseTLVType tlvValue = createACErrorCodeAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), AC_ERROR_CODE_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -42326,8 +42730,12 @@ public class ChipClusters {
       writeACLouverPositionAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createACLouverPositionAttributeValue(Integer value) {
+      return new UIntType(value);
+    }
+
     public void writeACLouverPositionAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new UIntType(value);
+      BaseTLVType tlvValue = createACLouverPositionAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), AC_LOUVER_POSITION_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -42387,8 +42795,12 @@ public class ChipClusters {
       writeACCapacityformatAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createACCapacityformatAttributeValue(Integer value) {
+      return new UIntType(value);
+    }
+
     public void writeACCapacityformatAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new UIntType(value);
+      BaseTLVType tlvValue = createACCapacityformatAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), AC_CAPACITYFORMAT_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -42630,8 +43042,12 @@ public class ChipClusters {
       writePresetsAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createPresetsAttributeValue(ArrayList<ChipStructs.ThermostatClusterPresetStruct> value) {
+      return ArrayType.generateArrayType(value, (elementvalue) -> elementvalue.encodeTlv());
+    }
+
     public void writePresetsAttribute(DefaultClusterCallback callback, ArrayList<ChipStructs.ThermostatClusterPresetStruct> value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = ArrayType.generateArrayType(value, (elementvalue) -> elementvalue.encodeTlv());
+      BaseTLVType tlvValue = createPresetsAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), PRESETS_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -42665,8 +43081,12 @@ public class ChipClusters {
       writeSchedulesAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createSchedulesAttributeValue(ArrayList<ChipStructs.ThermostatClusterScheduleStruct> value) {
+      return ArrayType.generateArrayType(value, (elementvalue) -> elementvalue.encodeTlv());
+    }
+
     public void writeSchedulesAttribute(DefaultClusterCallback callback, ArrayList<ChipStructs.ThermostatClusterScheduleStruct> value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = ArrayType.generateArrayType(value, (elementvalue) -> elementvalue.encodeTlv());
+      BaseTLVType tlvValue = createSchedulesAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), SCHEDULES_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -42972,8 +43392,12 @@ public class ChipClusters {
       writeFanModeAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createFanModeAttributeValue(Integer value) {
+      return new UIntType(value);
+    }
+
     public void writeFanModeAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new UIntType(value);
+      BaseTLVType tlvValue = createFanModeAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), FAN_MODE_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -43033,8 +43457,12 @@ public class ChipClusters {
       writePercentSettingAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createPercentSettingAttributeValue(Integer value) {
+      return value != null ? new UIntType(value) : new NullType();
+    }
+
     public void writePercentSettingAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = value != null ? new UIntType(value) : new NullType();
+      BaseTLVType tlvValue = createPercentSettingAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), PERCENT_SETTING_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -43120,8 +43548,12 @@ public class ChipClusters {
       writeSpeedSettingAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createSpeedSettingAttributeValue(Integer value) {
+      return value != null ? new UIntType(value) : new NullType();
+    }
+
     public void writeSpeedSettingAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = value != null ? new UIntType(value) : new NullType();
+      BaseTLVType tlvValue = createSpeedSettingAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), SPEED_SETTING_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -43207,8 +43639,12 @@ public class ChipClusters {
       writeRockSettingAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createRockSettingAttributeValue(Integer value) {
+      return new UIntType(value);
+    }
+
     public void writeRockSettingAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new UIntType(value);
+      BaseTLVType tlvValue = createRockSettingAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), ROCK_SETTING_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -43268,8 +43704,12 @@ public class ChipClusters {
       writeWindSettingAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createWindSettingAttributeValue(Integer value) {
+      return new UIntType(value);
+    }
+
     public void writeWindSettingAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new UIntType(value);
+      BaseTLVType tlvValue = createWindSettingAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), WIND_SETTING_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -43303,8 +43743,12 @@ public class ChipClusters {
       writeAirflowDirectionAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createAirflowDirectionAttributeValue(Integer value) {
+      return new UIntType(value);
+    }
+
     public void writeAirflowDirectionAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new UIntType(value);
+      BaseTLVType tlvValue = createAirflowDirectionAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), AIRFLOW_DIRECTION_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -43534,8 +43978,12 @@ public class ChipClusters {
       writeTemperatureDisplayModeAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createTemperatureDisplayModeAttributeValue(Integer value) {
+      return new UIntType(value);
+    }
+
     public void writeTemperatureDisplayModeAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new UIntType(value);
+      BaseTLVType tlvValue = createTemperatureDisplayModeAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), TEMPERATURE_DISPLAY_MODE_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -43569,8 +44017,12 @@ public class ChipClusters {
       writeKeypadLockoutAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createKeypadLockoutAttributeValue(Integer value) {
+      return new UIntType(value);
+    }
+
     public void writeKeypadLockoutAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new UIntType(value);
+      BaseTLVType tlvValue = createKeypadLockoutAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), KEYPAD_LOCKOUT_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -43604,8 +44056,12 @@ public class ChipClusters {
       writeScheduleProgrammingVisibilityAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createScheduleProgrammingVisibilityAttributeValue(Integer value) {
+      return new UIntType(value);
+    }
+
     public void writeScheduleProgrammingVisibilityAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new UIntType(value);
+      BaseTLVType tlvValue = createScheduleProgrammingVisibilityAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), SCHEDULE_PROGRAMMING_VISIBILITY_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -44925,8 +45381,12 @@ public class ChipClusters {
       writeOptionsAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createOptionsAttributeValue(Integer value) {
+      return new UIntType(value);
+    }
+
     public void writeOptionsAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new UIntType(value);
+      BaseTLVType tlvValue = createOptionsAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), OPTIONS_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -45454,8 +45914,12 @@ public class ChipClusters {
       writeWhitePointXAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createWhitePointXAttributeValue(Integer value) {
+      return new UIntType(value);
+    }
+
     public void writeWhitePointXAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new UIntType(value);
+      BaseTLVType tlvValue = createWhitePointXAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), WHITE_POINT_X_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -45489,8 +45953,12 @@ public class ChipClusters {
       writeWhitePointYAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createWhitePointYAttributeValue(Integer value) {
+      return new UIntType(value);
+    }
+
     public void writeWhitePointYAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new UIntType(value);
+      BaseTLVType tlvValue = createWhitePointYAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), WHITE_POINT_Y_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -45524,8 +45992,12 @@ public class ChipClusters {
       writeColorPointRXAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createColorPointRXAttributeValue(Integer value) {
+      return new UIntType(value);
+    }
+
     public void writeColorPointRXAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new UIntType(value);
+      BaseTLVType tlvValue = createColorPointRXAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), COLOR_POINT_RX_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -45559,8 +46031,12 @@ public class ChipClusters {
       writeColorPointRYAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createColorPointRYAttributeValue(Integer value) {
+      return new UIntType(value);
+    }
+
     public void writeColorPointRYAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new UIntType(value);
+      BaseTLVType tlvValue = createColorPointRYAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), COLOR_POINT_RY_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -45594,8 +46070,12 @@ public class ChipClusters {
       writeColorPointRIntensityAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createColorPointRIntensityAttributeValue(Integer value) {
+      return value != null ? new UIntType(value) : new NullType();
+    }
+
     public void writeColorPointRIntensityAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = value != null ? new UIntType(value) : new NullType();
+      BaseTLVType tlvValue = createColorPointRIntensityAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), COLOR_POINT_R_INTENSITY_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -45629,8 +46109,12 @@ public class ChipClusters {
       writeColorPointGXAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createColorPointGXAttributeValue(Integer value) {
+      return new UIntType(value);
+    }
+
     public void writeColorPointGXAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new UIntType(value);
+      BaseTLVType tlvValue = createColorPointGXAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), COLOR_POINT_GX_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -45664,8 +46148,12 @@ public class ChipClusters {
       writeColorPointGYAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createColorPointGYAttributeValue(Integer value) {
+      return new UIntType(value);
+    }
+
     public void writeColorPointGYAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new UIntType(value);
+      BaseTLVType tlvValue = createColorPointGYAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), COLOR_POINT_GY_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -45699,8 +46187,12 @@ public class ChipClusters {
       writeColorPointGIntensityAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createColorPointGIntensityAttributeValue(Integer value) {
+      return value != null ? new UIntType(value) : new NullType();
+    }
+
     public void writeColorPointGIntensityAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = value != null ? new UIntType(value) : new NullType();
+      BaseTLVType tlvValue = createColorPointGIntensityAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), COLOR_POINT_G_INTENSITY_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -45734,8 +46226,12 @@ public class ChipClusters {
       writeColorPointBXAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createColorPointBXAttributeValue(Integer value) {
+      return new UIntType(value);
+    }
+
     public void writeColorPointBXAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new UIntType(value);
+      BaseTLVType tlvValue = createColorPointBXAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), COLOR_POINT_BX_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -45769,8 +46265,12 @@ public class ChipClusters {
       writeColorPointBYAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createColorPointBYAttributeValue(Integer value) {
+      return new UIntType(value);
+    }
+
     public void writeColorPointBYAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new UIntType(value);
+      BaseTLVType tlvValue = createColorPointBYAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), COLOR_POINT_BY_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -45804,8 +46304,12 @@ public class ChipClusters {
       writeColorPointBIntensityAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createColorPointBIntensityAttributeValue(Integer value) {
+      return value != null ? new UIntType(value) : new NullType();
+    }
+
     public void writeColorPointBIntensityAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = value != null ? new UIntType(value) : new NullType();
+      BaseTLVType tlvValue = createColorPointBIntensityAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), COLOR_POINT_B_INTENSITY_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -46125,8 +46629,12 @@ public class ChipClusters {
       writeStartUpColorTemperatureMiredsAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createStartUpColorTemperatureMiredsAttributeValue(Integer value) {
+      return value != null ? new UIntType(value) : new NullType();
+    }
+
     public void writeStartUpColorTemperatureMiredsAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = value != null ? new UIntType(value) : new NullType();
+      BaseTLVType tlvValue = createStartUpColorTemperatureMiredsAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), START_UP_COLOR_TEMPERATURE_MIREDS_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -46465,8 +46973,12 @@ public class ChipClusters {
       writeMinLevelAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createMinLevelAttributeValue(Integer value) {
+      return new UIntType(value);
+    }
+
     public void writeMinLevelAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new UIntType(value);
+      BaseTLVType tlvValue = createMinLevelAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), MIN_LEVEL_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -46500,8 +47012,12 @@ public class ChipClusters {
       writeMaxLevelAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createMaxLevelAttributeValue(Integer value) {
+      return new UIntType(value);
+    }
+
     public void writeMaxLevelAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new UIntType(value);
+      BaseTLVType tlvValue = createMaxLevelAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), MAX_LEVEL_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -46535,8 +47051,12 @@ public class ChipClusters {
       writeIntrinsicBallastFactorAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createIntrinsicBallastFactorAttributeValue(Integer value) {
+      return value != null ? new UIntType(value) : new NullType();
+    }
+
     public void writeIntrinsicBallastFactorAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = value != null ? new UIntType(value) : new NullType();
+      BaseTLVType tlvValue = createIntrinsicBallastFactorAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), INTRINSIC_BALLAST_FACTOR_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -46570,8 +47090,12 @@ public class ChipClusters {
       writeBallastFactorAdjustmentAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createBallastFactorAdjustmentAttributeValue(Integer value) {
+      return value != null ? new UIntType(value) : new NullType();
+    }
+
     public void writeBallastFactorAdjustmentAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = value != null ? new UIntType(value) : new NullType();
+      BaseTLVType tlvValue = createBallastFactorAdjustmentAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), BALLAST_FACTOR_ADJUSTMENT_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -46631,8 +47155,12 @@ public class ChipClusters {
       writeLampTypeAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createLampTypeAttributeValue(String value) {
+      return new StringType(value);
+    }
+
     public void writeLampTypeAttribute(DefaultClusterCallback callback, String value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new StringType(value);
+      BaseTLVType tlvValue = createLampTypeAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), LAMP_TYPE_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -46666,8 +47194,12 @@ public class ChipClusters {
       writeLampManufacturerAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createLampManufacturerAttributeValue(String value) {
+      return new StringType(value);
+    }
+
     public void writeLampManufacturerAttribute(DefaultClusterCallback callback, String value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new StringType(value);
+      BaseTLVType tlvValue = createLampManufacturerAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), LAMP_MANUFACTURER_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -46701,8 +47233,12 @@ public class ChipClusters {
       writeLampRatedHoursAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createLampRatedHoursAttributeValue(Long value) {
+      return value != null ? new UIntType(value) : new NullType();
+    }
+
     public void writeLampRatedHoursAttribute(DefaultClusterCallback callback, Long value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = value != null ? new UIntType(value) : new NullType();
+      BaseTLVType tlvValue = createLampRatedHoursAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), LAMP_RATED_HOURS_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -46736,8 +47272,12 @@ public class ChipClusters {
       writeLampBurnHoursAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createLampBurnHoursAttributeValue(Long value) {
+      return value != null ? new UIntType(value) : new NullType();
+    }
+
     public void writeLampBurnHoursAttribute(DefaultClusterCallback callback, Long value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = value != null ? new UIntType(value) : new NullType();
+      BaseTLVType tlvValue = createLampBurnHoursAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), LAMP_BURN_HOURS_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -46771,8 +47311,12 @@ public class ChipClusters {
       writeLampAlarmModeAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createLampAlarmModeAttributeValue(Integer value) {
+      return new UIntType(value);
+    }
+
     public void writeLampAlarmModeAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new UIntType(value);
+      BaseTLVType tlvValue = createLampAlarmModeAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), LAMP_ALARM_MODE_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -46806,8 +47350,12 @@ public class ChipClusters {
       writeLampBurnHoursTripPointAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createLampBurnHoursTripPointAttributeValue(Long value) {
+      return value != null ? new UIntType(value) : new NullType();
+    }
+
     public void writeLampBurnHoursTripPointAttribute(DefaultClusterCallback callback, Long value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = value != null ? new UIntType(value) : new NullType();
+      BaseTLVType tlvValue = createLampBurnHoursTripPointAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), LAMP_BURN_HOURS_TRIP_POINT_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -48873,8 +49421,12 @@ public class ChipClusters {
       writeHoldTimeAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createHoldTimeAttributeValue(Integer value) {
+      return new UIntType(value);
+    }
+
     public void writeHoldTimeAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new UIntType(value);
+      BaseTLVType tlvValue = createHoldTimeAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), HOLD_TIME_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -48934,8 +49486,12 @@ public class ChipClusters {
       writePIROccupiedToUnoccupiedDelayAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createPIROccupiedToUnoccupiedDelayAttributeValue(Integer value) {
+      return new UIntType(value);
+    }
+
     public void writePIROccupiedToUnoccupiedDelayAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new UIntType(value);
+      BaseTLVType tlvValue = createPIROccupiedToUnoccupiedDelayAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), PIR_OCCUPIED_TO_UNOCCUPIED_DELAY_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -48969,8 +49525,12 @@ public class ChipClusters {
       writePIRUnoccupiedToOccupiedDelayAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createPIRUnoccupiedToOccupiedDelayAttributeValue(Integer value) {
+      return new UIntType(value);
+    }
+
     public void writePIRUnoccupiedToOccupiedDelayAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new UIntType(value);
+      BaseTLVType tlvValue = createPIRUnoccupiedToOccupiedDelayAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), PIR_UNOCCUPIED_TO_OCCUPIED_DELAY_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -49004,8 +49564,12 @@ public class ChipClusters {
       writePIRUnoccupiedToOccupiedThresholdAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createPIRUnoccupiedToOccupiedThresholdAttributeValue(Integer value) {
+      return new UIntType(value);
+    }
+
     public void writePIRUnoccupiedToOccupiedThresholdAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new UIntType(value);
+      BaseTLVType tlvValue = createPIRUnoccupiedToOccupiedThresholdAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), PIR_UNOCCUPIED_TO_OCCUPIED_THRESHOLD_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -49039,8 +49603,12 @@ public class ChipClusters {
       writeUltrasonicOccupiedToUnoccupiedDelayAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createUltrasonicOccupiedToUnoccupiedDelayAttributeValue(Integer value) {
+      return new UIntType(value);
+    }
+
     public void writeUltrasonicOccupiedToUnoccupiedDelayAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new UIntType(value);
+      BaseTLVType tlvValue = createUltrasonicOccupiedToUnoccupiedDelayAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), ULTRASONIC_OCCUPIED_TO_UNOCCUPIED_DELAY_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -49074,8 +49642,12 @@ public class ChipClusters {
       writeUltrasonicUnoccupiedToOccupiedDelayAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createUltrasonicUnoccupiedToOccupiedDelayAttributeValue(Integer value) {
+      return new UIntType(value);
+    }
+
     public void writeUltrasonicUnoccupiedToOccupiedDelayAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new UIntType(value);
+      BaseTLVType tlvValue = createUltrasonicUnoccupiedToOccupiedDelayAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), ULTRASONIC_UNOCCUPIED_TO_OCCUPIED_DELAY_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -49109,8 +49681,12 @@ public class ChipClusters {
       writeUltrasonicUnoccupiedToOccupiedThresholdAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createUltrasonicUnoccupiedToOccupiedThresholdAttributeValue(Integer value) {
+      return new UIntType(value);
+    }
+
     public void writeUltrasonicUnoccupiedToOccupiedThresholdAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new UIntType(value);
+      BaseTLVType tlvValue = createUltrasonicUnoccupiedToOccupiedThresholdAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), ULTRASONIC_UNOCCUPIED_TO_OCCUPIED_THRESHOLD_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -49144,8 +49720,12 @@ public class ChipClusters {
       writePhysicalContactOccupiedToUnoccupiedDelayAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createPhysicalContactOccupiedToUnoccupiedDelayAttributeValue(Integer value) {
+      return new UIntType(value);
+    }
+
     public void writePhysicalContactOccupiedToUnoccupiedDelayAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new UIntType(value);
+      BaseTLVType tlvValue = createPhysicalContactOccupiedToUnoccupiedDelayAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), PHYSICAL_CONTACT_OCCUPIED_TO_UNOCCUPIED_DELAY_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -49179,8 +49759,12 @@ public class ChipClusters {
       writePhysicalContactUnoccupiedToOccupiedDelayAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createPhysicalContactUnoccupiedToOccupiedDelayAttributeValue(Integer value) {
+      return new UIntType(value);
+    }
+
     public void writePhysicalContactUnoccupiedToOccupiedDelayAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new UIntType(value);
+      BaseTLVType tlvValue = createPhysicalContactUnoccupiedToOccupiedDelayAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), PHYSICAL_CONTACT_UNOCCUPIED_TO_OCCUPIED_DELAY_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -49214,8 +49798,12 @@ public class ChipClusters {
       writePhysicalContactUnoccupiedToOccupiedThresholdAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createPhysicalContactUnoccupiedToOccupiedThresholdAttributeValue(Integer value) {
+      return new UIntType(value);
+    }
+
     public void writePhysicalContactUnoccupiedToOccupiedThresholdAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new UIntType(value);
+      BaseTLVType tlvValue = createPhysicalContactUnoccupiedToOccupiedThresholdAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), PHYSICAL_CONTACT_UNOCCUPIED_TO_OCCUPIED_THRESHOLD_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -55409,8 +55997,12 @@ public class ChipClusters {
       writePreferredExtendedPanIDAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createPreferredExtendedPanIDAttributeValue(byte[] value) {
+      return value != null ? new ByteArrayType(value) : new NullType();
+    }
+
     public void writePreferredExtendedPanIDAttribute(DefaultClusterCallback callback, byte[] value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = value != null ? new ByteArrayType(value) : new NullType();
+      BaseTLVType tlvValue = createPreferredExtendedPanIDAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), PREFERRED_EXTENDED_PAN_ID_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -61477,8 +62069,12 @@ public class ChipClusters {
       writeTriggersAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createTriggersAttributeValue(ArrayList<ChipStructs.ZoneManagementClusterZoneTriggerControlStruct> value) {
+      return ArrayType.generateArrayType(value, (elementvalue) -> elementvalue.encodeTlv());
+    }
+
     public void writeTriggersAttribute(DefaultClusterCallback callback, ArrayList<ChipStructs.ZoneManagementClusterZoneTriggerControlStruct> value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = ArrayType.generateArrayType(value, (elementvalue) -> elementvalue.encodeTlv());
+      BaseTLVType tlvValue = createTriggersAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), TRIGGERS_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -61512,8 +62108,12 @@ public class ChipClusters {
       writeSensitivityAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createSensitivityAttributeValue(Integer value) {
+      return new UIntType(value);
+    }
+
     public void writeSensitivityAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new UIntType(value);
+      BaseTLVType tlvValue = createSensitivityAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), SENSITIVITY_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -62558,8 +63158,12 @@ public class ChipClusters {
       writeHDRModeEnabledAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createHDRModeEnabledAttributeValue(Boolean value) {
+      return new BooleanType(value);
+    }
+
     public void writeHDRModeEnabledAttribute(DefaultClusterCallback callback, Boolean value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new BooleanType(value);
+      BaseTLVType tlvValue = createHDRModeEnabledAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), HDR_MODE_ENABLED_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -62723,8 +63327,12 @@ public class ChipClusters {
       writeSoftRecordingPrivacyModeEnabledAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createSoftRecordingPrivacyModeEnabledAttributeValue(Boolean value) {
+      return new BooleanType(value);
+    }
+
     public void writeSoftRecordingPrivacyModeEnabledAttribute(DefaultClusterCallback callback, Boolean value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new BooleanType(value);
+      BaseTLVType tlvValue = createSoftRecordingPrivacyModeEnabledAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), SOFT_RECORDING_PRIVACY_MODE_ENABLED_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -62758,8 +63366,12 @@ public class ChipClusters {
       writeSoftLivestreamPrivacyModeEnabledAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createSoftLivestreamPrivacyModeEnabledAttributeValue(Boolean value) {
+      return new BooleanType(value);
+    }
+
     public void writeSoftLivestreamPrivacyModeEnabledAttribute(DefaultClusterCallback callback, Boolean value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new BooleanType(value);
+      BaseTLVType tlvValue = createSoftLivestreamPrivacyModeEnabledAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), SOFT_LIVESTREAM_PRIVACY_MODE_ENABLED_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -62819,8 +63431,12 @@ public class ChipClusters {
       writeNightVisionAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createNightVisionAttributeValue(Integer value) {
+      return new UIntType(value);
+    }
+
     public void writeNightVisionAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new UIntType(value);
+      BaseTLVType tlvValue = createNightVisionAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), NIGHT_VISION_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -62854,8 +63470,12 @@ public class ChipClusters {
       writeNightVisionIllumAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createNightVisionIllumAttributeValue(Integer value) {
+      return new UIntType(value);
+    }
+
     public void writeNightVisionIllumAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new UIntType(value);
+      BaseTLVType tlvValue = createNightVisionIllumAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), NIGHT_VISION_ILLUM_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -62889,8 +63509,12 @@ public class ChipClusters {
       writeViewportAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createViewportAttributeValue(ChipStructs.CameraAvStreamManagementClusterViewportStruct value) {
+      return value.encodeTlv();
+    }
+
     public void writeViewportAttribute(DefaultClusterCallback callback, ChipStructs.CameraAvStreamManagementClusterViewportStruct value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = value.encodeTlv();
+      BaseTLVType tlvValue = createViewportAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), VIEWPORT_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -62924,8 +63548,12 @@ public class ChipClusters {
       writeSpeakerMutedAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createSpeakerMutedAttributeValue(Boolean value) {
+      return new BooleanType(value);
+    }
+
     public void writeSpeakerMutedAttribute(DefaultClusterCallback callback, Boolean value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new BooleanType(value);
+      BaseTLVType tlvValue = createSpeakerMutedAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), SPEAKER_MUTED_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -62959,8 +63587,12 @@ public class ChipClusters {
       writeSpeakerVolumeLevelAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createSpeakerVolumeLevelAttributeValue(Integer value) {
+      return new UIntType(value);
+    }
+
     public void writeSpeakerVolumeLevelAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new UIntType(value);
+      BaseTLVType tlvValue = createSpeakerVolumeLevelAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), SPEAKER_VOLUME_LEVEL_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -63046,8 +63678,12 @@ public class ChipClusters {
       writeMicrophoneMutedAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createMicrophoneMutedAttributeValue(Boolean value) {
+      return new BooleanType(value);
+    }
+
     public void writeMicrophoneMutedAttribute(DefaultClusterCallback callback, Boolean value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new BooleanType(value);
+      BaseTLVType tlvValue = createMicrophoneMutedAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), MICROPHONE_MUTED_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -63081,8 +63717,12 @@ public class ChipClusters {
       writeMicrophoneVolumeLevelAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createMicrophoneVolumeLevelAttributeValue(Integer value) {
+      return new UIntType(value);
+    }
+
     public void writeMicrophoneVolumeLevelAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new UIntType(value);
+      BaseTLVType tlvValue = createMicrophoneVolumeLevelAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), MICROPHONE_VOLUME_LEVEL_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -63168,8 +63808,12 @@ public class ChipClusters {
       writeMicrophoneAGCEnabledAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createMicrophoneAGCEnabledAttributeValue(Boolean value) {
+      return new BooleanType(value);
+    }
+
     public void writeMicrophoneAGCEnabledAttribute(DefaultClusterCallback callback, Boolean value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new BooleanType(value);
+      BaseTLVType tlvValue = createMicrophoneAGCEnabledAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), MICROPHONE_AGC_ENABLED_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -63203,8 +63847,12 @@ public class ChipClusters {
       writeImageRotationAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createImageRotationAttributeValue(Integer value) {
+      return new UIntType(value);
+    }
+
     public void writeImageRotationAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new UIntType(value);
+      BaseTLVType tlvValue = createImageRotationAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), IMAGE_ROTATION_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -63238,8 +63886,12 @@ public class ChipClusters {
       writeImageFlipHorizontalAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createImageFlipHorizontalAttributeValue(Boolean value) {
+      return new BooleanType(value);
+    }
+
     public void writeImageFlipHorizontalAttribute(DefaultClusterCallback callback, Boolean value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new BooleanType(value);
+      BaseTLVType tlvValue = createImageFlipHorizontalAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), IMAGE_FLIP_HORIZONTAL_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -63273,8 +63925,12 @@ public class ChipClusters {
       writeImageFlipVerticalAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createImageFlipVerticalAttributeValue(Boolean value) {
+      return new BooleanType(value);
+    }
+
     public void writeImageFlipVerticalAttribute(DefaultClusterCallback callback, Boolean value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new BooleanType(value);
+      BaseTLVType tlvValue = createImageFlipVerticalAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), IMAGE_FLIP_VERTICAL_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -63308,8 +63964,12 @@ public class ChipClusters {
       writeLocalVideoRecordingEnabledAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createLocalVideoRecordingEnabledAttributeValue(Boolean value) {
+      return new BooleanType(value);
+    }
+
     public void writeLocalVideoRecordingEnabledAttribute(DefaultClusterCallback callback, Boolean value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new BooleanType(value);
+      BaseTLVType tlvValue = createLocalVideoRecordingEnabledAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), LOCAL_VIDEO_RECORDING_ENABLED_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -63343,8 +64003,12 @@ public class ChipClusters {
       writeLocalSnapshotRecordingEnabledAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createLocalSnapshotRecordingEnabledAttributeValue(Boolean value) {
+      return new BooleanType(value);
+    }
+
     public void writeLocalSnapshotRecordingEnabledAttribute(DefaultClusterCallback callback, Boolean value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new BooleanType(value);
+      BaseTLVType tlvValue = createLocalSnapshotRecordingEnabledAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), LOCAL_SNAPSHOT_RECORDING_ENABLED_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -63378,8 +64042,12 @@ public class ChipClusters {
       writeStatusLightEnabledAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createStatusLightEnabledAttributeValue(Boolean value) {
+      return new BooleanType(value);
+    }
+
     public void writeStatusLightEnabledAttribute(DefaultClusterCallback callback, Boolean value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new BooleanType(value);
+      BaseTLVType tlvValue = createStatusLightEnabledAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), STATUS_LIGHT_ENABLED_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -63413,8 +64081,12 @@ public class ChipClusters {
       writeStatusLightBrightnessAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createStatusLightBrightnessAttributeValue(Integer value) {
+      return new UIntType(value);
+    }
+
     public void writeStatusLightBrightnessAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new UIntType(value);
+      BaseTLVType tlvValue = createStatusLightBrightnessAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), STATUS_LIGHT_BRIGHTNESS_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -65660,8 +66332,12 @@ public class ChipClusters {
       writeActiveChimeIDAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createActiveChimeIDAttributeValue(Integer value) {
+      return new UIntType(value);
+    }
+
     public void writeActiveChimeIDAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new UIntType(value);
+      BaseTLVType tlvValue = createActiveChimeIDAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), ACTIVE_CHIME_ID_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -65695,8 +66371,12 @@ public class ChipClusters {
       writeEnabledAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createEnabledAttributeValue(Boolean value) {
+      return new BooleanType(value);
+    }
+
     public void writeEnabledAttribute(DefaultClusterCallback callback, Boolean value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new BooleanType(value);
+      BaseTLVType tlvValue = createEnabledAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), ENABLED_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -68725,8 +69405,12 @@ public class ChipClusters {
       writeBooleanAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createBooleanAttributeValue(Boolean value) {
+      return new BooleanType(value);
+    }
+
     public void writeBooleanAttribute(DefaultClusterCallback callback, Boolean value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new BooleanType(value);
+      BaseTLVType tlvValue = createBooleanAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), BOOLEAN_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -68760,8 +69444,12 @@ public class ChipClusters {
       writeBitmap8Attribute(callback, value, 0);
     }
 
+    public static BaseTLVType createBitmap8AttributeValue(Integer value) {
+      return new UIntType(value);
+    }
+
     public void writeBitmap8Attribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new UIntType(value);
+      BaseTLVType tlvValue = createBitmap8AttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), BITMAP8_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -68795,8 +69483,12 @@ public class ChipClusters {
       writeBitmap16Attribute(callback, value, 0);
     }
 
+    public static BaseTLVType createBitmap16AttributeValue(Integer value) {
+      return new UIntType(value);
+    }
+
     public void writeBitmap16Attribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new UIntType(value);
+      BaseTLVType tlvValue = createBitmap16AttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), BITMAP16_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -68830,8 +69522,12 @@ public class ChipClusters {
       writeBitmap32Attribute(callback, value, 0);
     }
 
+    public static BaseTLVType createBitmap32AttributeValue(Long value) {
+      return new UIntType(value);
+    }
+
     public void writeBitmap32Attribute(DefaultClusterCallback callback, Long value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new UIntType(value);
+      BaseTLVType tlvValue = createBitmap32AttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), BITMAP32_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -68865,8 +69561,12 @@ public class ChipClusters {
       writeBitmap64Attribute(callback, value, 0);
     }
 
+    public static BaseTLVType createBitmap64AttributeValue(Long value) {
+      return new UIntType(value);
+    }
+
     public void writeBitmap64Attribute(DefaultClusterCallback callback, Long value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new UIntType(value);
+      BaseTLVType tlvValue = createBitmap64AttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), BITMAP64_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -68900,8 +69600,12 @@ public class ChipClusters {
       writeInt8uAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createInt8uAttributeValue(Integer value) {
+      return new UIntType(value);
+    }
+
     public void writeInt8uAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new UIntType(value);
+      BaseTLVType tlvValue = createInt8uAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), INT8U_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -68935,8 +69639,12 @@ public class ChipClusters {
       writeInt16uAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createInt16uAttributeValue(Integer value) {
+      return new UIntType(value);
+    }
+
     public void writeInt16uAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new UIntType(value);
+      BaseTLVType tlvValue = createInt16uAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), INT16U_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -68970,8 +69678,12 @@ public class ChipClusters {
       writeInt24uAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createInt24uAttributeValue(Long value) {
+      return new UIntType(value);
+    }
+
     public void writeInt24uAttribute(DefaultClusterCallback callback, Long value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new UIntType(value);
+      BaseTLVType tlvValue = createInt24uAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), INT24U_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -69005,8 +69717,12 @@ public class ChipClusters {
       writeInt32uAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createInt32uAttributeValue(Long value) {
+      return new UIntType(value);
+    }
+
     public void writeInt32uAttribute(DefaultClusterCallback callback, Long value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new UIntType(value);
+      BaseTLVType tlvValue = createInt32uAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), INT32U_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -69040,8 +69756,12 @@ public class ChipClusters {
       writeInt40uAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createInt40uAttributeValue(Long value) {
+      return new UIntType(value);
+    }
+
     public void writeInt40uAttribute(DefaultClusterCallback callback, Long value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new UIntType(value);
+      BaseTLVType tlvValue = createInt40uAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), INT40U_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -69075,8 +69795,12 @@ public class ChipClusters {
       writeInt48uAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createInt48uAttributeValue(Long value) {
+      return new UIntType(value);
+    }
+
     public void writeInt48uAttribute(DefaultClusterCallback callback, Long value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new UIntType(value);
+      BaseTLVType tlvValue = createInt48uAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), INT48U_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -69110,8 +69834,12 @@ public class ChipClusters {
       writeInt56uAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createInt56uAttributeValue(Long value) {
+      return new UIntType(value);
+    }
+
     public void writeInt56uAttribute(DefaultClusterCallback callback, Long value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new UIntType(value);
+      BaseTLVType tlvValue = createInt56uAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), INT56U_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -69145,8 +69873,12 @@ public class ChipClusters {
       writeInt64uAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createInt64uAttributeValue(Long value) {
+      return new UIntType(value);
+    }
+
     public void writeInt64uAttribute(DefaultClusterCallback callback, Long value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new UIntType(value);
+      BaseTLVType tlvValue = createInt64uAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), INT64U_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -69180,8 +69912,12 @@ public class ChipClusters {
       writeInt8sAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createInt8sAttributeValue(Integer value) {
+      return new IntType(value);
+    }
+
     public void writeInt8sAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new IntType(value);
+      BaseTLVType tlvValue = createInt8sAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), INT8S_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -69215,8 +69951,12 @@ public class ChipClusters {
       writeInt16sAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createInt16sAttributeValue(Integer value) {
+      return new IntType(value);
+    }
+
     public void writeInt16sAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new IntType(value);
+      BaseTLVType tlvValue = createInt16sAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), INT16S_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -69250,8 +69990,12 @@ public class ChipClusters {
       writeInt24sAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createInt24sAttributeValue(Long value) {
+      return new IntType(value);
+    }
+
     public void writeInt24sAttribute(DefaultClusterCallback callback, Long value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new IntType(value);
+      BaseTLVType tlvValue = createInt24sAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), INT24S_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -69285,8 +70029,12 @@ public class ChipClusters {
       writeInt32sAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createInt32sAttributeValue(Long value) {
+      return new IntType(value);
+    }
+
     public void writeInt32sAttribute(DefaultClusterCallback callback, Long value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new IntType(value);
+      BaseTLVType tlvValue = createInt32sAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), INT32S_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -69320,8 +70068,12 @@ public class ChipClusters {
       writeInt40sAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createInt40sAttributeValue(Long value) {
+      return new IntType(value);
+    }
+
     public void writeInt40sAttribute(DefaultClusterCallback callback, Long value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new IntType(value);
+      BaseTLVType tlvValue = createInt40sAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), INT40S_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -69355,8 +70107,12 @@ public class ChipClusters {
       writeInt48sAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createInt48sAttributeValue(Long value) {
+      return new IntType(value);
+    }
+
     public void writeInt48sAttribute(DefaultClusterCallback callback, Long value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new IntType(value);
+      BaseTLVType tlvValue = createInt48sAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), INT48S_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -69390,8 +70146,12 @@ public class ChipClusters {
       writeInt56sAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createInt56sAttributeValue(Long value) {
+      return new IntType(value);
+    }
+
     public void writeInt56sAttribute(DefaultClusterCallback callback, Long value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new IntType(value);
+      BaseTLVType tlvValue = createInt56sAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), INT56S_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -69425,8 +70185,12 @@ public class ChipClusters {
       writeInt64sAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createInt64sAttributeValue(Long value) {
+      return new IntType(value);
+    }
+
     public void writeInt64sAttribute(DefaultClusterCallback callback, Long value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new IntType(value);
+      BaseTLVType tlvValue = createInt64sAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), INT64S_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -69460,8 +70224,12 @@ public class ChipClusters {
       writeEnum8Attribute(callback, value, 0);
     }
 
+    public static BaseTLVType createEnum8AttributeValue(Integer value) {
+      return new UIntType(value);
+    }
+
     public void writeEnum8Attribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new UIntType(value);
+      BaseTLVType tlvValue = createEnum8AttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), ENUM8_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -69495,8 +70263,12 @@ public class ChipClusters {
       writeEnum16Attribute(callback, value, 0);
     }
 
+    public static BaseTLVType createEnum16AttributeValue(Integer value) {
+      return new UIntType(value);
+    }
+
     public void writeEnum16Attribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new UIntType(value);
+      BaseTLVType tlvValue = createEnum16AttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), ENUM16_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -69530,8 +70302,12 @@ public class ChipClusters {
       writeFloatSingleAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createFloatSingleAttributeValue(Float value) {
+      return new FloatType(value);
+    }
+
     public void writeFloatSingleAttribute(DefaultClusterCallback callback, Float value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new FloatType(value);
+      BaseTLVType tlvValue = createFloatSingleAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), FLOAT_SINGLE_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -69565,8 +70341,12 @@ public class ChipClusters {
       writeFloatDoubleAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createFloatDoubleAttributeValue(Double value) {
+      return new DoubleType(value);
+    }
+
     public void writeFloatDoubleAttribute(DefaultClusterCallback callback, Double value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new DoubleType(value);
+      BaseTLVType tlvValue = createFloatDoubleAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), FLOAT_DOUBLE_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -69600,8 +70380,12 @@ public class ChipClusters {
       writeOctetStringAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createOctetStringAttributeValue(byte[] value) {
+      return new ByteArrayType(value);
+    }
+
     public void writeOctetStringAttribute(DefaultClusterCallback callback, byte[] value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new ByteArrayType(value);
+      BaseTLVType tlvValue = createOctetStringAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), OCTET_STRING_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -69635,8 +70419,12 @@ public class ChipClusters {
       writeListInt8uAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createListInt8uAttributeValue(ArrayList<Integer> value) {
+      return ArrayType.generateArrayType(value, (elementvalue) -> new UIntType(elementvalue));
+    }
+
     public void writeListInt8uAttribute(DefaultClusterCallback callback, ArrayList<Integer> value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = ArrayType.generateArrayType(value, (elementvalue) -> new UIntType(elementvalue));
+      BaseTLVType tlvValue = createListInt8uAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), LIST_INT8U_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -69670,8 +70458,12 @@ public class ChipClusters {
       writeListOctetStringAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createListOctetStringAttributeValue(ArrayList<byte[]> value) {
+      return ArrayType.generateArrayType(value, (elementvalue) -> new ByteArrayType(elementvalue));
+    }
+
     public void writeListOctetStringAttribute(DefaultClusterCallback callback, ArrayList<byte[]> value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = ArrayType.generateArrayType(value, (elementvalue) -> new ByteArrayType(elementvalue));
+      BaseTLVType tlvValue = createListOctetStringAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), LIST_OCTET_STRING_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -69705,8 +70497,12 @@ public class ChipClusters {
       writeListStructOctetStringAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createListStructOctetStringAttributeValue(ArrayList<ChipStructs.UnitTestingClusterTestListStructOctet> value) {
+      return ArrayType.generateArrayType(value, (elementvalue) -> elementvalue.encodeTlv());
+    }
+
     public void writeListStructOctetStringAttribute(DefaultClusterCallback callback, ArrayList<ChipStructs.UnitTestingClusterTestListStructOctet> value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = ArrayType.generateArrayType(value, (elementvalue) -> elementvalue.encodeTlv());
+      BaseTLVType tlvValue = createListStructOctetStringAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), LIST_STRUCT_OCTET_STRING_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -69740,8 +70536,12 @@ public class ChipClusters {
       writeLongOctetStringAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createLongOctetStringAttributeValue(byte[] value) {
+      return new ByteArrayType(value);
+    }
+
     public void writeLongOctetStringAttribute(DefaultClusterCallback callback, byte[] value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new ByteArrayType(value);
+      BaseTLVType tlvValue = createLongOctetStringAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), LONG_OCTET_STRING_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -69775,8 +70575,12 @@ public class ChipClusters {
       writeCharStringAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createCharStringAttributeValue(String value) {
+      return new StringType(value);
+    }
+
     public void writeCharStringAttribute(DefaultClusterCallback callback, String value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new StringType(value);
+      BaseTLVType tlvValue = createCharStringAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), CHAR_STRING_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -69810,8 +70614,12 @@ public class ChipClusters {
       writeLongCharStringAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createLongCharStringAttributeValue(String value) {
+      return new StringType(value);
+    }
+
     public void writeLongCharStringAttribute(DefaultClusterCallback callback, String value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new StringType(value);
+      BaseTLVType tlvValue = createLongCharStringAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), LONG_CHAR_STRING_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -69845,8 +70653,12 @@ public class ChipClusters {
       writeEpochUsAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createEpochUsAttributeValue(Long value) {
+      return new UIntType(value);
+    }
+
     public void writeEpochUsAttribute(DefaultClusterCallback callback, Long value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new UIntType(value);
+      BaseTLVType tlvValue = createEpochUsAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), EPOCH_US_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -69880,8 +70692,12 @@ public class ChipClusters {
       writeEpochSAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createEpochSAttributeValue(Long value) {
+      return new UIntType(value);
+    }
+
     public void writeEpochSAttribute(DefaultClusterCallback callback, Long value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new UIntType(value);
+      BaseTLVType tlvValue = createEpochSAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), EPOCH_S_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -69915,8 +70731,12 @@ public class ChipClusters {
       writeVendorIdAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createVendorIdAttributeValue(Integer value) {
+      return new UIntType(value);
+    }
+
     public void writeVendorIdAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new UIntType(value);
+      BaseTLVType tlvValue = createVendorIdAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), VENDOR_ID_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -69950,8 +70770,12 @@ public class ChipClusters {
       writeListNullablesAndOptionalsStructAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createListNullablesAndOptionalsStructAttributeValue(ArrayList<ChipStructs.UnitTestingClusterNullablesAndOptionalsStruct> value) {
+      return ArrayType.generateArrayType(value, (elementvalue) -> elementvalue.encodeTlv());
+    }
+
     public void writeListNullablesAndOptionalsStructAttribute(DefaultClusterCallback callback, ArrayList<ChipStructs.UnitTestingClusterNullablesAndOptionalsStruct> value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = ArrayType.generateArrayType(value, (elementvalue) -> elementvalue.encodeTlv());
+      BaseTLVType tlvValue = createListNullablesAndOptionalsStructAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), LIST_NULLABLES_AND_OPTIONALS_STRUCT_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -69985,8 +70809,12 @@ public class ChipClusters {
       writeEnumAttrAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createEnumAttrAttributeValue(Integer value) {
+      return new UIntType(value);
+    }
+
     public void writeEnumAttrAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new UIntType(value);
+      BaseTLVType tlvValue = createEnumAttrAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), ENUM_ATTR_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -70020,8 +70848,12 @@ public class ChipClusters {
       writeStructAttrAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createStructAttrAttributeValue(ChipStructs.UnitTestingClusterSimpleStruct value) {
+      return value.encodeTlv();
+    }
+
     public void writeStructAttrAttribute(DefaultClusterCallback callback, ChipStructs.UnitTestingClusterSimpleStruct value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = value.encodeTlv();
+      BaseTLVType tlvValue = createStructAttrAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), STRUCT_ATTR_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -70055,8 +70887,12 @@ public class ChipClusters {
       writeRangeRestrictedInt8uAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createRangeRestrictedInt8uAttributeValue(Integer value) {
+      return new UIntType(value);
+    }
+
     public void writeRangeRestrictedInt8uAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new UIntType(value);
+      BaseTLVType tlvValue = createRangeRestrictedInt8uAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), RANGE_RESTRICTED_INT8U_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -70090,8 +70926,12 @@ public class ChipClusters {
       writeRangeRestrictedInt8sAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createRangeRestrictedInt8sAttributeValue(Integer value) {
+      return new IntType(value);
+    }
+
     public void writeRangeRestrictedInt8sAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new IntType(value);
+      BaseTLVType tlvValue = createRangeRestrictedInt8sAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), RANGE_RESTRICTED_INT8S_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -70125,8 +70965,12 @@ public class ChipClusters {
       writeRangeRestrictedInt16uAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createRangeRestrictedInt16uAttributeValue(Integer value) {
+      return new UIntType(value);
+    }
+
     public void writeRangeRestrictedInt16uAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new UIntType(value);
+      BaseTLVType tlvValue = createRangeRestrictedInt16uAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), RANGE_RESTRICTED_INT16U_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -70160,8 +71004,12 @@ public class ChipClusters {
       writeRangeRestrictedInt16sAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createRangeRestrictedInt16sAttributeValue(Integer value) {
+      return new IntType(value);
+    }
+
     public void writeRangeRestrictedInt16sAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new IntType(value);
+      BaseTLVType tlvValue = createRangeRestrictedInt16sAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), RANGE_RESTRICTED_INT16S_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -70195,8 +71043,12 @@ public class ChipClusters {
       writeListLongOctetStringAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createListLongOctetStringAttributeValue(ArrayList<byte[]> value) {
+      return ArrayType.generateArrayType(value, (elementvalue) -> new ByteArrayType(elementvalue));
+    }
+
     public void writeListLongOctetStringAttribute(DefaultClusterCallback callback, ArrayList<byte[]> value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = ArrayType.generateArrayType(value, (elementvalue) -> new ByteArrayType(elementvalue));
+      BaseTLVType tlvValue = createListLongOctetStringAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), LIST_LONG_OCTET_STRING_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -70235,8 +71087,12 @@ public class ChipClusters {
       writeListFabricScopedAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createListFabricScopedAttributeValue(ArrayList<ChipStructs.UnitTestingClusterTestFabricScoped> value) {
+      return ArrayType.generateArrayType(value, (elementvalue) -> elementvalue.encodeTlv());
+    }
+
     public void writeListFabricScopedAttribute(DefaultClusterCallback callback, ArrayList<ChipStructs.UnitTestingClusterTestFabricScoped> value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = ArrayType.generateArrayType(value, (elementvalue) -> elementvalue.encodeTlv());
+      BaseTLVType tlvValue = createListFabricScopedAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), LIST_FABRIC_SCOPED_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -70266,8 +71122,12 @@ public class ChipClusters {
         }, TIMED_WRITE_BOOLEAN_ATTRIBUTE_ID, true);
     }
 
+    public static BaseTLVType createTimedWriteBooleanAttributeValue(Boolean value) {
+      return new BooleanType(value);
+    }
+
     public void writeTimedWriteBooleanAttribute(DefaultClusterCallback callback, Boolean value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new BooleanType(value);
+      BaseTLVType tlvValue = createTimedWriteBooleanAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), TIMED_WRITE_BOOLEAN_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -70301,8 +71161,12 @@ public class ChipClusters {
       writeGeneralErrorBooleanAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createGeneralErrorBooleanAttributeValue(Boolean value) {
+      return new BooleanType(value);
+    }
+
     public void writeGeneralErrorBooleanAttribute(DefaultClusterCallback callback, Boolean value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new BooleanType(value);
+      BaseTLVType tlvValue = createGeneralErrorBooleanAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), GENERAL_ERROR_BOOLEAN_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -70336,8 +71200,12 @@ public class ChipClusters {
       writeClusterErrorBooleanAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createClusterErrorBooleanAttributeValue(Boolean value) {
+      return new BooleanType(value);
+    }
+
     public void writeClusterErrorBooleanAttribute(DefaultClusterCallback callback, Boolean value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new BooleanType(value);
+      BaseTLVType tlvValue = createClusterErrorBooleanAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), CLUSTER_ERROR_BOOLEAN_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -70371,8 +71239,12 @@ public class ChipClusters {
       writeGlobalEnumAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createGlobalEnumAttributeValue(Integer value) {
+      return new UIntType(value);
+    }
+
     public void writeGlobalEnumAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new UIntType(value);
+      BaseTLVType tlvValue = createGlobalEnumAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), GLOBAL_ENUM_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -70406,8 +71278,12 @@ public class ChipClusters {
       writeGlobalStructAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createGlobalStructAttributeValue(ChipStructs.UnitTestingClusterTestGlobalStruct value) {
+      return value.encodeTlv();
+    }
+
     public void writeGlobalStructAttribute(DefaultClusterCallback callback, ChipStructs.UnitTestingClusterTestGlobalStruct value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = value.encodeTlv();
+      BaseTLVType tlvValue = createGlobalStructAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), GLOBAL_STRUCT_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -70441,8 +71317,12 @@ public class ChipClusters {
       writeUnsupportedAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createUnsupportedAttributeValue(Boolean value) {
+      return new BooleanType(value);
+    }
+
     public void writeUnsupportedAttribute(DefaultClusterCallback callback, Boolean value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new BooleanType(value);
+      BaseTLVType tlvValue = createUnsupportedAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), UNSUPPORTED_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -70476,8 +71356,12 @@ public class ChipClusters {
       writeReadFailureCodeAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createReadFailureCodeAttributeValue(Integer value) {
+      return new UIntType(value);
+    }
+
     public void writeReadFailureCodeAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new UIntType(value);
+      BaseTLVType tlvValue = createReadFailureCodeAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), READ_FAILURE_CODE_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -70511,8 +71395,12 @@ public class ChipClusters {
       writeFailureInt32UAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createFailureInt32UAttributeValue(Long value) {
+      return new UIntType(value);
+    }
+
     public void writeFailureInt32UAttribute(DefaultClusterCallback callback, Long value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new UIntType(value);
+      BaseTLVType tlvValue = createFailureInt32UAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), FAILURE_INT32_U_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -70546,8 +71434,12 @@ public class ChipClusters {
       writeNullableBooleanAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createNullableBooleanAttributeValue(Boolean value) {
+      return value != null ? new BooleanType(value) : new NullType();
+    }
+
     public void writeNullableBooleanAttribute(DefaultClusterCallback callback, Boolean value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = value != null ? new BooleanType(value) : new NullType();
+      BaseTLVType tlvValue = createNullableBooleanAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), NULLABLE_BOOLEAN_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -70581,8 +71473,12 @@ public class ChipClusters {
       writeNullableBitmap8Attribute(callback, value, 0);
     }
 
+    public static BaseTLVType createNullableBitmap8AttributeValue(Integer value) {
+      return value != null ? new UIntType(value) : new NullType();
+    }
+
     public void writeNullableBitmap8Attribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = value != null ? new UIntType(value) : new NullType();
+      BaseTLVType tlvValue = createNullableBitmap8AttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), NULLABLE_BITMAP8_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -70616,8 +71512,12 @@ public class ChipClusters {
       writeNullableBitmap16Attribute(callback, value, 0);
     }
 
+    public static BaseTLVType createNullableBitmap16AttributeValue(Integer value) {
+      return value != null ? new UIntType(value) : new NullType();
+    }
+
     public void writeNullableBitmap16Attribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = value != null ? new UIntType(value) : new NullType();
+      BaseTLVType tlvValue = createNullableBitmap16AttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), NULLABLE_BITMAP16_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -70651,8 +71551,12 @@ public class ChipClusters {
       writeNullableBitmap32Attribute(callback, value, 0);
     }
 
+    public static BaseTLVType createNullableBitmap32AttributeValue(Long value) {
+      return value != null ? new UIntType(value) : new NullType();
+    }
+
     public void writeNullableBitmap32Attribute(DefaultClusterCallback callback, Long value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = value != null ? new UIntType(value) : new NullType();
+      BaseTLVType tlvValue = createNullableBitmap32AttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), NULLABLE_BITMAP32_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -70686,8 +71590,12 @@ public class ChipClusters {
       writeNullableBitmap64Attribute(callback, value, 0);
     }
 
+    public static BaseTLVType createNullableBitmap64AttributeValue(Long value) {
+      return value != null ? new UIntType(value) : new NullType();
+    }
+
     public void writeNullableBitmap64Attribute(DefaultClusterCallback callback, Long value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = value != null ? new UIntType(value) : new NullType();
+      BaseTLVType tlvValue = createNullableBitmap64AttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), NULLABLE_BITMAP64_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -70721,8 +71629,12 @@ public class ChipClusters {
       writeNullableInt8uAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createNullableInt8uAttributeValue(Integer value) {
+      return value != null ? new UIntType(value) : new NullType();
+    }
+
     public void writeNullableInt8uAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = value != null ? new UIntType(value) : new NullType();
+      BaseTLVType tlvValue = createNullableInt8uAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), NULLABLE_INT8U_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -70756,8 +71668,12 @@ public class ChipClusters {
       writeNullableInt16uAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createNullableInt16uAttributeValue(Integer value) {
+      return value != null ? new UIntType(value) : new NullType();
+    }
+
     public void writeNullableInt16uAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = value != null ? new UIntType(value) : new NullType();
+      BaseTLVType tlvValue = createNullableInt16uAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), NULLABLE_INT16U_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -70791,8 +71707,12 @@ public class ChipClusters {
       writeNullableInt24uAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createNullableInt24uAttributeValue(Long value) {
+      return value != null ? new UIntType(value) : new NullType();
+    }
+
     public void writeNullableInt24uAttribute(DefaultClusterCallback callback, Long value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = value != null ? new UIntType(value) : new NullType();
+      BaseTLVType tlvValue = createNullableInt24uAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), NULLABLE_INT24U_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -70826,8 +71746,12 @@ public class ChipClusters {
       writeNullableInt32uAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createNullableInt32uAttributeValue(Long value) {
+      return value != null ? new UIntType(value) : new NullType();
+    }
+
     public void writeNullableInt32uAttribute(DefaultClusterCallback callback, Long value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = value != null ? new UIntType(value) : new NullType();
+      BaseTLVType tlvValue = createNullableInt32uAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), NULLABLE_INT32U_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -70861,8 +71785,12 @@ public class ChipClusters {
       writeNullableInt40uAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createNullableInt40uAttributeValue(Long value) {
+      return value != null ? new UIntType(value) : new NullType();
+    }
+
     public void writeNullableInt40uAttribute(DefaultClusterCallback callback, Long value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = value != null ? new UIntType(value) : new NullType();
+      BaseTLVType tlvValue = createNullableInt40uAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), NULLABLE_INT40U_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -70896,8 +71824,12 @@ public class ChipClusters {
       writeNullableInt48uAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createNullableInt48uAttributeValue(Long value) {
+      return value != null ? new UIntType(value) : new NullType();
+    }
+
     public void writeNullableInt48uAttribute(DefaultClusterCallback callback, Long value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = value != null ? new UIntType(value) : new NullType();
+      BaseTLVType tlvValue = createNullableInt48uAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), NULLABLE_INT48U_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -70931,8 +71863,12 @@ public class ChipClusters {
       writeNullableInt56uAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createNullableInt56uAttributeValue(Long value) {
+      return value != null ? new UIntType(value) : new NullType();
+    }
+
     public void writeNullableInt56uAttribute(DefaultClusterCallback callback, Long value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = value != null ? new UIntType(value) : new NullType();
+      BaseTLVType tlvValue = createNullableInt56uAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), NULLABLE_INT56U_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -70966,8 +71902,12 @@ public class ChipClusters {
       writeNullableInt64uAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createNullableInt64uAttributeValue(Long value) {
+      return value != null ? new UIntType(value) : new NullType();
+    }
+
     public void writeNullableInt64uAttribute(DefaultClusterCallback callback, Long value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = value != null ? new UIntType(value) : new NullType();
+      BaseTLVType tlvValue = createNullableInt64uAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), NULLABLE_INT64U_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -71001,8 +71941,12 @@ public class ChipClusters {
       writeNullableInt8sAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createNullableInt8sAttributeValue(Integer value) {
+      return value != null ? new IntType(value) : new NullType();
+    }
+
     public void writeNullableInt8sAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = value != null ? new IntType(value) : new NullType();
+      BaseTLVType tlvValue = createNullableInt8sAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), NULLABLE_INT8S_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -71036,8 +71980,12 @@ public class ChipClusters {
       writeNullableInt16sAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createNullableInt16sAttributeValue(Integer value) {
+      return value != null ? new IntType(value) : new NullType();
+    }
+
     public void writeNullableInt16sAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = value != null ? new IntType(value) : new NullType();
+      BaseTLVType tlvValue = createNullableInt16sAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), NULLABLE_INT16S_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -71071,8 +72019,12 @@ public class ChipClusters {
       writeNullableInt24sAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createNullableInt24sAttributeValue(Long value) {
+      return value != null ? new IntType(value) : new NullType();
+    }
+
     public void writeNullableInt24sAttribute(DefaultClusterCallback callback, Long value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = value != null ? new IntType(value) : new NullType();
+      BaseTLVType tlvValue = createNullableInt24sAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), NULLABLE_INT24S_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -71106,8 +72058,12 @@ public class ChipClusters {
       writeNullableInt32sAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createNullableInt32sAttributeValue(Long value) {
+      return value != null ? new IntType(value) : new NullType();
+    }
+
     public void writeNullableInt32sAttribute(DefaultClusterCallback callback, Long value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = value != null ? new IntType(value) : new NullType();
+      BaseTLVType tlvValue = createNullableInt32sAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), NULLABLE_INT32S_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -71141,8 +72097,12 @@ public class ChipClusters {
       writeNullableInt40sAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createNullableInt40sAttributeValue(Long value) {
+      return value != null ? new IntType(value) : new NullType();
+    }
+
     public void writeNullableInt40sAttribute(DefaultClusterCallback callback, Long value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = value != null ? new IntType(value) : new NullType();
+      BaseTLVType tlvValue = createNullableInt40sAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), NULLABLE_INT40S_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -71176,8 +72136,12 @@ public class ChipClusters {
       writeNullableInt48sAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createNullableInt48sAttributeValue(Long value) {
+      return value != null ? new IntType(value) : new NullType();
+    }
+
     public void writeNullableInt48sAttribute(DefaultClusterCallback callback, Long value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = value != null ? new IntType(value) : new NullType();
+      BaseTLVType tlvValue = createNullableInt48sAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), NULLABLE_INT48S_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -71211,8 +72175,12 @@ public class ChipClusters {
       writeNullableInt56sAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createNullableInt56sAttributeValue(Long value) {
+      return value != null ? new IntType(value) : new NullType();
+    }
+
     public void writeNullableInt56sAttribute(DefaultClusterCallback callback, Long value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = value != null ? new IntType(value) : new NullType();
+      BaseTLVType tlvValue = createNullableInt56sAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), NULLABLE_INT56S_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -71246,8 +72214,12 @@ public class ChipClusters {
       writeNullableInt64sAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createNullableInt64sAttributeValue(Long value) {
+      return value != null ? new IntType(value) : new NullType();
+    }
+
     public void writeNullableInt64sAttribute(DefaultClusterCallback callback, Long value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = value != null ? new IntType(value) : new NullType();
+      BaseTLVType tlvValue = createNullableInt64sAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), NULLABLE_INT64S_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -71281,8 +72253,12 @@ public class ChipClusters {
       writeNullableEnum8Attribute(callback, value, 0);
     }
 
+    public static BaseTLVType createNullableEnum8AttributeValue(Integer value) {
+      return value != null ? new UIntType(value) : new NullType();
+    }
+
     public void writeNullableEnum8Attribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = value != null ? new UIntType(value) : new NullType();
+      BaseTLVType tlvValue = createNullableEnum8AttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), NULLABLE_ENUM8_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -71316,8 +72292,12 @@ public class ChipClusters {
       writeNullableEnum16Attribute(callback, value, 0);
     }
 
+    public static BaseTLVType createNullableEnum16AttributeValue(Integer value) {
+      return value != null ? new UIntType(value) : new NullType();
+    }
+
     public void writeNullableEnum16Attribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = value != null ? new UIntType(value) : new NullType();
+      BaseTLVType tlvValue = createNullableEnum16AttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), NULLABLE_ENUM16_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -71351,8 +72331,12 @@ public class ChipClusters {
       writeNullableFloatSingleAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createNullableFloatSingleAttributeValue(Float value) {
+      return value != null ? new FloatType(value) : new NullType();
+    }
+
     public void writeNullableFloatSingleAttribute(DefaultClusterCallback callback, Float value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = value != null ? new FloatType(value) : new NullType();
+      BaseTLVType tlvValue = createNullableFloatSingleAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), NULLABLE_FLOAT_SINGLE_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -71386,8 +72370,12 @@ public class ChipClusters {
       writeNullableFloatDoubleAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createNullableFloatDoubleAttributeValue(Double value) {
+      return value != null ? new DoubleType(value) : new NullType();
+    }
+
     public void writeNullableFloatDoubleAttribute(DefaultClusterCallback callback, Double value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = value != null ? new DoubleType(value) : new NullType();
+      BaseTLVType tlvValue = createNullableFloatDoubleAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), NULLABLE_FLOAT_DOUBLE_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -71421,8 +72409,12 @@ public class ChipClusters {
       writeNullableOctetStringAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createNullableOctetStringAttributeValue(byte[] value) {
+      return value != null ? new ByteArrayType(value) : new NullType();
+    }
+
     public void writeNullableOctetStringAttribute(DefaultClusterCallback callback, byte[] value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = value != null ? new ByteArrayType(value) : new NullType();
+      BaseTLVType tlvValue = createNullableOctetStringAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), NULLABLE_OCTET_STRING_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -71456,8 +72448,12 @@ public class ChipClusters {
       writeNullableCharStringAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createNullableCharStringAttributeValue(String value) {
+      return value != null ? new StringType(value) : new NullType();
+    }
+
     public void writeNullableCharStringAttribute(DefaultClusterCallback callback, String value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = value != null ? new StringType(value) : new NullType();
+      BaseTLVType tlvValue = createNullableCharStringAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), NULLABLE_CHAR_STRING_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -71491,8 +72487,12 @@ public class ChipClusters {
       writeNullableEnumAttrAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createNullableEnumAttrAttributeValue(Integer value) {
+      return value != null ? new UIntType(value) : new NullType();
+    }
+
     public void writeNullableEnumAttrAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = value != null ? new UIntType(value) : new NullType();
+      BaseTLVType tlvValue = createNullableEnumAttrAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), NULLABLE_ENUM_ATTR_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -71526,8 +72526,12 @@ public class ChipClusters {
       writeNullableStructAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createNullableStructAttributeValue(ChipStructs.UnitTestingClusterSimpleStruct value) {
+      return value != null ? value.encodeTlv() : new NullType();
+    }
+
     public void writeNullableStructAttribute(DefaultClusterCallback callback, ChipStructs.UnitTestingClusterSimpleStruct value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = value != null ? value.encodeTlv() : new NullType();
+      BaseTLVType tlvValue = createNullableStructAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), NULLABLE_STRUCT_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -71561,8 +72565,12 @@ public class ChipClusters {
       writeNullableRangeRestrictedInt8uAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createNullableRangeRestrictedInt8uAttributeValue(Integer value) {
+      return value != null ? new UIntType(value) : new NullType();
+    }
+
     public void writeNullableRangeRestrictedInt8uAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = value != null ? new UIntType(value) : new NullType();
+      BaseTLVType tlvValue = createNullableRangeRestrictedInt8uAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), NULLABLE_RANGE_RESTRICTED_INT8U_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -71596,8 +72604,12 @@ public class ChipClusters {
       writeNullableRangeRestrictedInt8sAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createNullableRangeRestrictedInt8sAttributeValue(Integer value) {
+      return value != null ? new IntType(value) : new NullType();
+    }
+
     public void writeNullableRangeRestrictedInt8sAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = value != null ? new IntType(value) : new NullType();
+      BaseTLVType tlvValue = createNullableRangeRestrictedInt8sAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), NULLABLE_RANGE_RESTRICTED_INT8S_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -71631,8 +72643,12 @@ public class ChipClusters {
       writeNullableRangeRestrictedInt16uAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createNullableRangeRestrictedInt16uAttributeValue(Integer value) {
+      return value != null ? new UIntType(value) : new NullType();
+    }
+
     public void writeNullableRangeRestrictedInt16uAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = value != null ? new UIntType(value) : new NullType();
+      BaseTLVType tlvValue = createNullableRangeRestrictedInt16uAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), NULLABLE_RANGE_RESTRICTED_INT16U_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -71666,8 +72682,12 @@ public class ChipClusters {
       writeNullableRangeRestrictedInt16sAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createNullableRangeRestrictedInt16sAttributeValue(Integer value) {
+      return value != null ? new IntType(value) : new NullType();
+    }
+
     public void writeNullableRangeRestrictedInt16sAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = value != null ? new IntType(value) : new NullType();
+      BaseTLVType tlvValue = createNullableRangeRestrictedInt16sAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), NULLABLE_RANGE_RESTRICTED_INT16S_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -71701,8 +72721,12 @@ public class ChipClusters {
       writeWriteOnlyInt8uAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createWriteOnlyInt8uAttributeValue(Integer value) {
+      return new UIntType(value);
+    }
+
     public void writeWriteOnlyInt8uAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new UIntType(value);
+      BaseTLVType tlvValue = createWriteOnlyInt8uAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), WRITE_ONLY_INT8U_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -71736,8 +72760,12 @@ public class ChipClusters {
       writeNullableGlobalEnumAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createNullableGlobalEnumAttributeValue(Integer value) {
+      return value != null ? new UIntType(value) : new NullType();
+    }
+
     public void writeNullableGlobalEnumAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = value != null ? new UIntType(value) : new NullType();
+      BaseTLVType tlvValue = createNullableGlobalEnumAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), NULLABLE_GLOBAL_ENUM_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -71771,8 +72799,12 @@ public class ChipClusters {
       writeNullableGlobalStructAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createNullableGlobalStructAttributeValue(ChipStructs.UnitTestingClusterTestGlobalStruct value) {
+      return value != null ? value.encodeTlv() : new NullType();
+    }
+
     public void writeNullableGlobalStructAttribute(DefaultClusterCallback callback, ChipStructs.UnitTestingClusterTestGlobalStruct value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = value != null ? value.encodeTlv() : new NullType();
+      BaseTLVType tlvValue = createNullableGlobalStructAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), NULLABLE_GLOBAL_STRUCT_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -71806,8 +72838,12 @@ public class ChipClusters {
       writeMeiInt8uAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createMeiInt8uAttributeValue(Integer value) {
+      return new UIntType(value);
+    }
+
     public void writeMeiInt8uAttribute(DefaultClusterCallback callback, Integer value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new UIntType(value);
+      BaseTLVType tlvValue = createMeiInt8uAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), MEI_INT8U_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
@@ -72366,8 +73402,12 @@ public class ChipClusters {
       writeFlipFlopAttribute(callback, value, 0);
     }
 
+    public static BaseTLVType createFlipFlopAttributeValue(Boolean value) {
+      return new BooleanType(value);
+    }
+
     public void writeFlipFlopAttribute(DefaultClusterCallback callback, Boolean value, int timedWriteTimeoutMs) {
-      BaseTLVType tlvValue = new BooleanType(value);
+      BaseTLVType tlvValue = createFlipFlopAttributeValue(value);
       writeAttribute(new WriteAttributesCallbackImpl(callback), FLIP_FLOP_ATTRIBUTE_ID, tlvValue, timedWriteTimeoutMs);
     }
 
